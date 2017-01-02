@@ -5,18 +5,36 @@ A simple means of extracting the AWS IAM Service Map, which includes all service
 
 <img alt="Screenshot" src="https://raw.githubusercontent.com/witoff/aws-servicemap/master/screenshot.png" width="400">
 
-### Usage
+## Usage
 
-Update The Servicemap:
+**Update The Servicemap:**
 ```bash
 bundle install
 bundle exec generate-servicemap.rb
 ```
 
-Query the Servicemap:
+**Query Locally:**
 ```bash
-# Locally
-jq .AWSXRay servicemap.json
-# Remotely
-curl -s https://raw.githubusercontent.com/witoff/aws-servicemap/master/servicemap.json | jq .AWSXRay
+jq .AWSConfig servicemap.json
+jq .AWSConfig servicemap.json
+# {
+#   "StringPrefix": "config",
+#   "Actions": [
+#     "DeleteConfigRule",
+#     ...
+#   ]
+# }
 ```
+
+**Query Remotely:**
+```bash
+curl -s https://raw.githubusercontent.com/witoff/aws-servicemap/master/servicemap.json | jq .AmazonRekognition
+# {
+#   "StringPrefix": "rekognition",
+#   "Actions": [
+#     "CreateCollection",
+#     ...
+#   ]
+# }
+```
+
