@@ -9,8 +9,7 @@ A simple means of extracting the AWS IAM Service Map, which includes all service
 
 **Update The Servicemap:**
 ```bash
-bundle install
-bundle exec generate-servicemap.rb
+node generate.js
 ```
 
 **Query Locally:**
@@ -37,4 +36,3 @@ curl -s https://raw.githubusercontent.com/witoff/aws-servicemap/master/servicema
 #   ]
 # }
 ```
-
