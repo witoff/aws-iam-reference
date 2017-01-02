@@ -1,7 +1,7 @@
 AWS Servicemap
 ==============
 
-A simple means of extracting the AWS IAM Service Map, which includes all services and actions from the IAM Policy Generator.  This is used in the [Atom IAM Syntax Highlighter](github.com/witoff/atom-iam-syntax) and is useful for additional AWS validation and monitoring.  You can use this JSON servicemap like:
+A simple means of extracting the AWS IAM Service Map, which includes all services and actions from the IAM [Policy Generator](https://awspolicygen.s3.amazonaws.com/policygen.html).  This is used in the [Atom IAM Syntax Highlighter](github.com/witoff/atom-iam-syntax) and is useful for additional AWS validation and monitoring.  You can use this JSON servicemap like:
 
 <img alt="Screenshot" src="https://raw.githubusercontent.com/witoff/aws-servicemap/master/screenshot.png" width="400">
 
