@@ -53,7 +53,7 @@ exports.parse_servicemap = function(callback) {
     // turn objects into strings e.g. test:[] => "test":[]
     servicemap = servicemap.replace(/([a-zA-Z0-9_]+):([\[{0-9"])/g, '"$1":$2');
     // verify that our json is correct
-    JSON.parse(servicemap)
+    servicemap = JSON.stringify(JSON.parse(servicemap), null, 2);
     fs.writeFile(`${__dirname}/servicemap.json`, servicemap, (err) => {
       if (err) console.error(error);
       callback(servicemap);
