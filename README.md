@@ -36,3 +36,10 @@ curl -s https://raw.githubusercontent.com/witoff/aws-servicemap/master/servicema
 #   ]
 # }
 ```
+
+**Use the CLI:**
+```ruby
+  ./cli.rb list-services
+  ./cli.rb list-actions "Amazon RDS"
+  ./cli.rb find-actions "rds"
+```
