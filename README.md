@@ -12,10 +12,13 @@ A simple means of extracting the AWS IAM Service Map, which includes all service
 node generate.js
 ```
 
-**Query Locally:**
+**Querying:**
 ```bash
-jq .AWSConfig servicemap.json
-jq .AWSConfig servicemap.json
+# Optionally Download Map Directly
+curl -sO https://raw.githubusercontent.com/witoff/aws-servicemap/master/servicemap.json
+
+# Query for a key
+jq '.["AWS Config"]' servicemap.json
 # {
 #   "StringPrefix": "config",
 #   "Actions": [
@@ -23,18 +26,25 @@ jq .AWSConfig servicemap.json
 #     ...
 #   ]
 # }
-```
 
-**Query Remotely:**
-```bash
-curl -s https://raw.githubusercontent.com/witoff/aws-servicemap/master/servicemap.json | jq .AmazonRekognition
-# {
-#   "StringPrefix": "rekognition",
-#   "Actions": [
-#     "CreateCollection",
-#     ...
-#   ]
-# }
+# Get a list of available keys
+jq keys servicemap.json
+# [
+#   "AWS Application Discovery Service",
+#   "AWS Billing",
+#   "AWS Budgets",
+#   .....
+# ]
+
+# Get actions for a single key
+jq '.["AWS WAF"].Actions' servicemap.json
+# [
+#   "CreateByteMatchSet",
+#   "CreateIPSet",
+#   "CreateRule",
+#   ...
+# ]
+
 ```
 
 **Use the CLI:**
