@@ -88,6 +88,7 @@
       "DeleteCertificate",
       "DescribeCertificate",
       "GetCertificate",
+      "ImportCertificate",
       "ListCertificates",
       "ListTagsForCertificate",
       "RemoveTagsFromCertificate",
@@ -209,6 +210,51 @@
       "UpdateJobQueue"
     ]
   },
+  "Amazon Lex": {
+    "StringPrefix": "lex",
+    "ARNRegex": "REMOVED",
+    "ARNFormat": "arn:aws:lex:<region>:<account_ID>:<type>:<name>",
+    "HasResource": "!0",
+    "Actions": [
+      "CreateBotChannelAssociation",
+      "CreateBotVersion",
+      "CreateIntentVersion",
+      "CreateSlotTypeVersion",
+      "DeleteBot",
+      "DeleteBotAlias",
+      "DeleteBotChannelAssociation",
+      "DeleteIntent",
+      "DeleteSlotType",
+      "DeleteUtterances",
+      "GetBot",
+      "GetBotAlias",
+      "GetBotAliases",
+      "GetBotChannelAssociation",
+      "GetBotChannelAssociations",
+      "GetBuiltinIntent",
+      "GetBuiltinIntents",
+      "GetBuiltinSlotTypes",
+      "GetBots",
+      "GetBotVersions",
+      "GetIntent",
+      "GetIntents",
+      "GetIntentVersions",
+      "GetSlotType",
+      "GetSlotTypes",
+      "GetSlotTypeVersions",
+      "GetUtterancesView",
+      "PostContent",
+      "PostText",
+      "PutBot",
+      "PutBotAlias",
+      "PutIntent",
+      "PutSlotType"
+    ],
+    "conditionKeys": [
+      "lex:AssociatedIntents",
+      "lex:AssociatedSlotTypes"
+    ]
+  },
   "Amazon Polly": {
     "StringPrefix": "polly",
     "ARNRegex": "REMOVED",
@@ -218,7 +264,7 @@
       "DeleteLexicon",
       "DescribeVoices",
       "GetLexicon",
-      "ListLexicon",
+      "ListLexicons",
       "PutLexicon",
       "SynthesizeSpeech"
     ]
@@ -775,13 +821,18 @@
       "DeleteRepository",
       "GetBlob",
       "GetBranch",
+      "GetCommit",
+      "GetDifferences",
       "GetObjectIdentifier",
       "GetRepository",
+      "GetRepositoryTriggers",
       "GetTree",
       "GitPull",
       "GitPush",
       "ListBranches",
       "ListRepositories",
+      "PutRepositoryTriggers",
+      "TestRepositoryTriggers",
       "UpdateDefaultBranch",
       "UpdateRepositoryDescription",
       "UpdateRepositoryName"
@@ -2166,6 +2217,25 @@
       "GetSessionToken"
     ]
   },
+  "AWS Support": {
+    "StringPrefix": "support",
+    "Actions": [
+      "AddAttachmentsToSet",
+      "AddCommunicationToCase",
+      "CreateCase",
+      "DescribeAttachment",
+      "DescribeCases",
+      "DescribeCommunications",
+      "DescribeServices",
+      "DescribeSeverityLevels",
+      "DescribeTrustedAdvisorCheckRefreshStatuses",
+      "DescribeTrustedAdvisorCheckResult",
+      "DescribeTrustedAdvisorChecks",
+      "DescribeTrustedAdvisorCheckSummaries",
+      "RefreshTrustedAdvisorCheck",
+      "ResolveCase"
+    ]
+  },
   "Amazon WorkDocs": {
     "StringPrefix": "workdocs",
     "Actions": [
@@ -2505,6 +2575,33 @@
       "ViewUsage"
     ]
   },
+  "AWS CodeStar": {
+    "StringPrefix": "codestar",
+    "ARNFormat": "arn:aws:codestar:<region>:<account_ID>:<resource_type>/<resource_id>",
+    "ARNRegex": "REMOVED",
+    "HasResource": "!0",
+    "Actions": [
+      "AssociateTeamMember",
+      "CreateProject",
+      "CreateUserProfile",
+      "DeleteExtendedAccess",
+      "DeleteProject",
+      "DeleteUserProfile",
+      "DescribeProject",
+      "DescribeUserProfile",
+      "DisassociateTeamMember",
+      "GetExtendedAccess",
+      "ListProjects",
+      "ListResources",
+      "ListTeamMembers",
+      "ListUserProfiles",
+      "PutExtendedAccess",
+      "UpdateProject",
+      "UpdateTeamMember",
+      "UpdateUserProfile",
+      "VerifyServiceRole"
+    ]
+  },
   "AWS Direct Connect": {
     "StringPrefix": "directconnect",
     "Actions": [
@@ -2622,6 +2719,31 @@
       "DescribeSubscription",
       "ListAttacks",
       "ListProtections"
+    ]
+  },
+  "AWS Step Functions": {
+    "StringPrefix": "states",
+    "ARNRegex": "REMOVED",
+    "ARNFormat": "arn:aws:states:.+:<account_ID>:<resource>:<resource_id>",
+    "HasResource": "!0",
+    "Actions": [
+      "CreateActivity",
+      "CreateStateMachine",
+      "DeleteActivity",
+      "DeleteStateMachine",
+      "DescribeActivity",
+      "DescribeExecution",
+      "DescribeStateMachine",
+      "GetActivityTask",
+      "GetExecutionHistory",
+      "ListActivities",
+      "ListExecutions",
+      "ListStateMachines",
+      "SendTaskFailure",
+      "SendTaskHeartbeat",
+      "SendTaskSuccess",
+      "StartExecution",
+      "StopExecution"
     ]
   },
   "AWS Trusted Advisor": {
@@ -2920,6 +3042,7 @@
       "DeleteFaces",
       "DetectFaces",
       "DetectLabels",
+      "DetectModerationLabels",
       "IndexFaces",
       "ListCollections",
       "ListFaces",
