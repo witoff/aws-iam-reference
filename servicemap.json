@@ -1603,6 +1603,11 @@
       "RevokeSnapshotAccess",
       "RotateEncryptionKey",
       "ViewQueriesInConsole"
+    ],
+    "conditionKeys": [
+      "redshift:DbUser",
+      "redshift:DbName",
+      "redshift:DurationSeconds"
     ]
   },
   "Amazon RDS": {
