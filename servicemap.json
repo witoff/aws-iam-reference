@@ -216,15 +216,17 @@
     "ARNFormat": "arn:aws:lex:<region>:<account_ID>:<type>:<name>",
     "HasResource": "!0",
     "Actions": [
-      "CreateBotChannelAssociation",
       "CreateBotVersion",
       "CreateIntentVersion",
       "CreateSlotTypeVersion",
       "DeleteBot",
       "DeleteBotAlias",
       "DeleteBotChannelAssociation",
+      "DeleteBotVersion",
       "DeleteIntent",
+      "DeleteIntentVersion",
       "DeleteSlotType",
+      "DeleteSlotTypeVersion",
       "DeleteUtterances",
       "GetBot",
       "GetBotAlias",
@@ -817,6 +819,7 @@
     "Actions": [
       "BatchGetRepositories",
       "CreateBranch",
+      "DeleteBranch",
       "CreateRepository",
       "DeleteRepository",
       "GetBlob",
@@ -824,6 +827,7 @@
       "GetCommit",
       "GetDifferences",
       "GetObjectIdentifier",
+      "GetReferences",
       "GetRepository",
       "GetRepositoryTriggers",
       "GetTree",
@@ -1735,7 +1739,8 @@
       "RunJobFlow",
       "SetTerminationProtection",
       "SetVisibleToAllUsers",
-      "TerminateJobFlows"
+      "TerminateJobFlows",
+      "ViewEventsFromAllClustersInConsole"
     ],
     "conditionKeys": [
       "elasticmapreduce:ResourceTag",
@@ -2127,12 +2132,15 @@
       "GetShardIterator",
       "ListStreams",
       "ListTables",
+      "ListTagsOfResource",
       "PurchaseReservedCapacityOfferings",
       "PutItem",
       "Query",
       "Scan",
+      "TagResource",
       "UpdateItem",
-      "UpdateTable"
+      "UpdateTable",
+      "UntagResource"
     ],
     "conditionKeys": [
       "dynamodb:Attributes",
@@ -2223,25 +2231,6 @@
       "DecodeAuthorizationMessage",
       "GetFederationToken",
       "GetSessionToken"
-    ]
-  },
-  "AWS Support": {
-    "StringPrefix": "support",
-    "Actions": [
-      "AddAttachmentsToSet",
-      "AddCommunicationToCase",
-      "CreateCase",
-      "DescribeAttachment",
-      "DescribeCases",
-      "DescribeCommunications",
-      "DescribeServices",
-      "DescribeSeverityLevels",
-      "DescribeTrustedAdvisorCheckRefreshStatuses",
-      "DescribeTrustedAdvisorCheckResult",
-      "DescribeTrustedAdvisorChecks",
-      "DescribeTrustedAdvisorCheckSummaries",
-      "RefreshTrustedAdvisorCheck",
-      "ResolveCase"
     ]
   },
   "Amazon WorkDocs": {
@@ -2549,6 +2538,7 @@
       "ListGrants",
       "ListKeyPolicies",
       "ListKeys",
+      "ListResourceTags",
       "ListRetirableGrants",
       "PutKeyPolicy",
       "ReEncryptFrom",
@@ -2556,6 +2546,8 @@
       "ReEncrypt*",
       "RevokeGrant",
       "ScheduleKeyDeletion",
+      "TagResource",
+      "UntagResource",
       "UpdateAlias",
       "UpdateKeyDescription"
     ],
@@ -3582,6 +3574,22 @@
       "GetTraceSummaries",
       "PutTelemetryRecords",
       "PutTraceSegments"
+    ]
+  },
+  "Amazon Athena": {
+    "StringPrefix": "athena",
+    "Actions": [
+      "BatchGetNamedQuery",
+      "BatchGetQueryExecution",
+      "CreateNamedQuery",
+      "DeleteNamedQuery",
+      "GetNamedQuery",
+      "GetQueryExecution",
+      "GetQueryResults",
+      "ListNamedQueries",
+      "ListQueryExecutions",
+      "StartQueryExecution",
+      "StopQueryExecution"
     ]
   }
 }
