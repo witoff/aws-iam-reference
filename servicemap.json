@@ -99,6 +99,18 @@
     "ARNRegex": "REMOVED",
     "HasResource": "!0"
   },
+  "Amazon Resource Group Tagging API": {
+    "StringPrefix": "tag",
+    "Actions": [
+      "AddResourceTags",
+      "GetResources",
+      "GetTagKeys",
+      "GetTagValues",
+      "RemoveResourceTags",
+      "TagResources",
+      "UntagResources"
+    ]
+  },
   "Amazon EC2 Container Registry": {
     "StringPrefix": "ecr",
     "Actions": [
@@ -2150,6 +2162,47 @@
       "dynamodb:LeadingKeys"
     ]
   },
+  "Amazon DynamoDB Accelerator": {
+    "ARNFormat": "arn:aws:dax:<region>:<account>:cache/<cluster_name>",
+    "ARNRegex": "REMOVED",
+    "HasResource": "!0",
+    "StringPrefix": "dax",
+    "Actions": [
+      "BatchGetItem",
+      "BatchWriteItem",
+      "CreateCluster",
+      "CreateParameterGroup",
+      "CreateSubnetGroup",
+      "DecreaseReplicationFactor",
+      "DefineAttributeList",
+      "DefineAttributeListId",
+      "DefineKeySchema",
+      "DeleteCluster",
+      "DeleteItem",
+      "DeleteParameterGroup",
+      "DeleteSubnetGroup",
+      "DescribeClusters",
+      "DescribeDefaultParameters",
+      "DescribeEvents",
+      "DescribeParameterGroups",
+      "DescribeParameters",
+      "DescribeSubnetGroups",
+      "Endpoints",
+      "GetItem",
+      "IncreaseReplicationFactor",
+      "ListTags",
+      "PutItem",
+      "Query",
+      "RebootNode",
+      "Scan",
+      "TagResource",
+      "UntagResource",
+      "UpdateCluster",
+      "UpdateItem",
+      "UpdateParameterGroup",
+      "UpdateSubnetGroup"
+    ]
+  },
   "Amazon Glacier": {
     "HasResource": "!0",
     "ARNFormat": "arn:aws:glacier:<region>:<accountID>:<relative-id>",
@@ -3099,6 +3152,11 @@
       "SetStatus",
       "SetTaskStatus",
       "ValidatePipelineDefinition"
+    ],
+    "conditionKeys": [
+      "datapipeline:PipelineCreator",
+      "datapipeline:Tag",
+      "datapipeline:workerGroup"
     ]
   },
   "AWS CodeBuild ": {
