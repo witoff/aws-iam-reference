@@ -1338,6 +1338,7 @@
       "GetMaintenanceWindow",
       "GetMaintenanceWindowExecution",
       "GetMaintenanceWindowExecutionTask",
+      "GetManifest",
       "GetParameterHistory",
       "GetParameters",
       "GetPatchBaseline",
