@@ -6,7 +6,7 @@ var https = require('https');
 var fs    = require('fs') ;
 
 exports.get_servicemap = function(callback) {
-  var url = 'https://awsiamconsole.s3.amazonaws.com/iam/assets/js/bundles/policies.js';
+  var url = 'https://awspolicygen.s3.amazonaws.com/js/policies.js';
   https.get(url, (response) => {
     var body = '';
     response.on('data', (d) => { body += d; });
@@ -30,28 +30,7 @@ var load_policies = function (callback) {
 
 exports.parse_servicemap = function(callback) {
   load_policies( (policies) => {
-    // Extract the ServiceMap
-    var separator = 'serviceMap:';
-    var index = policies.indexOf(separator) + separator.length;
-    var chars = policies.substring(index).split('');
-    // Parse just the JSON object
-    var obj = [];
-    var lb=rb=0;
-    for (var i = 0; i < chars.length; i++) {
-      c = chars[i];
-      if (c=='{') lb++;
-      if (c=='}') rb++;
-      obj.push(c);
-      if (lb>0 && lb==rb) break;
-    }
-    // Turn Javascript Object into JSON (FML -- can't aws just give us the JSON?)
-    var servicemap = obj.join('')
-    //   servicemap = obj.join.gsub(/\s/, '')
-    // Cleanup Exceptions
-    servicemap = servicemap.replace(/HasResource:\!([0-9]+)/g, 'HasResource:"!$1"');
-    servicemap = servicemap.replace(/ARNRegex:("[^"]*")/g, 'ARNRegex:"REMOVED"');
-    // turn objects into strings e.g. test:[] => "test":[]
-    servicemap = servicemap.replace(/([a-zA-Z0-9_]+):([\[{0-9"])/g, '"$1":$2');
+    var servicemap = policies.substring(policies.indexOf('{'));
     // verify that our json is correct
     servicemap = JSON.stringify(JSON.parse(servicemap), null, 2);
     fs.writeFile(`${__dirname}/servicemap.json`, servicemap, (err) => {
