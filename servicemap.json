@@ -4473,8 +4473,11 @@
         "DeleteLexicon",
         "DescribeVoices",
         "GetLexicon",
+        "GetSpeechSynthesisTask",
         "ListLexicons",
+        "ListSpeechSynthesisTasks",
         "PutLexicon",
+        "StartSpeechSynthesisTask",
         "SynthesizeSpeech"
       ],
       "ARNFormat": "arn:aws:polly:<region>:<accountID>:<relative-id>",
