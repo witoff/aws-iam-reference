@@ -432,10 +432,10 @@
         "AcceptCertificateTransfer",
         "AddThingToThingGroup",
         "AssociateTargetsWithJob",
-        "AttachPolicy",
-        "AttachPrincipalPolicy",
-        "AttachThingPrincipal",
-        "CancelCertificateTransfer",
+        "Att[20;1H[m[?2004l[?1l>[?1049lVim: Caught deadly signal HUP
+Vim: preserving files...
+Vim: Finished.
+[20;1H
         "CancelJob",
         "ClearDefaultAuthorizer",
         "Connect",
