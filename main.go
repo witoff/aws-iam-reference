@@ -8,7 +8,7 @@ import (
 )
 
 const PolicyUrl = "https://awspolicygen.s3.amazonaws.com/js/policies.js"
-const PolicyFilename = "servicemap.json"
+const PolicyFilename = "reference.json"
 
 func Check(err error) {
 	if err != nil {
@@ -16,7 +16,7 @@ func Check(err error) {
 	}
 }
 
-// Load the policymap, save to `servicemap.json` and print to stdout
+// Load the policymap, save to `reference.json` and print to stdout
 func main() {
 	// Download the policymap
 	resp, err := http.Get(PolicyUrl)
