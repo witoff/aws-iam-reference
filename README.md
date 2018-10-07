@@ -9,7 +9,7 @@ A simple means of extracting the AWS IAM Service Map, which includes all service
 
 **Update The Servicemap:**
 ```bash
-node generate.js
+go run main.go
 ```
 
 **Querying:**
@@ -45,11 +45,4 @@ jq '.["AWS WAF"].Actions' servicemap.json
 #   ...
 # ]
 
-```
-
-**Use the CLI:**
-```ruby
-  ./cli.rb list-services
-  ./cli.rb list-actions "Amazon RDS"
-  ./cli.rb find-actions "rds"
 ```
