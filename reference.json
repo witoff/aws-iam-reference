@@ -5800,6 +5800,16 @@
       "HasResource": false,
       "StringPrefix": "discovery"
     },
+    "Comprehend Medical": {
+      "ARNFormat": "arn:${Partition}:comprehendmedical:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
+      "ARNRegex": "^arn:${Partition}:comprehendmedical:.+:.+:.+",
+      "Actions": [
+        "DetectEntities",
+        "DetectPHI"
+      ],
+      "HasResource": false,
+      "StringPrefix": "comprehendmedical"
+    },
     "Data Pipeline": {
       "Actions": [
         "ActivatePipeline",
