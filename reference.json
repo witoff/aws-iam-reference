@@ -1014,6 +1014,28 @@
         "elasticbeanstalk:InApplication"
       ]
     },
+    "AWS Elemental MediaConnect": {
+      "ARNFormat": "arn:${Partition}:mediaconnect:${Region}:${Account}:\u003cnamespace\u003e:\u003crelative-id\u003e:\u003crelative-name\u003e",
+      "ARNRegex": "^arn:${Partition}:mediaconnect:.+",
+      "Actions": [
+        "AddFlowOutputs",
+        "CreateFlow",
+        "DeleteFlow",
+        "DescribeFlow",
+        "GrantFlowEntitlements",
+        "ListEntitlements",
+        "ListFlows",
+        "RemoveFlowOutput",
+        "RevokeFlowEntitlement",
+        "StartFlow",
+        "StopFlow",
+        "UpdateFlowEntitlement",
+        "UpdateFlowOutput",
+        "UpdateFlowSource"
+      ],
+      "HasResource": true,
+      "StringPrefix": "mediaconnect"
+    },
     "AWS Elemental MediaConvert": {
       "Actions": [
         "CancelJob",
