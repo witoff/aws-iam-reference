@@ -1904,6 +1904,23 @@
       "HasResource": false,
       "StringPrefix": "pricing"
     },
+    "AWS Private Marketplace": {
+      "Actions": [
+        "AssociateProductsWithPrivateMarketplace",
+        "CreatePrivateMarketplace",
+        "CreatePrivateMarketplaceProfile",
+        "DescribePrivateMarketplaceProducts",
+        "DescribePrivateMarketplaceProfile",
+        "DescribePrivateMarketplaceStatus",
+        "DisassociateProductsFromPrivateMarketplace",
+        "ListPrivateMarketplaceProducts",
+        "StartPrivateMarketplace",
+        "StopPrivateMarketplace",
+        "UpdatePrivateMarketplaceProfile"
+      ],
+      "HasResource": false,
+      "StringPrefix": "aws-marketplace"
+    },
     "AWS Resource Access Manager": {
       "ARNFormat": "arn:aws:ram:\u003cregion\u003e:\u003caccount-id\u003e:resource-share/\u003cresource-uuid\u003e",
       "ARNRegex": "^arn:aws:ram:.+:.+:.+",
