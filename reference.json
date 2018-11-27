@@ -5906,6 +5906,31 @@
         "elasticloadbalancing:ResourceTag/tag-key"
       ]
     },
+    "Global Accelerator": {
+      "ARNFormat": "arn:aws:globalaccelerator::\u003caccount\u003e:accelerator/\u003cAcceleratorId\u003e",
+      "ARNRegex": "^arn:aws:globalaccelerator::.+:.+",
+      "Actions": [
+        "CreateAccelerator",
+        "CreateEndpointGroup",
+        "CreateListener",
+        "DeleteAccelerator",
+        "DeleteEndpointGroup",
+        "DeleteListener",
+        "DescribeAccelerator",
+        "DescribeAcceleratorAttributes",
+        "DescribeEndpointGroup",
+        "DescribeListener",
+        "ListAccelerators",
+        "ListEndpointGroups",
+        "ListListeners",
+        "UpdateAccelerator",
+        "UpdateAcceleratorAttributes",
+        "UpdateEndpointGroup",
+        "UpdateListener"
+      ],
+      "HasResource": true,
+      "StringPrefix": "globalaccelerator"
+    },
     "Identity And Access Management": {
       "ARNFormat": "arn:aws:iam::\u003cnamespace\u003e:\u003crelative-id\u003e",
       "ARNRegex": "^arn:aws:iam::.+",
