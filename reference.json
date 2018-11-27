@@ -3386,6 +3386,7 @@
       "Actions": [
         "BatchGetItem",
         "BatchWriteItem",
+        "ConditionCheckItem",
         "CreateBackup",
         "CreateGlobalTable",
         "CreateTable",
@@ -3429,6 +3430,7 @@
       "StringPrefix": "dynamodb",
       "conditionKeys": [
         "dynamodb:Attributes",
+        "dynamodb:EnclosingOperation",
         "dynamodb:LeadingKeys",
         "dynamodb:ReturnConsumedCapacity",
         "dynamodb:ReturnValues",
