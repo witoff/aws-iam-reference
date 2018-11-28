@@ -2170,6 +2170,46 @@
         "secretsmanager:resource/AllowRotationLambdaArn"
       ]
     },
+    "AWS Security Hub": {
+      "ARNFormat": "arn:aws:securityhub:\u003cregion\u003e:\u003caccount_ID\u003e:.+",
+      "ARNRegex": "^arn:aws:securityhub:.+",
+      "Actions": [
+        "AcceptInvitation",
+        "BatchDisableStandards",
+        "BatchEnableStandards",
+        "BatchImportFindings",
+        "CreateInsight",
+        "CreateMembers",
+        "DeclineInvitations",
+        "DeleteInsight",
+        "DeleteInvitations",
+        "DeleteMembers",
+        "DisableImportFindingsForProduct",
+        "DisableSecurityHub",
+        "DisassociateFromMasterAccount",
+        "DisassociateMembers",
+        "EnableImportFindingsForProduct",
+        "EnableSecurityHub",
+        "GetEnabledStandards",
+        "GetFindings",
+        "GetInsightResults",
+        "GetInsights",
+        "GetInvitationsCount",
+        "GetMasterAccount",
+        "GetMembers",
+        "InviteMembers",
+        "ListEnabledProductsForImport",
+        "ListInvitations",
+        "ListMembers",
+        "UpdateFindings",
+        "UpdateInsight"
+      ],
+      "HasResource": true,
+      "StringPrefix": "securityhub",
+      "conditionKeys": [
+        "securityhub:TargetAccount"
+      ]
+    },
     "AWS Security Token Service": {
       "ARNFormat": "arn:aws:iam::\u003cnamespace\u003e:\u003crelative-id\u003e",
       "ARNRegex": "^arn:aws:iam::.+",
