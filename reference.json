@@ -5663,6 +5663,10 @@
       "ARNFormat": "arn:${Partition}:translate:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
       "ARNRegex": "^arn:${Partition}:translate:.+:.+:.+",
       "Actions": [
+        "DeleteTerminology",
+        "GetTerminology",
+        "ImportTerminology",
+        "ListTerminologies",
         "TranslateText"
       ],
       "HasResource": false,
