@@ -4672,6 +4672,18 @@
       "HasResource": false,
       "StringPrefix": "macie"
     },
+    "Amazon Managed Streaming for Kafka": {
+      "Actions": [
+        "CreateCluster",
+        "DeleteCluster",
+        "DescribeCluster",
+        "GetBootstrapBrokers",
+        "ListClusters",
+        "ListNodes"
+      ],
+      "HasResource": false,
+      "StringPrefix": "kafka"
+    },
     "Amazon Mechanical Turk": {
       "Actions": [
         "ApproveAssignment",
