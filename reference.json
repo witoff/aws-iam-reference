@@ -5755,6 +5755,20 @@
       "HasResource": true,
       "StringPrefix": "sumerian"
     },
+    "Amazon Textract": {
+      "ARNFormat": "arn:aws:textract:\u003cregion\u003e:\u003caccountID\u003e:\u003crelative-id\u003e",
+      "ARNRegex": "^arn:aws:textract::.+",
+      "Actions": [
+        "AnalyzeDocument",
+        "DetectDocumentText",
+        "GetDocumentAnalysis",
+        "GetDocumentTextDetection",
+        "StartDocumentAnalysis",
+        "StartDocumentTextDetection"
+      ],
+      "HasResource": false,
+      "StringPrefix": "textract"
+    },
     "Amazon Transcribe": {
       "ARNFormat": "arn:${Partition}:transcribe:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
       "ARNRegex": "^arn:${Partition}:transcribe:.+:.+:.+",
