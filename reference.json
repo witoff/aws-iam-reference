@@ -1676,6 +1676,32 @@
       "HasResource": true,
       "StringPrefix": "lambda"
     },
+    "AWS License Manager": {
+      "ARNFormat": "arn:aws:license-manager:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresourceType\u003e/\u003cresourceId\u003e",
+      "ARNRegex": "^arn:aws:license-manager:.+:.+:.+",
+      "Actions": [
+        "CreateLicenseConfiguration",
+        "DeleteLicenseConfiguration",
+        "GetLicenseConfiguration",
+        "GetServiceSettings",
+        "ListAssociationsForLicenseConfiguration",
+        "ListLicenseConfigurations",
+        "ListLicenseSpecificationsForResource",
+        "ListResourceInventory",
+        "ListTagsForResource",
+        "ListUsageForLicenseConfiguration",
+        "TagResource",
+        "UntagResource",
+        "UpdateLicenseConfiguration",
+        "UpdateLicenseSpecificationsForResource",
+        "UpdateServiceSettings"
+      ],
+      "HasResource": true,
+      "StringPrefix": "license-manager",
+      "conditionKeys": [
+        "aws:TagKeys"
+      ]
+    },
     "AWS Marketplace Management Portal": {
       "Actions": [
         "uploadFiles",
