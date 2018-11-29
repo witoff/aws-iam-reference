@@ -1666,9 +1666,10 @@
       ]
     },
     "AWS Lambda": {
-      "ARNFormat": "arn:aws:lambda:\u003cregion\u003e:\u003caccount\u003e:function:\u003cfunctionName\u003e",
+      "ARNFormat": "arn:aws:lambda:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e:\u003cresourceId\u003e",
       "ARNRegex": "^arn:aws:lambda:.+",
       "Actions": [
+        "AddLayerVersionPermission",
         "AddPermission",
         "CreateAlias",
         "CreateEventSourceMapping",
@@ -1677,22 +1678,29 @@
         "DeleteEventSourceMapping",
         "DeleteFunction",
         "DeleteFunctionConcurrency",
+        "DeleteLayerVersion",
         "EnableReplication",
         "GetAccountSettings",
         "GetAlias",
         "GetEventSourceMapping",
         "GetFunction",
         "GetFunctionConfiguration",
+        "GetLayerVersion",
+        "GetLayerVersionPolicy",
         "GetPolicy",
         "InvokeAsync",
         "InvokeFunction",
         "ListAliases",
         "ListEventSourceMappings",
         "ListFunctions",
+        "ListLayerVersions",
+        "ListLayers",
         "ListTags",
         "ListVersionsByFunction",
+        "PublishLayerVersion",
         "PublishVersion",
         "PutFunctionConcurrency",
+        "RemoveLayerVersionPermission",
         "RemovePermission",
         "TagResource",
         "UntagResource",
@@ -1702,7 +1710,12 @@
         "UpdateFunctionConfiguration"
       ],
       "HasResource": true,
-      "StringPrefix": "lambda"
+      "StringPrefix": "lambda",
+      "conditionKeys": [
+        "lambda:FunctionArn",
+        "lambda:Layer",
+        "lambda:Principal"
+      ]
     },
     "AWS License Manager": {
       "ARNFormat": "arn:aws:license-manager:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresourceType\u003e/\u003cresourceId\u003e",
