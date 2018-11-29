@@ -318,6 +318,34 @@
       "HasResource": true,
       "StringPrefix": "acm-pca"
     },
+    "AWS Cloud Map": {
+      "ARNFormat": "arn:aws:servicediscovery:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+      "ARNRegex": "^arn:aws:servicediscovery:.+",
+      "Actions": [
+        "CreateHttpNamespace",
+        "CreatePrivateDnsNamespace",
+        "CreatePublicDnsNamespace",
+        "CreateService",
+        "DeleteNamespace",
+        "DeleteService",
+        "DeregisterInstance",
+        "DiscoverInstances",
+        "GetInstance",
+        "GetInstancesHealthStatus",
+        "GetNamespace",
+        "GetOperation",
+        "GetService",
+        "ListInstances",
+        "ListNamespaces",
+        "ListOperations",
+        "ListServices",
+        "RegisterInstance",
+        "UpdateInstanceHeartbeatStatus",
+        "UpdateService"
+      ],
+      "HasResource": true,
+      "StringPrefix": "servicediscovery"
+    },
     "AWS Cloud9": {
       "ARNFormat": "arn:aws:cloud9:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource_type\u003e:\u003cresource_id\u003e",
       "ARNRegex": "^arn:aws:cloud9:.+:[0-9]+:.+:.+",
@@ -5178,32 +5206,6 @@
       ],
       "HasResource": true,
       "StringPrefix": "route53"
-    },
-    "Amazon Route 53 Auto Naming": {
-      "ARNFormat": "arn:aws:servicediscovery:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
-      "ARNRegex": "^arn:aws:servicediscovery:.+",
-      "Actions": [
-        "CreatePrivateDnsNamespace",
-        "CreatePublicDnsNamespace",
-        "CreateService",
-        "DeleteNamespace",
-        "DeleteService",
-        "DeregisterInstance",
-        "GetInstance",
-        "GetInstancesHealthStatus",
-        "GetNamespace",
-        "GetOperation",
-        "GetService",
-        "ListInstances",
-        "ListNamespaces",
-        "ListOperations",
-        "ListServices",
-        "RegisterInstance",
-        "UpdateInstanceHeartbeatStatus",
-        "UpdateService"
-      ],
-      "HasResource": true,
-      "StringPrefix": "servicediscovery"
     },
     "Amazon Route 53 Resolver": {
       "ARNFormat": "arn:aws:route53resolver:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource-id\u003e",
