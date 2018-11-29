@@ -2801,6 +2801,17 @@
       "HasResource": true,
       "StringPrefix": "waf-regional"
     },
+    "AWS Well-Architected Tool": {
+      "ARNFormat": "arn:aws:wellarchitected:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+      "ARNRegex": "^arn:${Partition}:wellarchitected:.+",
+      "Actions": [
+        "CreateWorkload",
+        "GetWorkload",
+        "ListWorkloads"
+      ],
+      "HasResource": true,
+      "StringPrefix": "wellarchitected"
+    },
     "AWS XRay": {
       "Actions": [
         "BatchGetTraces",
