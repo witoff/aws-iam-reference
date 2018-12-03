@@ -2330,6 +2330,42 @@
         "sts:ExternalId"
       ]
     },
+    "AWS Server Migration Service automates the migration of your on-premises VMware vSphere or Microsoft Hyper-V/SCVMM virtual machines to the AWS Cloud.": {
+      "ARNFormat": "arn:aws:\u003cserviceName\u003e:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+      "ARNRegex": "^arn:aws:\u003cserviceName\u003e:.+:.+:.+",
+      "Actions": [
+        "CreateApp",
+        "CreateReplicationJob",
+        "DeleteApp",
+        "DeleteAppLaunchConfiguration",
+        "DeleteAppReplicationConfiguration",
+        "DeleteReplicationJob",
+        "DeleteServerCatalog",
+        "DisassociateConnectors",
+        "GenerateChangeSet",
+        "GenerateTemplate",
+        "GetApp",
+        "GetAppLaunchConfiguration",
+        "GetAppReplicationConfiguration",
+        "GetConnectors",
+        "GetReplicationJobs",
+        "GetReplicationRuns",
+        "GetServers",
+        "ImportServerCatalog",
+        "LaunchApp",
+        "ListApps",
+        "PutAppLaunchConfiguration",
+        "PutAppReplicationConfiguration",
+        "StartAppReplication",
+        "StartOnDemandReplicationRun",
+        "StopAppReplication",
+        "TerminateApp",
+        "UpdateApp",
+        "UpdateReplicationJob"
+      ],
+      "HasResource": false,
+      "StringPrefix": "sms"
+    },
     "AWS Serverless Application Repository": {
       "ARNFormat": "arn:aws:serverlessrepo:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
       "ARNRegex": "^arn:aws:serverlessrepo:.+:.+:.+",
