@@ -1785,6 +1785,7 @@
       "Actions": [
         "BatchMeterUsage",
         "MeterUsage",
+        "RegisterUsage",
         "ResolveCustomer"
       ],
       "HasResource": false,
