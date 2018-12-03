@@ -1604,6 +1604,33 @@
         "iotanalytics:ResourceTag/${TagKey}"
       ]
     },
+    "AWS IoT Events": {
+      "ARNFormat": "arn:aws:iotevents:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+      "ARNRegex": "^arn:aws:iotevents:.+",
+      "Actions": [
+        "BatchPutMessage",
+        "CreateDetectorModel",
+        "CreateInput",
+        "DeleteDetectorModel",
+        "DeleteInput",
+        "DescribeDetector",
+        "DescribeDetectorModel",
+        "DescribeInput",
+        "DescribeLoggingOptions",
+        "ListDetectorModelVersions",
+        "ListDetectorModels",
+        "ListDetectors",
+        "ListInputs",
+        "PutLoggingOptions",
+        "UpdateDetectorModel",
+        "UpdateInput"
+      ],
+      "HasResource": true,
+      "StringPrefix": "iotevents",
+      "conditionKeys": [
+        "iotevents:KeyValue"
+      ]
+    },
     "AWS Key Management Service": {
       "ARNFormat": "arn:aws:kms:\u003cregion\u003e:\u003caccount_id\u003e:\u003cresource_type\u003e/\u003cid\u003e",
       "ARNRegex": "^arn:aws:kms:.+",
