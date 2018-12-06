@@ -702,6 +702,7 @@
       "ARNFormat": "arn:\u003cpartition\u003e:config:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceId\u003e",
       "ARNRegex": "arn:\u003cpartition\u003e:config:.+",
       "Actions": [
+        "BatchGetAggregateResourceConfig",
         "BatchGetResourceConfig",
         "DeleteAggregationAuthorization",
         "DeleteConfigRule",
@@ -710,6 +711,7 @@
         "DeleteDeliveryChannel",
         "DeleteEvaluationResults",
         "DeletePendingAggregationRequest",
+        "DeleteRetentionConfiguration",
         "DeliverConfigSnapshot",
         "DescribeAggregateComplianceByConfigRules",
         "DescribeAggregationAuthorizations",
@@ -724,15 +726,20 @@
         "DescribeDeliveryChannelStatus",
         "DescribeDeliveryChannels",
         "DescribePendingAggregationRequests",
+        "DescribeRetentionConfigurations",
         "GetAggregateComplianceDetailsByConfigRule",
         "GetAggregateConfigRuleComplianceSummary",
+        "GetAggregateDiscoveredResourceCounts",
+        "GetAggregateResourceConfig",
         "GetComplianceDetailsByConfigRule",
         "GetComplianceDetailsByResource",
         "GetComplianceSummaryByConfigRule",
         "GetComplianceSummaryByResourceType",
+        "GetDiscoveredResourceCounts",
         "GetResourceConfigHistory",
         "GetResources",
         "GetTagKeys",
+        "ListAggregateDiscoveredResources",
         "ListDiscoveredResources",
         "PutAggregationAuthorization",
         "PutConfigRule",
@@ -740,6 +747,7 @@
         "PutConfigurationRecorder",
         "PutDeliveryChannel",
         "PutEvaluations",
+        "PutRetentionConfiguration",
         "StartConfigRulesEvaluation",
         "StartConfigurationRecorder",
         "StopConfigurationRecorder"
@@ -2042,20 +2050,20 @@
       "ARNFormat": "arn:aws:ram:\u003cregion\u003e:\u003caccount-id\u003e:resource-share/\u003cresource-uuid\u003e",
       "ARNRegex": "^arn:aws:ram:.+:.+:.+",
       "Actions": [
-        "AcceptResourceShareInvitations",
+        "AcceptResourceShareInvitation",
         "AssociateResourceShare",
         "CreateResourceShare",
         "DeleteResourceShare",
         "DisassociateResourceShare",
-        "EnableSharingWithAwsOrganizations",
+        "EnableSharingWithAwsOrganization",
         "GetResourceShareAssociations",
         "GetResourceShareInvitations",
         "GetResourceShares",
         "ListPrincipals",
         "ListResources",
-        "RejectResourceShareInvitations",
-        "TagResourceShare",
-        "UntagResourceShare",
+        "RejectResourceShareInvitation",
+        "TagResource",
+        "UntagResource",
         "UpdateResourceShare"
       ],
       "HasResource": true,
@@ -4720,8 +4728,10 @@
       "Actions": [
         "CreateBroker",
         "CreateConfiguration",
+        "CreateTags",
         "CreateUser",
         "DeleteBroker",
+        "DeleteTags",
         "DeleteUser",
         "DescribeBroker",
         "DescribeConfiguration",
@@ -4730,6 +4740,7 @@
         "ListBrokers",
         "ListConfigurationRevisions",
         "ListConfigurations",
+        "ListTags",
         "ListUsers",
         "RebootBroker",
         "UpdateBroker",
@@ -5703,7 +5714,7 @@
         "sagemaker:ResourceTag/tag-key"
       ]
     },
-    "Amazon Session Manager Messsage Gateway Service": {
+    "Amazon Session Manager Message Gateway Service": {
       "Actions": [
         "CreateControlChannel",
         "CreateDataChannel",
@@ -6394,11 +6405,10 @@
       "Actions": [
         "DELETE",
         "GET",
-        "HEAD",
-        "OPTIONS",
         "PATCH",
         "POST",
-        "PUT"
+        "PUT",
+        "UpdateRestApiPolicy"
       ],
       "HasResource": true,
       "StringPrefix": "apigateway"
