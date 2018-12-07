@@ -5083,7 +5083,9 @@
         "RestoreDBInstanceFromDBSnapshot",
         "RestoreDBInstanceToPointInTime",
         "RevokeDBSecurityGroupIngress",
+        "StartDBCluster",
         "StartDBInstance",
+        "StopDBCluster",
         "StopDBInstance"
       ],
       "HasResource": true,
