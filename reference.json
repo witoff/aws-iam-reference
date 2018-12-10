@@ -1191,6 +1191,8 @@
       "StringPrefix": "fms"
     },
     "AWS Glue": {
+      "ARNFormat": "arn:aws:glue:\u003cregion\u003e:\u003caccountID\u003e:\u003cresourceType\u003e/\u003cresourcePath\u003e",
+      "ARNRegex": "^arn:aws:glue:.+:.+",
       "Actions": [
         "BatchCreatePartition",
         "BatchDeleteConnection",
@@ -1205,6 +1207,7 @@
         "CreateJob",
         "CreatePartition",
         "CreateScript",
+        "CreateSecurityConfiguration",
         "CreateTable",
         "CreateTrigger",
         "CreateUserDefinedFunction",
@@ -1215,6 +1218,8 @@
         "DeleteDevEndpoint",
         "DeleteJob",
         "DeletePartition",
+        "DeleteResourcePolicy",
+        "DeleteSecurityConfiguration",
         "DeleteTable",
         "DeleteTrigger",
         "DeleteUserDefinedFunction",
@@ -1226,6 +1231,7 @@
         "GetCrawler",
         "GetCrawlerMetrics",
         "GetCrawlers",
+        "GetDataCatalogEncryptionSettings",
         "GetDatabase",
         "GetDatabases",
         "GetDataflowGraph",
@@ -1239,6 +1245,9 @@
         "GetPartition",
         "GetPartitions",
         "GetPlan",
+        "GetResourcePolicy",
+        "GetSecurityConfiguration",
+        "GetSecurityConfigurations",
         "GetTable",
         "GetTableVersions",
         "GetTables",
@@ -1247,6 +1256,8 @@
         "GetUserDefinedFunction",
         "GetUserDefinedFunctions",
         "ImportCatalogToGlue",
+        "PutDataCatalogEncryptionSettings",
+        "PutResourcePolicy",
         "ResetJobBookmark",
         "StartCrawler",
         "StartCrawlerSchedule",
@@ -1266,7 +1277,7 @@
         "UpdateTrigger",
         "UpdateUserDefinedFunction"
       ],
-      "HasResource": false,
+      "HasResource": true,
       "StringPrefix": "glue"
     },
     "AWS Greengrass": {
