@@ -3071,7 +3071,9 @@
         "BatchGetQueryExecution",
         "CancelQueryExecution",
         "CreateNamedQuery",
+        "CreateWorkGroup",
         "DeleteNamedQuery",
+        "DeleteWorkGroup",
         "GetCatalogs",
         "GetExecutionEngine",
         "GetExecutionEngines",
@@ -3084,11 +3086,14 @@
         "GetQueryResultsStream",
         "GetTable",
         "GetTables",
+        "GetWorkGroup",
         "ListNamedQueries",
         "ListQueryExecutions",
+        "ListWorkGroups",
         "RunQuery",
         "StartQueryExecution",
-        "StopQueryExecution"
+        "StopQueryExecution",
+        "UpdateWorkGroup"
       ],
       "HasResource": false,
       "StringPrefix": "athena"
@@ -4244,7 +4249,10 @@
         "CreateCluster",
         "DeleteCluster",
         "DescribeCluster",
-        "ListClusters"
+        "DescribeUpdate",
+        "ListClusters",
+        "ListUpdates",
+        "UpdateClusterVersion"
       ],
       "HasResource": true,
       "StringPrefix": "eks"
