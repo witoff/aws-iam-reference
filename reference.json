@@ -2758,6 +2758,35 @@
         "ssm:resourceTag/tag-key"
       ]
     },
+    "AWS Transfer for SFTP": {
+      "ARNFormat": "arn:aws:transfer:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+      "ARNRegex": "^arn:aws:transfer:.+:.+:.+",
+      "Actions": [
+        "CreateServer",
+        "CreateUser",
+        "DeleteServer",
+        "DeleteSshPublicKey",
+        "DeleteUser",
+        "DescribeServer",
+        "DescribeUser",
+        "ImportSshPublicKey",
+        "ListServers",
+        "ListTagsForResource",
+        "ListUsers",
+        "StartServer",
+        "StopServer",
+        "TagResource",
+        "UntagResource",
+        "UpdateServer",
+        "UpdateUser"
+      ],
+      "HasResource": true,
+      "StringPrefix": "transfer",
+      "conditionKeys": [
+        "aws:RequestTag/tag-key",
+        "aws:TagKeys"
+      ]
+    },
     "AWS Trusted Advisor": {
       "ARNFormat": "arn:aws:trustedadvisor:*:\u003caccount_ID\u003e:checks/{category}/{checkId}",
       "ARNRegex": "arn:aws:trustedadvisor:*",
