@@ -2972,14 +2972,27 @@
       "HasResource": true,
       "StringPrefix": "wellarchitected"
     },
-    "AWS XRay": {
+    "AWS X-Ray": {
       "Actions": [
         "BatchGetTraces",
+        "CreateGroup",
+        "CreateSamplingRule",
+        "DeleteGroup",
+        "DeleteSamplingRule",
+        "GetEncryptionConfig",
+        "GetGroup",
+        "GetGroups",
+        "GetSamplingRules",
+        "GetSamplingStatisticSummaries",
+        "GetSamplingTargets",
         "GetServiceGraph",
         "GetTraceGraph",
         "GetTraceSummaries",
+        "PutEncryptionConfig",
         "PutTelemetryRecords",
-        "PutTraceSegments"
+        "PutTraceSegments",
+        "UpdateGroup",
+        "UpdateSamplingRule"
       ],
       "HasResource": false,
       "StringPrefix": "xray"
