@@ -2218,6 +2218,7 @@
         "GetPermissionSet",
         "GetPermissionsPolicy",
         "GetProfile",
+        "GetSSOConfiguration",
         "GetSSOStatus",
         "GetTrust",
         "GetUserPoolInfo",
@@ -2255,6 +2256,7 @@
         "UpdateDirectoryAssociation",
         "UpdateGroup",
         "UpdateProfile",
+        "UpdateSSOConfiguration",
         "UpdateTrust",
         "UpdateUser"
       ],
