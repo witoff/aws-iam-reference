@@ -2288,7 +2288,8 @@
         "RemoveMemberFromGroup",
         "UpdateGroup",
         "UpdatePassword",
-        "UpdateUser"
+        "UpdateUser",
+        "VerifyEmail"
       ],
       "HasResource": false,
       "StringPrefix": "sso-directory"
