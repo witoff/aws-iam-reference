@@ -3150,6 +3150,8 @@
         "AddDomain",
         "AddOrUpdateGroups",
         "AuthorizeDirectory",
+        "BatchSuspendUser",
+        "BatchUnsuspendUser",
         "BatchUpdateUser",
         "ConnectDirectory",
         "CreateAccount",
