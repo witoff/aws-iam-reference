@@ -3749,6 +3749,7 @@
       "Actions": [
         "BatchGetItem",
         "BatchWriteItem",
+        "ConditionCheckItem",
         "CreateCluster",
         "CreateParameterGroup",
         "CreateSubnetGroup",
@@ -3763,10 +3764,8 @@
         "DescribeParameterGroups",
         "DescribeParameters",
         "DescribeSubnetGroups",
-        "DescribeTable",
         "GetItem",
         "IncreaseReplicationFactor",
-        "ListTables",
         "ListTags",
         "PutItem",
         "Query",
@@ -3780,7 +3779,10 @@
         "UpdateSubnetGroup"
       ],
       "HasResource": true,
-      "StringPrefix": "dax"
+      "StringPrefix": "dax",
+      "conditionKeys": [
+        "dax:EnclosingOperation"
+      ]
     },
     "Amazon EC2": {
       "ARNFormat": "arn:aws:ec2:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourcePath\u003e",
