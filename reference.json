@@ -2135,7 +2135,7 @@
       "StringPrefix": "resource-groups"
     },
     "AWS RoboMaker": {
-      "ARNFormat": "arn:${Partition}:robomaker:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e",
+      "ARNFormat": "arn:${Partition}:robomaker:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
       "ARNRegex": "^arn:${Partition}:robomaker:.+:.+:.+",
       "Actions": [
         "BatchDescribeSimulationJob",
