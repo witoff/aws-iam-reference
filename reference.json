@@ -3649,7 +3649,9 @@
         "StopDominantLanguageDetectionJob",
         "StopEntitiesDetectionJob",
         "StopKeyPhrasesDetectionJob",
-        "StopSentimentDetectionJob"
+        "StopSentimentDetectionJob",
+        "StopTrainingDocumentClassifier",
+        "StopTrainingEntityRecognizer"
       ],
       "HasResource": true,
       "StringPrefix": "comprehend"
