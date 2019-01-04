@@ -4324,7 +4324,8 @@
         "DescribeMountTargetSecurityGroups",
         "DescribeMountTargets",
         "DescribeTags",
-        "ModifyMountTargetSecurityGroups"
+        "ModifyMountTargetSecurityGroups",
+        "UpdateFileSystem"
       ],
       "HasResource": true,
       "StringPrefix": "elasticfilesystem"
@@ -4709,12 +4710,22 @@
         "DeleteDeliveryStream",
         "DescribeDeliveryStream",
         "ListDeliveryStreams",
+        "ListTagsForDeliveryStream",
         "PutRecord",
         "PutRecordBatch",
+        "StartDeliveryStreamEncryption",
+        "StopDeliveryStreamEncryption",
+        "TagDeliveryStream",
+        "UntagDeliveryStream",
         "UpdateDestination"
       ],
       "HasResource": true,
-      "StringPrefix": "firehose"
+      "StringPrefix": "firehose",
+      "conditionKeys": [
+        "aws:RequestTag/tag-key",
+        "aws:ResourceTag/tag-key",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Kinesis Video Streams": {
       "ARNFormat": "arn:aws:kinesisvideo:\u003cregion\u003e:\u003caccount_ID\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e/\u003ccreationTime\u003e",
