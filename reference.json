@@ -6010,6 +6010,7 @@
         "ListVolumeInitiators",
         "ListVolumeRecoveryPoints",
         "ListVolumes",
+        "NotifyWhenUploaded",
         "RefreshCache",
         "RemoveTagsFromResource",
         "ResetCache",
