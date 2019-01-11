@@ -4177,11 +4177,12 @@
         "autoscaling:LoadBalancerNames",
         "autoscaling:MaxSize",
         "autoscaling:MinSize",
-        "autoscaling:ResourceTag/tag-key",
+        "autoscaling:ResourceTag/${TagKey}",
         "autoscaling:SpotPrice",
         "autoscaling:TargetGroupARNs",
         "autoscaling:VPCZoneIdentifiers",
-        "aws:RequestTag/"
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
       ]
     },
     "Amazon EC2 Container Registry": {
