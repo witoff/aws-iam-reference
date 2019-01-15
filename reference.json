@@ -2793,6 +2793,7 @@
         "StartServer",
         "StopServer",
         "TagResource",
+        "TestIdentityProvider",
         "UntagResource",
         "UpdateServer",
         "UpdateUser"
@@ -2800,7 +2801,7 @@
       "HasResource": true,
       "StringPrefix": "transfer",
       "conditionKeys": [
-        "aws:RequestTag/tag-key",
+        "aws:RequestTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
