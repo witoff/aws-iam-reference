@@ -296,13 +296,15 @@
         "AddTagsToCertificate",
         "DeleteCertificate",
         "DescribeCertificate",
+        "ExportCertificate",
         "GetCertificate",
         "ImportCertificate",
         "ListCertificates",
         "ListTagsForCertificate",
         "RemoveTagsFromCertificate",
         "RequestCertificate",
-        "ResendValidationEmail"
+        "ResendValidationEmail",
+        "UpdateCertificateOptions"
       ],
       "HasResource": true,
       "StringPrefix": "acm"
