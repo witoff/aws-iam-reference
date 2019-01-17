@@ -2283,6 +2283,7 @@
         "GetPermissionSet",
         "GetPermissionsPolicy",
         "GetProfile",
+        "GetSSOConfiguration",
         "GetSSOStatus",
         "GetTrust",
         "GetUserPoolInfo",
@@ -2320,6 +2321,7 @@
         "UpdateDirectoryAssociation",
         "UpdateGroup",
         "UpdateProfile",
+        "UpdateSSOConfiguration",
         "UpdateTrust",
         "UpdateUser"
       ],
@@ -2351,7 +2353,8 @@
         "RemoveMemberFromGroup",
         "UpdateGroup",
         "UpdatePassword",
-        "UpdateUser"
+        "UpdateUser",
+        "VerifyEmail"
       ],
       "HasResource": false,
       "StringPrefix": "sso-directory"
