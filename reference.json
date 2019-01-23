@@ -6209,6 +6209,32 @@
       "HasResource": false,
       "StringPrefix": "workdocs"
     },
+    "Amazon WorkLink": {
+      "ARNFormat": "arn:${Partition}:worklink::${account}:${resourceType}/${resourcePath}",
+      "ARNRegex": "^arn:${Partition}:worklink:.+",
+      "Actions": [
+        "AssociateWebsiteCertificateAuthority",
+        "CreateFleet",
+        "DeleteFleet",
+        "DescribeCompanyNetworkConfiguration",
+        "DescribeDevice",
+        "DescribeDevicePolicyConfiguration",
+        "DescribeFleetMetadata",
+        "DescribeIdentityProviderConfiguration",
+        "DescribeWebsiteCertificateAuthority",
+        "DisassociateWebsiteCertificateAuthority",
+        "ListDevices",
+        "ListFleets",
+        "ListWebsiteCertificateAuthorities",
+        "SignOutUser",
+        "UpdateCompanyNetworkConfiguration",
+        "UpdateDevicePolicyConfiguration",
+        "UpdateFleetMetadata",
+        "UpdateIdentityProviderConfiguration"
+      ],
+      "HasResource": true,
+      "StringPrefix": "worklink"
+    },
     "Amazon WorkMail": {
       "Actions": [
         "AddMembersToGroup",
