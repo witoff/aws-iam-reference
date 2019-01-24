@@ -4810,8 +4810,8 @@
       "HasResource": true,
       "StringPrefix": "firehose",
       "conditionKeys": [
-        "aws:RequestTag/tag-key",
-        "aws:ResourceTag/tag-key",
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
