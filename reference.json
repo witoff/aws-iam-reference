@@ -6388,6 +6388,44 @@
         "datapipeline:workerGroup"
       ]
     },
+    "DataSync": {
+      "ARNFormat": "arn:${Partition}:datasync:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e",
+      "ARNRegex": "^arn:${Partition}:datasync:.+",
+      "Actions": [
+        "CancelTaskExecution",
+        "CreateAgent",
+        "CreateLocationEfs",
+        "CreateLocationNfs",
+        "CreateLocationS3",
+        "CreateTask",
+        "DeleteAgent",
+        "DeleteLocation",
+        "DeleteTask",
+        "DescribeAgent",
+        "DescribeLocationEfs",
+        "DescribeLocationNfs",
+        "DescribeLocationS3",
+        "DescribeTask",
+        "DescribeTaskExecution",
+        "ListAgents",
+        "ListLocations",
+        "ListTagsForResource",
+        "ListTaskExecutions",
+        "ListTasks",
+        "StartTaskExecution",
+        "TagResource",
+        "UntagResource",
+        "UpdateAgent",
+        "UpdateTask"
+      ],
+      "HasResource": true,
+      "StringPrefix": "datasync",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
     "Elastic Load Balancing": {
       "ARNFormat": "arn:aws:elasticloadbalancing:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceid\u003e",
       "ARNRegex": "^arn:aws:elasticloadbalancing:.+",
