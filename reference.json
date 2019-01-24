@@ -4264,31 +4264,6 @@
         "aws:TagKeys"
       ]
     },
-    "Amazon EC2 Container Registry": {
-      "ARNFormat": "arn:aws:ecr:\u003cregion\u003e:\u003caccount_ID\u003e:repository/\u003crepository_name\u003e",
-      "ARNRegex": "arn:aws:ecr+:[^:]+:[0-9]{12}:repository/.*",
-      "Actions": [
-        "BatchCheckLayerAvailability",
-        "BatchDeleteImage",
-        "BatchGetImage",
-        "CompleteLayerUpload",
-        "CreateRepository",
-        "DeleteRepository",
-        "DeleteRepositoryPolicy",
-        "DescribeImages",
-        "DescribeRepositories",
-        "GetAuthorizationToken",
-        "GetDownloadUrlForLayer",
-        "GetRepositoryPolicy",
-        "InitiateLayerUpload",
-        "ListImages",
-        "PutImage",
-        "SetRepositoryPolicy",
-        "UploadLayerPart"
-      ],
-      "HasResource": true,
-      "StringPrefix": "ecr"
-    },
     "Amazon ElastiCache": {
       "Actions": [
         "AddTagsToResource",
@@ -4332,6 +4307,45 @@
       ],
       "HasResource": false,
       "StringPrefix": "elasticache"
+    },
+    "Amazon Elastic Container Registry": {
+      "ARNFormat": "arn:aws:ecr:\u003cregion\u003e:\u003caccount_ID\u003e:repository/\u003crepository_name\u003e",
+      "ARNRegex": "arn:aws:ecr+:[^:]+:[0-9]{12}:repository/.*",
+      "Actions": [
+        "BatchCheckLayerAvailability",
+        "BatchDeleteImage",
+        "BatchGetImage",
+        "CompleteLayerUpload",
+        "CreateRepository",
+        "DeleteLifecyclePolicy",
+        "DeleteRepository",
+        "DeleteRepositoryPolicy",
+        "DescribeImages",
+        "DescribeRepositories",
+        "GetAuthorizationToken",
+        "GetDownloadUrlForLayer",
+        "GetLifecyclePolicy",
+        "GetLifecyclePolicyPreview",
+        "GetRepositoryPolicy",
+        "InitiateLayerUpload",
+        "ListImages",
+        "ListTagsForResource",
+        "PutImage",
+        "PutLifecyclePolicy",
+        "SetRepositoryPolicy",
+        "StartLifecyclePolicyPreview",
+        "TagResource",
+        "UntagResource",
+        "UploadLayerPart"
+      ],
+      "HasResource": true,
+      "StringPrefix": "ecr",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ecr:ResourceTag/${TagKey}"
+      ]
     },
     "Amazon Elastic Container Service": {
       "ARNFormat": "arn:aws:ecs:\u003cregion\u003e:\u003caccount_ID\u003e:\u003cresource_type\u003e/\u003crelative_ID\u003e",
