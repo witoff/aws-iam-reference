@@ -4409,6 +4409,7 @@
       "Actions": [
         "CreateCluster",
         "CreateService",
+        "DeleteAccountSettings",
         "DeleteAttributes",
         "DeleteCluster",
         "DeleteService",
@@ -4420,6 +4421,7 @@
         "DescribeTaskDefinition",
         "DescribeTasks",
         "DiscoverPollEndpoint",
+        "ListAccountSettings",
         "ListAttributes",
         "ListClusters",
         "ListContainerInstances",
@@ -4429,6 +4431,8 @@
         "ListTaskDefinitions",
         "ListTasks",
         "Poll",
+        "PutAccountSetting",
+        "PutAccountSettingDefault",
         "PutAttributes",
         "RegisterContainerInstance",
         "RegisterTaskDefinition",
@@ -4448,7 +4452,9 @@
       "StringPrefix": "ecs",
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ecs:ResourceTag/${TagKey}",
         "ecs:cluster",
         "ecs:container-instances"
       ]
