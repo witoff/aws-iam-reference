@@ -3206,6 +3206,8 @@
       ]
     },
     "Amazon Athena": {
+      "ARNFormat": "arn:${Partition}:athena:${Region}:${Account}:workgroup/${WorkGroupName}",
+      "ARNRegex": "^arn:${Partition}:athena:.+",
       "Actions": [
         "BatchGetNamedQuery",
         "BatchGetQueryExecution",
@@ -3229,14 +3231,22 @@
         "GetWorkGroup",
         "ListNamedQueries",
         "ListQueryExecutions",
+        "ListTagsForResource",
         "ListWorkGroups",
         "RunQuery",
         "StartQueryExecution",
         "StopQueryExecution",
+        "TagResource",
+        "UntagResource",
         "UpdateWorkGroup"
       ],
-      "HasResource": false,
-      "StringPrefix": "athena"
+      "HasResource": true,
+      "StringPrefix": "athena",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Chime": {
       "Actions": [
