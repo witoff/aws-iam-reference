@@ -1631,7 +1631,7 @@
       "ARNRegex": "^arn:aws:iot1click:.+:[0-9]+:.+",
       "Actions": [
         "AssociateDeviceWithPlacement",
-        "ClaimDeviceByClaimCode",
+        "ClaimDevicesByClaimCode",
         "CreatePlacement",
         "CreateProject",
         "DeletePlacement",
@@ -1655,7 +1655,12 @@
         "UpdateProject"
       ],
       "HasResource": true,
-      "StringPrefix": "iot1click"
+      "StringPrefix": "iot1click",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS IoT Analytics": {
       "ARNFormat": "arn:aws:iotanalytics:\u003cregion\u003e:\u003caccount_ID\u003e:\u003ctype\u003e/\u003cname\u003e",
