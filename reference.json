@@ -3214,7 +3214,10 @@
       "HasResource": true,
       "StringPrefix": "appstream",
       "conditionKeys": [
-        "appstream:userId"
+        "appstream:userId",
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
       ]
     },
     "Amazon Athena": {
