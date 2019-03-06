@@ -2714,15 +2714,23 @@
         "ListActivities",
         "ListExecutions",
         "ListStateMachines",
+        "ListTagsForResource",
         "SendTaskFailure",
         "SendTaskHeartbeat",
         "SendTaskSuccess",
         "StartExecution",
         "StopExecution",
+        "TagResource",
+        "UntagResource",
         "UpdateStateMachine"
       ],
       "HasResource": true,
-      "StringPrefix": "states"
+      "StringPrefix": "states",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Support": {
       "Actions": [
