@@ -610,6 +610,7 @@
         "BatchGetRepositories",
         "CancelUploadArchive",
         "CreateBranch",
+        "CreateCommit",
         "CreatePullRequest",
         "CreateRepository",
         "DeleteBranch",
@@ -658,7 +659,10 @@
         "UploadArchive"
       ],
       "HasResource": true,
-      "StringPrefix": "codecommit"
+      "StringPrefix": "codecommit",
+      "conditionKeys": [
+        "codecommit:References"
+      ]
     },
     "AWS CodeDeploy": {
       "ARNFormat": "arn:aws:codedeploy:region:account:resource-type:resource-specifier",
