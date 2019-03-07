@@ -3324,7 +3324,7 @@
         "RenameAccount",
         "RenewDelegate",
         "ResetAccountResource",
-        "ResetPersonalPin",
+        "ResetPersonalPIN",
         "RetrieveDataExports",
         "StartDataExport",
         "SubmitSupportRequest",
