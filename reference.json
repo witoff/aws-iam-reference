@@ -1224,11 +1224,20 @@
         "DescribeOriginEndpoint",
         "ListChannels",
         "ListOriginEndpoints",
+        "ListTagsForResource",
+        "RotateIngestEndpointCredentials",
+        "TagResource",
+        "UntagResource",
         "UpdateChannel",
         "UpdateOriginEndpoint"
       ],
       "HasResource": true,
-      "StringPrefix": "mediapackage"
+      "StringPrefix": "mediapackage",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Elemental MediaStore": {
       "ARNFormat": "arn:aws:mediastore:\u003cRegion\u003e:\u003cAccount\u003e:\u003cResource\u003e",
