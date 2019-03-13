@@ -838,7 +838,10 @@
       "ARNRegex": "^arn:aws:ce::.+:.+",
       "Actions": [
         "GetCostAndUsage",
+        "GetCostForecast",
         "GetDimensionValues",
+        "GetReservationCoverage",
+        "GetReservationPurchaseRecommendation",
         "GetReservationUtilization",
         "GetTags"
       ],
