@@ -349,6 +349,7 @@
         "ListCertificates",
         "ListTagsForCertificate",
         "RemoveTagsFromCertificate",
+        "RenewCertificate",
         "RequestCertificate",
         "ResendValidationEmail",
         "UpdateCertificateOptions"
@@ -362,7 +363,9 @@
       "Actions": [
         "CreateCertificateAuthority",
         "CreateCertificateAuthorityAuditReport",
+        "CreatePermission",
         "DeleteCertificateAuthority",
+        "DeletePermission",
         "DescribeCertificateAuthority",
         "DescribeCertificateAuthorityAuditReport",
         "GetCertificate",
@@ -371,6 +374,7 @@
         "ImportCertificateAuthorityCertificate",
         "IssueCertificate",
         "ListCertificateAuthorities",
+        "ListPermissions",
         "ListTags",
         "RestoreCertificateAuthority",
         "RevokeCertificate",
@@ -379,7 +383,12 @@
         "UpdateCertificateAuthority"
       ],
       "HasResource": true,
-      "StringPrefix": "acm-pca"
+      "StringPrefix": "acm-pca",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Cloud Map": {
       "ARNFormat": "arn:aws:servicediscovery:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
