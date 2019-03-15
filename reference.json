@@ -6165,10 +6165,11 @@
       "HasResource": true,
       "StringPrefix": "sagemaker",
       "conditionKeys": [
-        "aws:RequestTag/tag-key",
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "sagemaker:ResourceTag/",
-        "sagemaker:ResourceTag/tag-key"
+        "sagemaker:ResourceTag/${TagKey}"
       ]
     },
     "Amazon Session Manager Message Gateway Service": {
