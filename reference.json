@@ -1279,6 +1279,26 @@
       "HasResource": true,
       "StringPrefix": "mediastore"
     },
+    "AWS Elemental MediaTailor": {
+      "ARNFormat": "arn:aws:mediatailor:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource-name\u003e",
+      "ARNRegex": "^arn:aws:mediatailor:.+:.+:.+",
+      "Actions": [
+        "DeletePlaybackConfiguration",
+        "GetPlaybackConfiguration",
+        "ListPlaybackConfigurations",
+        "ListTagsForResource",
+        "PutPlaybackConfiguration",
+        "TagResource",
+        "UntagResource"
+      ],
+      "HasResource": true,
+      "StringPrefix": "mediatailor",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
     "AWS Firewall Manager": {
       "ARNFormat": "arn:aws:fms:\u003cregion\u003e:\u003caccount_id\u003e:\u003cresource\u003e/\u003cresource_id\u003e",
       "ARNRegex": "^arn:aws:fms:.+:[0-9]+:.+/.+",
