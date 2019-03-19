@@ -6353,6 +6353,7 @@
         "AddTagsToResource",
         "AddUploadBuffer",
         "AddWorkingStorage",
+        "AttachVolume",
         "CancelArchival",
         "CancelRetrieval",
         "CreateCachediSCSIVolume",
@@ -6388,6 +6389,7 @@
         "DescribeUploadBuffer",
         "DescribeVTLDevices",
         "DescribeWorkingStorage",
+        "DetachVolume",
         "DisableGateway",
         "JoinDomain",
         "ListFileShares",
@@ -6419,7 +6421,12 @@
         "UpdateVTLDeviceType"
       ],
       "HasResource": true,
-      "StringPrefix": "storagegateway"
+      "StringPrefix": "storagegateway",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Sumerian": {
       "ARNFormat": "arn:aws:sumerian:\u003cregion\u003e:\u003caccount-id\u003e:\u003csumerian_resource_path\u003e",
