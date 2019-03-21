@@ -3635,6 +3635,7 @@
         "EnableRule",
         "ListRuleNamesByTarget",
         "ListRules",
+        "ListTagsForResource",
         "ListTargetsByRule",
         "PutEvents",
         "PutPermission",
@@ -3642,11 +3643,16 @@
         "PutTargets",
         "RemovePermission",
         "RemoveTargets",
-        "TestEventPattern"
+        "TagResource",
+        "TestEventPattern",
+        "UntagResource"
       ],
       "HasResource": true,
       "StringPrefix": "events",
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "events:TargetArn",
         "events:detail-type",
         "events:detail.eventTypeCode",
