@@ -31,6 +31,7 @@
     "aws:EpochTime",
     "aws:MultiFactorAuthAge",
     "aws:MultiFactorAuthPresent",
+    "aws:PrincipalArn",
     "aws:PrincipalOrgID",
     "aws:PrincipalTag/${TagKey}",
     "aws:PrincipalType",
