@@ -143,8 +143,8 @@
   "serviceMap": {
     "AWS Accounts": {
       "Actions": [
-        "account:DisableRegion",
-        "account:EnableRegion"
+        "DisableRegion",
+        "EnableRegion"
       ],
       "HasResource": false,
       "StringPrefix": "account",
