@@ -141,6 +141,17 @@
     }
   },
   "serviceMap": {
+    "AWS Accounts": {
+      "Actions": [
+        "account:DisableRegion",
+        "account:EnableRegion"
+      ],
+      "HasResource": false,
+      "StringPrefix": "account",
+      "conditionKeys": [
+        "account:TargetRegion"
+      ]
+    },
     "AWS Amplify": {
       "ARNFormat": "arn:aws:amplify:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
       "ARNRegex": "^arn:aws:amplify:.+:.+:.+",
