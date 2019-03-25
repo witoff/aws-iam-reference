@@ -1180,7 +1180,10 @@
       "StringPrefix": "mediaconnect"
     },
     "AWS Elemental MediaConvert": {
+      "ARNFormat": "arn:${Partition}:mediaconvert:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceId\u003e",
+      "ARNRegex": "^arn:${Partition}:mediaconvert:.+",
       "Actions": [
+        "AssociateCertificate",
         "CancelJob",
         "CreateJob",
         "CreateJobTemplate",
@@ -1190,6 +1193,7 @@
         "DeletePreset",
         "DeleteQueue",
         "DescribeEndpoints",
+        "DisassociateCertificate",
         "GetJob",
         "GetJobTemplate",
         "GetPreset",
@@ -1198,12 +1202,20 @@
         "ListJobs",
         "ListPresets",
         "ListQueues",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
         "UpdateJobTemplate",
         "UpdatePreset",
         "UpdateQueue"
       ],
-      "HasResource": false,
-      "StringPrefix": "mediaconvert"
+      "HasResource": true,
+      "StringPrefix": "mediaconvert",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Elemental MediaLive": {
       "Actions": [
