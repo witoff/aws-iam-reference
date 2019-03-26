@@ -6538,9 +6538,16 @@
       "ARNFormat": "arn:${Partition}:transcribe:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
       "ARNRegex": "^arn:${Partition}:transcribe:.+:.+:.+",
       "Actions": [
+        "CreateVocabulary",
+        "DeleteTranscriptionJob",
+        "DeleteVocabulary",
         "GetTranscriptionJob",
+        "GetVocabulary",
         "ListTranscriptionJobs",
-        "StartTranscriptionJob"
+        "ListVocabularies",
+        "StartStreamTranscription",
+        "StartTranscriptionJob",
+        "UpdateVocabulary"
       ],
       "HasResource": false,
       "StringPrefix": "transcribe"
