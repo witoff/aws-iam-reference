@@ -3653,6 +3653,8 @@
       "StringPrefix": "cloudsearch"
     },
     "Amazon CloudWatch": {
+      "ARNFormat": "arn:${Partition}:cloudwatch:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+      "ARNRegex": "^arn:${Partition}:cloudwatch:.+",
       "Actions": [
         "DeleteAlarms",
         "DeleteDashboards",
@@ -3667,13 +3669,21 @@
         "GetMetricWidgetImage",
         "ListDashboards",
         "ListMetrics",
+        "ListTagsForResource",
         "PutDashboard",
         "PutMetricAlarm",
         "PutMetricData",
-        "SetAlarmState"
+        "SetAlarmState",
+        "TagResource",
+        "UntagResource"
       ],
-      "HasResource": false,
-      "StringPrefix": "cloudwatch"
+      "HasResource": true,
+      "StringPrefix": "cloudwatch",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon CloudWatch Events": {
       "ARNFormat": "arn:aws:\u003cserviceName\u003e:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e",
