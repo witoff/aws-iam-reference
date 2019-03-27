@@ -144,7 +144,8 @@
     "AWS Accounts": {
       "Actions": [
         "DisableRegion",
-        "EnableRegion"
+        "EnableRegion",
+        "ListRegions"
       ],
       "HasResource": false,
       "StringPrefix": "account",
@@ -5502,6 +5503,7 @@
         "PhoneNumberValidate",
         "PutEventStream",
         "PutEvents",
+        "RemoveAttributes",
         "SendMessages",
         "SendUsersMessages",
         "TagResource",
