@@ -5848,6 +5848,7 @@
         "DeleteCollection",
         "DeleteFaces",
         "DeleteStreamProcessor",
+        "DescribeCollection",
         "DescribeStreamProcessor",
         "DetectFaces",
         "DetectLabels",
