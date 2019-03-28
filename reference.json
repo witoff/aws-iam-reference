@@ -1360,6 +1360,7 @@
         "GetComplianceDetail",
         "GetNotificationChannel",
         "GetPolicy",
+        "GetProtectionStatus",
         "ListComplianceStatus",
         "ListMemberAccounts",
         "ListPolicies",
