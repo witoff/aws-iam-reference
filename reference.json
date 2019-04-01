@@ -3854,15 +3854,23 @@
         "GetOpenIdTokenForDeveloperIdentity",
         "ListIdentities",
         "ListIdentityPools",
+        "ListTagsForResource",
         "LookupDeveloperIdentity",
         "MergeDeveloperIdentities",
         "SetIdentityPoolRoles",
+        "TagResource",
         "UnlinkDeveloperIdentity",
         "UnlinkIdentity",
+        "UntagResource",
         "UpdateIdentityPool"
       ],
       "HasResource": true,
-      "StringPrefix": "cognito-identity"
+      "StringPrefix": "cognito-identity",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Cognito Sync": {
       "ARNFormat": "arn:aws:cognito-sync:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourcePath\u003e:",
@@ -3965,6 +3973,7 @@
         "ListGroups",
         "ListIdentityProviders",
         "ListResourceServers",
+        "ListTagsForResource",
         "ListUserImportJobs",
         "ListUserPoolClients",
         "ListUserPools",
@@ -3980,6 +3989,8 @@
         "SignUp",
         "StartUserImportJob",
         "StopUserImportJob",
+        "TagResource",
+        "UntagResource",
         "UpdateAuthEventFeedback",
         "UpdateDeviceStatus",
         "UpdateGroup",
@@ -3988,11 +3999,17 @@
         "UpdateUserAttributes",
         "UpdateUserPool",
         "UpdateUserPoolClient",
+        "UpdateUserPoolDomain",
         "VerifySoftwareToken",
         "VerifyUserAttribute"
       ],
       "HasResource": true,
-      "StringPrefix": "cognito-idp"
+      "StringPrefix": "cognito-idp",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Comprehend": {
       "ARNFormat": "arn:${Partition}:comprehend:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
