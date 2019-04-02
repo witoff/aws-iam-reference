@@ -4446,6 +4446,7 @@
         "ModifyInstanceAttribute",
         "ModifyInstanceCapacityReservationAttributes",
         "ModifyInstanceCreditSpecification",
+        "ModifyInstanceEventStartTime",
         "ModifyInstancePlacement",
         "ModifyLaunchTemplate",
         "ModifyNetworkInterfaceAttribute",
