@@ -4950,6 +4950,8 @@
       ]
     },
     "Amazon FreeRTOS": {
+      "ARNFormat": "arn:aws:freertos:\u003cregion\u003e:\u003caccount_ID\u003e:\u003ctype\u003e/\u003cname\u003e",
+      "ARNRegex": "^arn:aws:freertos:.+:[0-9]+:.+",
       "Actions": [
         "CreateSoftwareConfiguration",
         "DeleteSoftwareConfiguration",
@@ -4963,7 +4965,7 @@
         "ListSoftwareConfigurations",
         "UpdateSoftwareConfiguration"
       ],
-      "HasResource": false,
+      "HasResource": true,
       "StringPrefix": "freertos"
     },
     "Amazon GameLift": {
