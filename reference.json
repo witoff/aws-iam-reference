@@ -4069,6 +4069,7 @@
         "ListEntityRecognizers",
         "ListKeyPhrasesDetectionJobs",
         "ListSentimentDetectionJobs",
+        "ListTagsForResource",
         "ListTopicsDetectionJobs",
         "StartDocumentClassificationJob",
         "StartDominantLanguageDetectionJob",
@@ -4081,10 +4082,17 @@
         "StopKeyPhrasesDetectionJob",
         "StopSentimentDetectionJob",
         "StopTrainingDocumentClassifier",
-        "StopTrainingEntityRecognizer"
+        "StopTrainingEntityRecognizer",
+        "TagResource",
+        "UntagResource"
       ],
       "HasResource": true,
-      "StringPrefix": "comprehend"
+      "StringPrefix": "comprehend",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Connect": {
       "ARNFormat": "arn:${Partition}:connect",
