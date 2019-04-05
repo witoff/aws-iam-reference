@@ -2093,7 +2093,9 @@
       "HasResource": true,
       "StringPrefix": "license-manager",
       "conditionKeys": [
-        "aws:TagKeys"
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
+        "license-manager:ResourceTag/${TagKey}"
       ]
     },
     "AWS Marketplace Management Portal": {
