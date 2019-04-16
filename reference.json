@@ -3279,6 +3279,8 @@
       "StringPrefix": "wellarchitected"
     },
     "AWS X-Ray": {
+      "ARNFormat": "arn:${Partition}:xray:${Region}:${Account}:${ResourceType}/${ResourceId}",
+      "ARNRegex": "^arn:${Partition}:xray:.+",
       "Actions": [
         "BatchGetTraces",
         "CreateGroup",
@@ -3300,7 +3302,7 @@
         "UpdateGroup",
         "UpdateSamplingRule"
       ],
-      "HasResource": false,
+      "HasResource": true,
       "StringPrefix": "xray"
     },
     "Alexa for Business": {
@@ -5659,6 +5661,63 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
+      ]
+    },
+    "Amazon Pinpoint Email Service": {
+      "ARNFormat": "arn:aws:ses:\u003cregion\u003e:\u003caccount_ID\u003e:\u003carn_type\u003e/\u003cresource_id\u003e",
+      "ARNRegex": "^arn:aws:ses:.+:[0-9]+:.+",
+      "Actions": [
+        "CreateConfigurationSet",
+        "CreateConfigurationSetEventDestination",
+        "CreateDedicatedIpPool",
+        "CreateDeliverabilityTestReport",
+        "CreateEmailIdentity",
+        "DeleteConfigurationSet",
+        "DeleteConfigurationSetEventDestination",
+        "DeleteDedicatedIpPool",
+        "DeleteEmailIdentity",
+        "GetAccount",
+        "GetBlacklistReports",
+        "GetConfigurationSet",
+        "GetConfigurationSetEventDestinations",
+        "GetDedicatedIp",
+        "GetDedicatedIps",
+        "GetDeliverabilityDashboardOptions",
+        "GetDeliverabilityTestReport",
+        "GetDomainStatisticsReport",
+        "GetEmailIdentity",
+        "ListConfigurationSets",
+        "ListDedicatedIpPools",
+        "ListDeliverabilityTestReports",
+        "ListEmailIdentities",
+        "ListTagsForResource",
+        "PutAccountDedicatedIpWarmupAttributes",
+        "PutAccountSendingAttributes",
+        "PutConfigurationSetDeliveryOptions",
+        "PutConfigurationSetReputationOptions",
+        "PutConfigurationSetSendingOptions",
+        "PutConfigurationSetTrackingOptions",
+        "PutDedicatedIpInPool",
+        "PutDedicatedIpWarmupAttributes",
+        "PutDeliverabilityDashboardOption",
+        "PutEmailIdentityDkimAttributes",
+        "PutEmailIdentityFeedbackAttributes",
+        "PutEmailIdentityMailFromAttributes",
+        "SendEmail",
+        "TagResource",
+        "UntagResource",
+        "UpdateConfigurationSetEventDestination"
+      ],
+      "HasResource": true,
+      "StringPrefix": "ses",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:FeedbackAddress",
+        "ses:FromAddress",
+        "ses:FromDisplayName",
+        "ses:Recipients"
       ]
     },
     "Amazon Pinpoint SMS and Voice Service": {
