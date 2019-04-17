@@ -5935,6 +5935,7 @@
         "rds:es-tag",
         "rds:og-tag",
         "rds:pg-tag",
+        "rds:req-tag",
         "rds:ri-tag",
         "rds:secgrp-tag",
         "rds:snapshot-tag",
