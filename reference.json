@@ -1285,15 +1285,19 @@
       ]
     },
     "AWS Elemental MediaLive": {
+      "ARNFormat": "arn:${Partition}:medialive:${Region}:${Account}:${ResourceType}:${ResourcePath}",
+      "ARNRegex": "^arn:${Partition}:medialive:.+",
       "Actions": [
         "BatchUpdateSchedule",
         "CreateChannel",
         "CreateInput",
         "CreateInputSecurityGroup",
+        "CreateTags",
         "DeleteChannel",
         "DeleteInput",
         "DeleteInputSecurityGroup",
         "DeleteReservation",
+        "DeleteTags",
         "DescribeChannel",
         "DescribeInput",
         "DescribeInputSecurityGroup",
@@ -1305,15 +1309,22 @@
         "ListInputs",
         "ListOfferings",
         "ListReservations",
+        "ListTagsForResource",
         "PurchaseOffering",
         "StartChannel",
         "StopChannel",
         "UpdateChannel",
         "UpdateInput",
-        "UpdateInputSecurityGroup"
+        "UpdateInputSecurityGroup",
+        "UpdateReservation"
       ],
-      "HasResource": false,
-      "StringPrefix": "medialive"
+      "HasResource": true,
+      "StringPrefix": "medialive",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Elemental MediaPackage": {
       "ARNFormat": "arn:aws:mediapackage:\u003cregion\u003e:\u003caccount_ID\u003e:\u003cresource\u003e/\u003cidentifier\u003e",
@@ -5442,7 +5453,12 @@
         "UpdateUser"
       ],
       "HasResource": true,
-      "StringPrefix": "mq"
+      "StringPrefix": "mq",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Machine Learning": {
       "ARNFormat": "arn:aws:machinelearning:\u003cregion\u003e:\u003caccount_ID\u003e:\u003cresource_type\u003e/\u003crelative_ID\u003e",
