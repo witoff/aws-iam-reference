@@ -644,6 +644,7 @@
         "BatchGetProjects",
         "CreateProject",
         "CreateWebhook",
+        "DeleteOAuthToken",
         "DeleteProject",
         "DeleteSourceCredentials",
         "DeleteWebhook",
@@ -2283,13 +2284,14 @@
       "StringPrefix": "opsworks-cm"
     },
     "AWS Organizations": {
-      "ARNFormat": "arn:aws:organizations::\u003cmasterAccountId\u003e:\u003cresource\u003e/o-\u003corganizationId\u003e(/\u003cresourceType\u003e/\u003cresourceId\u003e)?",
-      "ARNRegex": "^arn:aws:organizations::.+:.+",
+      "ARNFormat": "arn:${Partition}:organizations::\u003cmasterAccountId\u003e:\u003cresource\u003e/o-\u003corganizationId\u003e(/\u003cresourceType\u003e/\u003cresourceId\u003e)?",
+      "ARNRegex": "^arn:${Partition}:organizations::.+:.+",
       "Actions": [
         "AcceptHandshake",
         "AttachPolicy",
         "CancelHandshake",
         "CreateAccount",
+        "CreateGovCloudAccount",
         "CreateOrganization",
         "CreateOrganizationalUnit",
         "CreatePolicy",
