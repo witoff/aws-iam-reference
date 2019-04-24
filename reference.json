@@ -466,7 +466,7 @@
         "ListOperations",
         "ListServices",
         "RegisterInstance",
-        "UpdateInstanceHeartbeatStatus",
+        "UpdateInstanceCustomHealthStatus",
         "UpdateService"
       ],
       "HasResource": true,
