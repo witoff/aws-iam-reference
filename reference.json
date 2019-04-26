@@ -7368,6 +7368,7 @@
         "ResetServiceSpecificCredential",
         "ResyncMFADevice",
         "SetDefaultPolicyVersion",
+        "SetSecurityTokenServicePreferences",
         "SimulateCustomPolicy",
         "SimulatePrincipalPolicy",
         "TagRole",
