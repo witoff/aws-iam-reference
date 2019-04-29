@@ -5539,6 +5539,32 @@
         "aws:SourceArn"
       ]
     },
+    "Amazon Managed Blockchain": {
+      "ARNFormat": "arn:aws:managedblockchain:\u003cregion\u003e:\u003caccountId\u003e:\u003cresourceType\u003e/\u003cresourcePath\u003e",
+      "ARNRegex": "^arn:aws:managedblockchain:.+:[0-9]+:.+",
+      "Actions": [
+        "CreateMember",
+        "CreateNetwork",
+        "CreateNode",
+        "CreateProposal",
+        "DeleteMember",
+        "DeleteNode",
+        "GetMember",
+        "GetNetwork",
+        "GetNode",
+        "GetProposal",
+        "ListInvitations",
+        "ListMembers",
+        "ListNetworks",
+        "ListNodes",
+        "ListProposalVotes",
+        "ListProposals",
+        "RejectInvitation",
+        "VoteOnProposal"
+      ],
+      "HasResource": true,
+      "StringPrefix": "managedblockchain"
+    },
     "Amazon Managed Streaming for Kafka": {
       "Actions": [
         "CreateCluster",
@@ -5822,6 +5848,7 @@
         "DeleteGroup",
         "DeleteGroupMembership",
         "DeleteUser",
+        "DeleteUserByPrincipalId",
         "DescribeGroup",
         "DescribeUser",
         "GetDashboardEmbedUrl",
@@ -5835,7 +5862,8 @@
         "SetGroupMapping",
         "Subscribe",
         "Unsubscribe",
-        "UpdateGroup"
+        "UpdateGroup",
+        "UpdateUser"
       ],
       "HasResource": true,
       "StringPrefix": "quicksight",
