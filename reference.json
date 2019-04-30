@@ -3320,6 +3320,7 @@
         "GetSamplingStatisticSummaries",
         "GetSamplingTargets",
         "GetServiceGraph",
+        "GetTimeSeriesServiceStatistics",
         "GetTraceGraph",
         "GetTraceSummaries",
         "PutEncryptionConfig",
