@@ -2394,6 +2394,7 @@
         "DeleteResourceShare",
         "DisassociateResourceShare",
         "EnableSharingWithAwsOrganization",
+        "GetResourcePolicies",
         "GetResourceShareAssociations",
         "GetResourceShareInvitations",
         "GetResourceShares",
@@ -2407,12 +2408,14 @@
       "HasResource": true,
       "StringPrefix": "ram",
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "ram:AllowsExternalPrincipals",
         "ram:Principals",
+        "ram:RequestedResourceType",
         "ram:ResourceArns",
         "ram:ResourceShareNames",
-        "ram:ResourceType",
         "ram:ShareOwnerAccountIds"
       ]
     },
