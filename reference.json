@@ -4710,6 +4710,7 @@
         "autoscaling:TargetGroupARNs",
         "autoscaling:VPCZoneIdentifiers",
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
     },
