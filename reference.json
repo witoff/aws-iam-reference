@@ -4806,16 +4806,19 @@
       "Actions": [
         "CreateCluster",
         "CreateService",
-        "DeleteAccountSettings",
+        "CreateTaskSet",
+        "DeleteAccountSetting",
         "DeleteAttributes",
         "DeleteCluster",
         "DeleteService",
+        "DeleteTaskSet",
         "DeregisterContainerInstance",
         "DeregisterTaskDefinition",
         "DescribeClusters",
         "DescribeContainerInstances",
         "DescribeServices",
         "DescribeTaskDefinition",
+        "DescribeTaskSets",
         "DescribeTasks",
         "DiscoverPollEndpoint",
         "ListAccountSettings",
@@ -4843,7 +4846,9 @@
         "UntagResource",
         "UpdateContainerAgent",
         "UpdateContainerInstancesState",
-        "UpdateService"
+        "UpdateService",
+        "UpdateServicePrimaryTaskSet",
+        "UpdateTaskSet"
       ],
       "HasResource": true,
       "StringPrefix": "ecs",
@@ -4853,7 +4858,9 @@
         "aws:TagKeys",
         "ecs:ResourceTag/${TagKey}",
         "ecs:cluster",
-        "ecs:container-instances"
+        "ecs:container-instances",
+        "ecs:service",
+        "ecs:task-definition"
       ]
     },
     "Amazon Elastic Container Service for Kubernetes": {
