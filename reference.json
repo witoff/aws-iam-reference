@@ -2542,6 +2542,7 @@
         "UpdateApplicationInstanceStatus",
         "UpdateDirectoryAssociation",
         "UpdateGroup",
+        "UpdatePermissionSet",
         "UpdateProfile",
         "UpdateSSOConfiguration",
         "UpdateTrust",
