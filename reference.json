@@ -860,6 +860,7 @@
         "DeleteDeliveryChannel",
         "DeleteEvaluationResults",
         "DeletePendingAggregationRequest",
+        "DeleteRemediationConfiguration",
         "DeleteRetentionConfiguration",
         "DeliverConfigSnapshot",
         "DescribeAggregateComplianceByConfigRules",
@@ -875,6 +876,8 @@
         "DescribeDeliveryChannelStatus",
         "DescribeDeliveryChannels",
         "DescribePendingAggregationRequests",
+        "DescribeRemediationConfigurations",
+        "DescribeRemediationExecutionStatus",
         "DescribeRetentionConfigurations",
         "GetAggregateComplianceDetailsByConfigRule",
         "GetAggregateConfigRuleComplianceSummary",
@@ -890,19 +893,30 @@
         "GetTagKeys",
         "ListAggregateDiscoveredResources",
         "ListDiscoveredResources",
+        "ListTagsForResource",
         "PutAggregationAuthorization",
         "PutConfigRule",
         "PutConfigurationAggregator",
         "PutConfigurationRecorder",
         "PutDeliveryChannel",
         "PutEvaluations",
+        "PutRemediationConfigurations",
         "PutRetentionConfiguration",
+        "SelectResourceConfig",
         "StartConfigRulesEvaluation",
         "StartConfigurationRecorder",
-        "StopConfigurationRecorder"
+        "StartRemediationExecution",
+        "StopConfigurationRecorder",
+        "TagResource",
+        "UntagResource"
       ],
       "HasResource": true,
-      "StringPrefix": "config"
+      "StringPrefix": "config",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Cost Explorer Service": {
       "ARNFormat": "arn:aws:ce::\u003caccount_ID\u003e:ce",
