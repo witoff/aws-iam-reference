@@ -470,7 +470,13 @@
         "UpdateService"
       ],
       "HasResource": true,
-      "StringPrefix": "servicediscovery"
+      "StringPrefix": "servicediscovery",
+      "conditionKeys": [
+        "servicediscovery:NamespaceArn",
+        "servicediscovery:NamespaceName",
+        "servicediscovery:ServiceArn",
+        "servicediscovery:ServiceName"
+      ]
     },
     "AWS Cloud9": {
       "ARNFormat": "arn:aws:cloud9:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource_type\u003e:\u003cresource_id\u003e",
@@ -792,6 +798,7 @@
         "GetPipelineExecution",
         "GetPipelineState",
         "GetThirdPartyJobDetails",
+        "ListActionExecutions",
         "ListActionTypes",
         "ListPipelineExecutions",
         "ListPipelines",
