@@ -1161,6 +1161,7 @@
         "DisableSso",
         "EnableRadius",
         "EnableSso",
+        "GetAuthorizedApplicationDetails",
         "GetDirectoryLimits",
         "GetSnapshotLimits",
         "ListAuthorizedApplications",
