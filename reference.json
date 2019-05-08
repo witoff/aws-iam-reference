@@ -1126,6 +1126,8 @@
       "StringPrefix": "directconnect"
     },
     "AWS Directory Service": {
+      "ARNFormat": "arn:\u003cpartition\u003e:ds:\u003cregion\u003e:\u003caccountID\u003e:\u003crelative-id\u003e",
+      "ARNRegex": "^arn:\u003cpartition\u003e:ds:.+",
       "Actions": [
         "AcceptSharedDirectory",
         "AddIpRoutes",
@@ -1137,6 +1139,7 @@
         "CreateComputer",
         "CreateConditionalForwarder",
         "CreateDirectory",
+        "CreateIdentityPoolDirectory",
         "CreateLogSubscription",
         "CreateMicrosoftAD",
         "CreateSnapshot",
@@ -1180,8 +1183,13 @@
         "UpdateRadius",
         "VerifyTrust"
       ],
-      "HasResource": false,
-      "StringPrefix": "ds"
+      "HasResource": true,
+      "StringPrefix": "ds",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Elastic Beanstalk": {
       "ARNFormat": "arn:aws:elasticbeanstalk:\u003cregion\u003e:\u003caccount_ID\u003e:\u003cresource_type\u003e/\u003cpath_to_resource\u003e",
