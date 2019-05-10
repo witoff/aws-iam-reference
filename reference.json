@@ -5364,6 +5364,35 @@
       "HasResource": true,
       "StringPrefix": "kinesisanalytics"
     },
+    "Amazon Kinesis Analytics V2": {
+      "ARNFormat": "arn:aws:kinesisanalytics:\u003cregion\u003e:\u003caccount_ID\u003e:application/\u003capplicationname\u003e",
+      "ARNRegex": "^arn:aws:kinesisanalytics:.+:[0-9]+:application/[a-zA-Z0-9_.-]+",
+      "Actions": [
+        "AddApplicationCloudWatchLoggingOption",
+        "AddApplicationInput",
+        "AddApplicationInputProcessingConfiguration",
+        "AddApplicationOutput",
+        "AddApplicationReferenceDataSource",
+        "CreateApplication",
+        "CreateApplicationSnapshot",
+        "DeleteApplication",
+        "DeleteApplicationCloudWatchLoggingOption",
+        "DeleteApplicationInputProcessingConfiguration",
+        "DeleteApplicationOutput",
+        "DeleteApplicationReferenceDataSource",
+        "DeleteApplicationSnapshot",
+        "DescribeApplication",
+        "DescribeApplicationSnapshot",
+        "DiscoverInputSchema",
+        "ListApplicationSnapshots",
+        "ListApplications",
+        "StartApplication",
+        "StopApplication",
+        "UpdateApplication"
+      ],
+      "HasResource": true,
+      "StringPrefix": "kinesisanalytics"
+    },
     "Amazon Kinesis Firehose": {
       "ARNFormat": "arn:aws:firehose:\u003cregion\u003e:\u003caccount_ID\u003e:deliverystream/\u003cdeliverystreamname\u003e",
       "ARNRegex": "^arn:aws:firehose:.+:[0-9]+:deliverystream/.+",
