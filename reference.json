@@ -4045,6 +4045,7 @@
         "AdminResetUserPassword",
         "AdminRespondToAuthChallenge",
         "AdminSetUserMFAPreference",
+        "AdminSetUserPassword",
         "AdminSetUserSettings",
         "AdminUpdateAuthEventFeedback",
         "AdminUpdateDeviceStatus",
