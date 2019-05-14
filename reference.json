@@ -1344,6 +1344,7 @@
         "StartChannel",
         "StopChannel",
         "UpdateChannel",
+        "UpdateChannelClass",
         "UpdateInput",
         "UpdateInputSecurityGroup",
         "UpdateReservation"
