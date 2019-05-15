@@ -3215,6 +3215,7 @@
       "ARNFormat": "arn:aws:trustedadvisor:*:\u003caccount_ID\u003e:checks/{category}/{checkId}",
       "ARNRegex": "arn:aws:trustedadvisor:*",
       "Actions": [
+        "DescribeAccountAccess",
         "DescribeCheckItems",
         "DescribeCheckRefreshStatuses",
         "DescribeCheckSummaries",
@@ -3222,6 +3223,7 @@
         "ExcludeCheckItems",
         "IncludeCheckItems",
         "RefreshCheck",
+        "SetAccountAccess",
         "UpdateNotificationPreferences"
       ],
       "HasResource": true,
