@@ -802,6 +802,7 @@
         "ListActionTypes",
         "ListPipelineExecutions",
         "ListPipelines",
+        "ListTagsForResource",
         "ListWebhooks",
         "PollForJobs",
         "PollForThirdPartyJobs",
@@ -815,10 +816,17 @@
         "RegisterWebhookWithThirdParty",
         "RetryStageExecution",
         "StartPipelineExecution",
+        "TagResource",
+        "UntagResource",
         "UpdatePipeline"
       ],
       "HasResource": true,
-      "StringPrefix": "codepipeline"
+      "StringPrefix": "codepipeline",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS CodeStar": {
       "ARNFormat": "arn:aws:codestar:\u003cregion\u003e:\u003caccount_ID\u003e:\u003cresource_type\u003e/\u003cresource_id\u003e",
