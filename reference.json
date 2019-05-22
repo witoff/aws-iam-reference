@@ -2542,7 +2542,12 @@
         "UpdateGroupQuery"
       ],
       "HasResource": true,
-      "StringPrefix": "resource-groups"
+      "StringPrefix": "resource-groups",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS RoboMaker": {
       "ARNFormat": "arn:${Partition}:robomaker:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
