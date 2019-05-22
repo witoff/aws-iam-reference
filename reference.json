@@ -2502,6 +2502,7 @@
         "GetResourceShareAssociations",
         "GetResourceShareInvitations",
         "GetResourceShares",
+        "ListPendingInvitationResources",
         "ListPrincipals",
         "ListResources",
         "RejectResourceShareInvitation",
@@ -2516,11 +2517,11 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "ram:AllowsExternalPrincipals",
-        "ram:Principals",
+        "ram:Principal",
         "ram:RequestedResourceType",
-        "ram:ResourceArns",
-        "ram:ResourceShareNames",
-        "ram:ShareOwnerAccountIds"
+        "ram:ResourceArn",
+        "ram:ResourceShareName",
+        "ram:ShareOwnerAccountId"
       ]
     },
     "AWS Resource Groups": {
