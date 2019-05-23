@@ -1686,6 +1686,51 @@
         "aws:UserAgent"
       ]
     },
+    "AWS Ground Station": {
+      "ARNFormat": "arn:aws:groundstation:\u003cregion\u003e:\u003caccountID\u003e:\u003cresourceType\u003e/\u003cresourceId\u003e",
+      "ARNRegex": "^arn:aws:groundstation:.+",
+      "Actions": [
+        "CancelContact",
+        "CreateConfig",
+        "CreateDataflowEndpointGroup",
+        "CreateMissionProfile",
+        "DeleteConfig",
+        "DeleteDataflowEndpointGroup",
+        "DeleteMissionProfile",
+        "DescribeContact",
+        "GetConfig",
+        "GetDataflowEndpointGroup",
+        "GetMinuteUsage",
+        "GetMissionProfile",
+        "GetSatellite",
+        "ListConfigs",
+        "ListContacts",
+        "ListDataflowEndpointGroups",
+        "ListGroundStations",
+        "ListMissionProfiles",
+        "ListSatellites",
+        "ListTagsForResource",
+        "ReserveContact",
+        "TagResource",
+        "UntagResource",
+        "UpdateConfig",
+        "UpdateMissionProfile"
+      ],
+      "HasResource": true,
+      "StringPrefix": "groundstation",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "groundstation:configId",
+        "groundstation:configType",
+        "groundstation:contactId",
+        "groundstation:dataflowEndpointGroupId",
+        "groundstation:groundStationId",
+        "groundstation:missionProfileId",
+        "groundstation:satelliteId"
+      ]
+    },
     "AWS Health APIs and Notifications": {
       "ARNFormat": "arn:aws:health::\u003cnamespace\u003e:\u003crelative-id\u003e",
       "ARNRegex": "^arn:aws:health:[^:]*:[^:]*:.+",
