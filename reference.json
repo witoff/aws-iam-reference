@@ -2041,6 +2041,7 @@
       "ARNRegex": "^arn:aws:iotevents:.+",
       "Actions": [
         "BatchPutMessage",
+        "BatchUpdateDetector",
         "CreateDetectorModel",
         "CreateInput",
         "DeleteDetectorModel",
@@ -2053,14 +2054,20 @@
         "ListDetectorModels",
         "ListDetectors",
         "ListInputs",
+        "ListTagsForResource",
         "PutLoggingOptions",
+        "TagResource",
+        "UntagResource",
         "UpdateDetectorModel",
-        "UpdateInput"
+        "UpdateInput",
+        "UpdateInputRouting"
       ],
       "HasResource": true,
       "StringPrefix": "iotevents",
       "conditionKeys": [
-        "iotevents:KeyValue"
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
       ]
     },
     "AWS IoT SiteWise": {
@@ -5501,12 +5508,20 @@
         "DiscoverInputSchema",
         "ListApplicationSnapshots",
         "ListApplications",
+        "ListTagsForResource",
         "StartApplication",
         "StopApplication",
+        "TagResource",
+        "UntagResource",
         "UpdateApplication"
       ],
       "HasResource": true,
-      "StringPrefix": "kinesisanalytics"
+      "StringPrefix": "kinesisanalytics",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Kinesis Firehose": {
       "ARNFormat": "arn:aws:firehose:\u003cregion\u003e:\u003caccount_ID\u003e:deliverystream/\u003cdeliverystreamname\u003e",
