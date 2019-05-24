@@ -5479,12 +5479,20 @@
         "DescribeApplication",
         "DiscoverInputSchema",
         "ListApplications",
+        "ListTagsForResource",
         "StartApplication",
         "StopApplication",
+        "TagResource",
+        "UntagResource",
         "UpdateApplication"
       ],
       "HasResource": true,
-      "StringPrefix": "kinesisanalytics"
+      "StringPrefix": "kinesisanalytics",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Kinesis Analytics V2": {
       "ARNFormat": "arn:aws:kinesisanalytics:\u003cregion\u003e:\u003caccount_ID\u003e:application/\u003capplicationname\u003e",
