@@ -5855,16 +5855,34 @@
       "StringPrefix": "managedblockchain"
     },
     "Amazon Managed Streaming for Kafka": {
+      "ARNFormat": "arn:aws:kafka:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e/\u003cUUID\u003e",
+      "ARNRegex": "^arn:aws:kafka:.+",
       "Actions": [
         "CreateCluster",
+        "CreateConfiguration",
         "DeleteCluster",
         "DescribeCluster",
+        "DescribeClusterOperation",
+        "DescribeConfiguration",
+        "DescribeConfigurationRevision",
         "GetBootstrapBrokers",
+        "ListClusterOperations",
         "ListClusters",
-        "ListNodes"
+        "ListConfigurations",
+        "ListNodes",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateBrokerStorage",
+        "UpdateClusterConfiguration"
       ],
-      "HasResource": false,
-      "StringPrefix": "kafka"
+      "HasResource": true,
+      "StringPrefix": "kafka",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Mechanical Turk": {
       "Actions": [
