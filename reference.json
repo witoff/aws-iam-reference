@@ -4512,6 +4512,7 @@
         "CreateRouteTable",
         "CreateSecurityGroup",
         "CreateSnapshot",
+        "CreateSnapshots",
         "CreateSpotDatafeedSubscription",
         "CreateSubnet",
         "CreateTags",
@@ -7781,7 +7782,12 @@
         "UpdateRestApiPolicy"
       ],
       "HasResource": true,
-      "StringPrefix": "apigateway"
+      "StringPrefix": "apigateway",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "The Data API allows access to RDS databases using web services-based APIs": {
       "Actions": [
