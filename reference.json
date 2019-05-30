@@ -7777,6 +7777,17 @@
       ],
       "HasResource": true,
       "StringPrefix": "apigateway"
+    },
+    "The Data API allows access to RDS databases using web services-based APIs": {
+      "Actions": [
+        "BatchExecuteStatement",
+        "BeginTransaction",
+        "CommitTransaction",
+        "ExecuteStatement",
+        "RollbackTransaction"
+      ],
+      "HasResource": false,
+      "StringPrefix": "rds-data"
     }
   }
 }
