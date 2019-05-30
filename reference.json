@@ -676,7 +676,6 @@
       "ARNFormat": "arn:aws:codecommit:\u003cregion\u003e:\u003caccount_ID\u003e:\u003crepository_name\u003e",
       "ARNRegex": "^arn:aws:codecommit:.+",
       "Actions": [
-        "BatchGetPullRequests",
         "BatchGetRepositories",
         "CancelUploadArchive",
         "CreateBranch",
@@ -712,13 +711,16 @@
         "ListBranches",
         "ListPullRequests",
         "ListRepositories",
+        "ListTagsForResource",
         "MergePullRequestByFastForward",
         "PostCommentForComparedCommit",
         "PostCommentForPullRequest",
         "PostCommentReply",
         "PutFile",
         "PutRepositoryTriggers",
+        "TagResource",
         "TestRepositoryTriggers",
+        "UntagResource",
         "UpdateComment",
         "UpdateDefaultBranch",
         "UpdatePullRequestDescription",
@@ -731,6 +733,9 @@
       "HasResource": true,
       "StringPrefix": "codecommit",
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "codecommit:References"
       ]
     },
