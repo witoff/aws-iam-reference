@@ -3130,11 +3130,12 @@
       "StringPrefix": "support"
     },
     "AWS Systems Manager": {
-      "ARNFormat": "arn:aws:ssm:\u003cregion\u003e:\u003caccount_ID\u003e:\u003cdocument_name\u003e",
+      "ARNFormat": "arn:aws:ssm:\u003cregion\u003e:\u003caccount_ID\u003e:\u003crelative-id\u003e",
       "ARNRegex": "^arn:aws:(ssm|ec2):.+",
       "Actions": [
         "AddTagsToResource",
         "CancelCommand",
+        "CancelMaintenanceWindowExecution",
         "CreateActivation",
         "CreateAssociation",
         "CreateAssociationBatch",
@@ -3145,6 +3146,7 @@
         "DeleteActivation",
         "DeleteAssociation",
         "DeleteDocument",
+        "DeleteInventory",
         "DeleteMaintenanceWindow",
         "DeleteParameter",
         "DeleteParameters",
@@ -3172,12 +3174,15 @@
         "DescribeInstancePatchStatesForPatchGroup",
         "DescribeInstancePatches",
         "DescribeInstanceProperties",
+        "DescribeInventoryDeletions",
         "DescribeMaintenanceWindowExecutionTaskInvocations",
         "DescribeMaintenanceWindowExecutionTasks",
         "DescribeMaintenanceWindowExecutions",
+        "DescribeMaintenanceWindowSchedule",
         "DescribeMaintenanceWindowTargets",
         "DescribeMaintenanceWindowTasks",
         "DescribeMaintenanceWindows",
+        "DescribeMaintenanceWindowsForTarget",
         "DescribeParameters",
         "DescribePatchBaselines",
         "DescribePatchGroupState",
@@ -3203,6 +3208,7 @@
         "GetParametersByPath",
         "GetPatchBaseline",
         "GetPatchBaselineForPatchGroup",
+        "LabelParameterVersion",
         "ListAssociationVersions",
         "ListAssociations",
         "ListCommandInvocations",
@@ -3249,6 +3255,9 @@
       "HasResource": true,
       "StringPrefix": "ssm",
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "ssm:resourceTag/tag-key"
       ]
     },
