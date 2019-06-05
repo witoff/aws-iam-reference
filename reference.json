@@ -3616,7 +3616,14 @@
         "UpdateSkillGroup"
       ],
       "HasResource": true,
-      "StringPrefix": "a4b"
+      "StringPrefix": "a4b",
+      "conditionKeys": [
+        "a4b:amazonId",
+        "a4b:filters_deviceType",
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon API Gateway": {
       "ARNFormat": "arn:aws:execute-api:\u003cregion\u003e:\u003caccount_id\u003e:\u003capi_id\u003e/\u003cstage\u003e/\u003cmethod\u003e/\u003capi_specific_resource_path\u003e",
