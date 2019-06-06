@@ -2823,6 +2823,7 @@
         "DeleteInsight",
         "DeleteInvitations",
         "DeleteMembers",
+        "DescribeProducts",
         "DisableImportFindingsForProduct",
         "DisableSecurityHub",
         "DisassociateFromMasterAccount",
@@ -2840,6 +2841,7 @@
         "ListEnabledProductsForImport",
         "ListInvitations",
         "ListMembers",
+        "ListProductSubscribers",
         "UpdateFindings",
         "UpdateInsight"
       ],
