@@ -6048,8 +6048,7 @@
         "ListSolutionVersions",
         "ListSolutions",
         "PutEvents",
-        "UpdateCampaign",
-        "UpdateDataset"
+        "UpdateCampaign"
       ],
       "HasResource": true,
       "StringPrefix": "personalize"
