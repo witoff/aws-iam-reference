@@ -2518,9 +2518,12 @@
         "ListPolicies",
         "ListPoliciesForTarget",
         "ListRoots",
+        "ListTagsForResource",
         "ListTargetsForPolicy",
         "MoveAccount",
         "RemoveAccountFromOrganization",
+        "TagResource",
+        "UntagResource",
         "UpdateOrganizationalUnit",
         "UpdatePolicy"
       ],
