@@ -206,6 +206,7 @@
         "ListVirtualNodes",
         "ListVirtualRouters",
         "ListVirtualServices",
+        "StreamAggregatedResources",
         "TagResource",
         "UntagResource",
         "UpdateMesh",
@@ -251,8 +252,12 @@
         "ListFunctions",
         "ListGraphqlApis",
         "ListResolvers",
+        "ListResolversByFunction",
+        "ListTagsForResource",
         "ListTypes",
         "StartSchemaCreation",
+        "TagResource",
+        "UntagResource",
         "UpdateApiKey",
         "UpdateDataSource",
         "UpdateFunction",
@@ -261,7 +266,12 @@
         "UpdateType"
       ],
       "HasResource": true,
-      "StringPrefix": "appsync"
+      "StringPrefix": "appsync",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Artifact": {
       "ARNFormat": "arn:aws:artifact::\u003cresource\u003e",
@@ -439,6 +449,7 @@
       "HasResource": true,
       "StringPrefix": "acm-pca",
       "conditionKeys": [
+        "acm-pca:TemplateArn",
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
@@ -676,16 +687,20 @@
       "ARNFormat": "arn:aws:codecommit:\u003cregion\u003e:\u003caccount_ID\u003e:\u003crepository_name\u003e",
       "ARNRegex": "^arn:aws:codecommit:.+",
       "Actions": [
+        "BatchDescribeMergeConflicts",
+        "BatchGetPullRequests",
         "BatchGetRepositories",
         "CancelUploadArchive",
         "CreateBranch",
         "CreateCommit",
         "CreatePullRequest",
         "CreateRepository",
+        "CreateUnreferencedMergeCommit",
         "DeleteBranch",
         "DeleteCommentContent",
         "DeleteFile",
         "DeleteRepository",
+        "DescribeMergeConflicts",
         "DescribePullRequestEvents",
         "GetBlob",
         "GetBranch",
@@ -698,7 +713,9 @@
         "GetDifferences",
         "GetFile",
         "GetFolder",
+        "GetMergeCommit",
         "GetMergeConflicts",
+        "GetMergeOptions",
         "GetObjectIdentifier",
         "GetPullRequest",
         "GetReferences",
@@ -712,7 +729,12 @@
         "ListPullRequests",
         "ListRepositories",
         "ListTagsForResource",
+        "MergeBranchesByFastForward",
+        "MergeBranchesBySquash",
+        "MergeBranchesByThreeWay",
         "MergePullRequestByFastForward",
+        "MergePullRequestBySquash",
+        "MergePullRequestByThreeWay",
         "PostCommentForComparedCommit",
         "PostCommentForPullRequest",
         "PostCommentReply",
@@ -941,7 +963,8 @@
         "GetReservationCoverage",
         "GetReservationPurchaseRecommendation",
         "GetReservationUtilization",
-        "GetTags"
+        "GetTags",
+        "GetUsageForecast"
       ],
       "HasResource": false,
       "StringPrefix": "ce"
@@ -1109,35 +1132,44 @@
       "StringPrefix": "devicefarm"
     },
     "AWS Direct Connect": {
+      "ARNFormat": "arn:${Partition}:directconnect:${Region}:${Account}:${ResourceType}/${ResourceId}",
+      "ARNRegex": "^arn:${Partition}:directconnect:.+",
       "Actions": [
+        "AcceptDirectConnectGatewayAssociationProposal",
         "AllocateConnectionOnInterconnect",
         "AllocateHostedConnection",
         "AllocatePrivateVirtualInterface",
         "AllocatePublicVirtualInterface",
+        "AllocateTransitVirtualInterface",
         "AssociateConnectionWithLag",
         "AssociateHostedConnection",
         "AssociateVirtualInterface",
         "ConfirmConnection",
         "ConfirmPrivateVirtualInterface",
         "ConfirmPublicVirtualInterface",
+        "ConfirmTransitVirtualInterface",
         "CreateBGPPeer",
         "CreateConnection",
         "CreateDirectConnectGateway",
         "CreateDirectConnectGatewayAssociation",
+        "CreateDirectConnectGatewayAssociationProposal",
         "CreateInterconnect",
         "CreateLag",
         "CreatePrivateVirtualInterface",
         "CreatePublicVirtualInterface",
+        "CreateTransitVirtualInterface",
         "DeleteBGPPeer",
         "DeleteConnection",
         "DeleteDirectConnectGateway",
         "DeleteDirectConnectGatewayAssociation",
+        "DeleteDirectConnectGatewayAssociationProposal",
         "DeleteInterconnect",
         "DeleteLag",
         "DeleteVirtualInterface",
         "DescribeConnectionLoa",
         "DescribeConnections",
         "DescribeConnectionsOnInterconnect",
+        "DescribeDirectConnectGatewayAssociationProposals",
         "DescribeDirectConnectGatewayAssociations",
         "DescribeDirectConnectGatewayAttachments",
         "DescribeDirectConnectGateways",
@@ -1153,11 +1185,17 @@
         "DisassociateConnectionFromLag",
         "TagResource",
         "UntagResource",
+        "UpdateDirectConnectGatewayAssociation",
         "UpdateLag",
         "UpdateVirtualInterfaceAttributes"
       ],
-      "HasResource": false,
-      "StringPrefix": "directconnect"
+      "HasResource": true,
+      "StringPrefix": "directconnect",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Directory Service": {
       "ARNFormat": "arn:\u003cpartition\u003e:ds:\u003cregion\u003e:\u003caccountID\u003e:\u003crelative-id\u003e",
@@ -1279,6 +1317,9 @@
       "HasResource": true,
       "StringPrefix": "elasticbeanstalk",
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "elasticbeanstalk:FromApplication",
         "elasticbeanstalk:FromApplicationVersion",
         "elasticbeanstalk:FromConfigurationTemplate",
@@ -1521,7 +1562,13 @@
         "BatchDeleteConnection",
         "BatchDeletePartition",
         "BatchDeleteTable",
+        "BatchDeleteTableVersion",
+        "BatchGetCrawlers",
+        "BatchGetDevEndpoints",
+        "BatchGetJobs",
         "BatchGetPartition",
+        "BatchGetTriggers",
+        "BatchStopJobRun",
         "CreateClassifier",
         "CreateConnection",
         "CreateCrawler",
@@ -1544,6 +1591,7 @@
         "DeleteResourcePolicy",
         "DeleteSecurityConfiguration",
         "DeleteTable",
+        "DeleteTableVersion",
         "DeleteTrigger",
         "DeleteUserDefinedFunction",
         "GetCatalogImportStatus",
@@ -1572,13 +1620,19 @@
         "GetSecurityConfiguration",
         "GetSecurityConfigurations",
         "GetTable",
+        "GetTableVersion",
         "GetTableVersions",
         "GetTables",
+        "GetTags",
         "GetTrigger",
         "GetTriggers",
         "GetUserDefinedFunction",
         "GetUserDefinedFunctions",
         "ImportCatalogToGlue",
+        "ListCrawlers",
+        "ListDevEndpoints",
+        "ListJobs",
+        "ListTriggers",
         "PutDataCatalogEncryptionSettings",
         "PutResourcePolicy",
         "ResetJobBookmark",
@@ -1589,6 +1643,8 @@
         "StopCrawler",
         "StopCrawlerSchedule",
         "StopTrigger",
+        "TagResource",
+        "UntagResource",
         "UpdateClassifier",
         "UpdateConnection",
         "UpdateCrawler",
@@ -1604,8 +1660,8 @@
       "StringPrefix": "glue"
     },
     "AWS Greengrass": {
-      "ARNFormat": "arn:aws:greengrass:\u003cregion\u003e:\u003caccount_ID\u003e:/greengrass/\u003ctype\u003e/\u003cId\u003e",
-      "ARNRegex": "^arn:aws:greengrass:.+:[0-9]+:.+",
+      "ARNFormat": "arn:${Partition}:greengrass:${Region}:${Account}:/greengrass/${resourceType}/${resourcePath}",
+      "ARNRegex": "^arn:${Partition}:greengrass:.+:[0-9]+:.+",
       "Actions": [
         "AssociateRoleToGroup",
         "AssociateServiceRoleToAccount",
@@ -2297,6 +2353,15 @@
         "license-manager:ResourceTag/${TagKey}"
       ]
     },
+    "AWS Marketplace": {
+      "Actions": [
+        "Subscribe",
+        "Unsubscribe",
+        "ViewSubscriptions"
+      ],
+      "HasResource": false,
+      "StringPrefix": "aws-marketplace"
+    },
     "AWS Marketplace Management Portal": {
       "Actions": [
         "uploadFiles",
@@ -2314,6 +2379,14 @@
         "MeterUsage",
         "RegisterUsage",
         "ResolveCustomer"
+      ],
+      "HasResource": false,
+      "StringPrefix": "aws-marketplace"
+    },
+    "AWS Marketplace Procurement Systems Integration": {
+      "Actions": [
+        "DescribeProcurementSystemConfiguration",
+        "PutProcurementSystemConfiguration"
       ],
       "HasResource": false,
       "StringPrefix": "aws-marketplace"
@@ -2635,6 +2708,7 @@
       "ARNRegex": "^arn:${Partition}:robomaker:.+:.+:.+",
       "Actions": [
         "BatchDescribeSimulationJob",
+        "CancelDeploymentJob",
         "CancelSimulationJob",
         "CreateDeploymentJob",
         "CreateFleet",
@@ -2644,6 +2718,7 @@
         "CreateSimulationApplication",
         "CreateSimulationApplicationVersion",
         "CreateSimulationJob",
+        "DeleteFleet",
         "DeleteRobot",
         "DeleteRobotApplication",
         "DeleteSimulationApplication",
@@ -2660,14 +2735,22 @@
         "ListRobots",
         "ListSimulationApplications",
         "ListSimulationJobs",
+        "ListTagsForResource",
         "RegisterRobot",
         "RestartSimulationJob",
         "SyncDeploymentJob",
+        "TagResource",
+        "UntagResource",
         "UpdateRobotApplication",
         "UpdateSimulationApplication"
       ],
       "HasResource": true,
-      "StringPrefix": "robomaker"
+      "StringPrefix": "robomaker",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS SSO": {
       "ARNFormat": "arn:${Partition}:sso:${Region}:${Account}:\u003crelative-id\u003e",
@@ -2817,12 +2900,16 @@
         "BatchDisableStandards",
         "BatchEnableStandards",
         "BatchImportFindings",
+        "CreateActionTarget",
         "CreateInsight",
         "CreateMembers",
         "DeclineInvitations",
+        "DeleteActionTarget",
         "DeleteInsight",
         "DeleteInvitations",
         "DeleteMembers",
+        "DescribeActionTargets",
+        "DescribeHub",
         "DescribeProducts",
         "DisableImportFindingsForProduct",
         "DisableSecurityHub",
@@ -2841,13 +2928,18 @@
         "ListEnabledProductsForImport",
         "ListInvitations",
         "ListMembers",
-        "ListProductSubscribers",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
         "UpdateFindings",
         "UpdateInsight"
       ],
       "HasResource": true,
       "StringPrefix": "securityhub",
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "securityhub:TargetAccount"
       ]
     },
@@ -2967,6 +3059,7 @@
       "ARNRegex": "^arn:aws:(catalog|servicecatalog):.+",
       "Actions": [
         "AcceptPortfolioShare",
+        "AssociateBudgetWithResource",
         "AssociatePrincipalWithPortfolio",
         "AssociateProductWithPortfolio",
         "AssociateServiceActionWithProvisioningArtifact",
@@ -3003,8 +3096,10 @@
         "DescribeProvisioningParameters",
         "DescribeRecord",
         "DescribeServiceAction",
+        "DescribeServiceActionExecutionParameters",
         "DescribeTagOption",
         "DisableAWSOrganizationsAccess",
+        "DisassociateBudgetFromResource",
         "DisassociatePrincipalFromPortfolio",
         "DisassociateProductFromPortfolio",
         "DisassociateServiceActionFromProvisioningArtifact",
@@ -3014,6 +3109,7 @@
         "ExecuteProvisionedProductServiceAction",
         "GetAWSOrganizationsAccessStatus",
         "ListAcceptedPortfolioShares",
+        "ListBudgetsForResource",
         "ListConstraintsForPortfolio",
         "ListLaunchPaths",
         "ListOrganizationPortfolioAccess",
@@ -3028,6 +3124,7 @@
         "ListResourcesForTagOption",
         "ListServiceActions",
         "ListServiceActionsForProvisioningArtifact",
+        "ListStackInstancesForProvisionedProduct",
         "ListTagOptions",
         "ProvisionProduct",
         "RejectPortfolioShare",
@@ -3040,6 +3137,7 @@
         "UpdatePortfolio",
         "UpdateProduct",
         "UpdateProvisionedProduct",
+        "UpdateProvisionedProductProperties",
         "UpdateProvisioningArtifact",
         "UpdateServiceAction",
         "UpdateTagOption"
@@ -3134,26 +3232,6 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
-    },
-    "AWS Support": {
-      "Actions": [
-        "AddAttachmentsToSet",
-        "AddCommunicationToCase",
-        "CreateCase",
-        "DescribeAttachment",
-        "DescribeCases",
-        "DescribeCommunications",
-        "DescribeServices",
-        "DescribeSeverityLevels",
-        "DescribeTrustedAdvisorCheckRefreshStatuses",
-        "DescribeTrustedAdvisorCheckResult",
-        "DescribeTrustedAdvisorCheckSummaries",
-        "DescribeTrustedAdvisorChecks",
-        "RefreshTrustedAdvisorCheck",
-        "ResolveCase"
-      ],
-      "HasResource": false,
-      "StringPrefix": "support"
     },
     "AWS Systems Manager": {
       "ARNFormat": "arn:aws:ssm:\u003cregion\u003e:\u003caccount_ID\u003e:\u003crelative-id\u003e",
@@ -3321,10 +3399,12 @@
       "ARNFormat": "arn:aws:trustedadvisor:*:\u003caccount_ID\u003e:checks/{category}/{checkId}",
       "ARNRegex": "arn:aws:trustedadvisor:*",
       "Actions": [
+        "DescribeAccount",
         "DescribeAccountAccess",
         "DescribeCheckItems",
         "DescribeCheckRefreshStatuses",
         "DescribeCheckSummaries",
+        "DescribeChecks",
         "DescribeNotificationPreferences",
         "ExcludeCheckItems",
         "IncludeCheckItems",
@@ -3396,10 +3476,13 @@
         "ListSizeConstraintSets",
         "ListSqlInjectionMatchSets",
         "ListSubscribedRuleGroups",
+        "ListTagsForResource",
         "ListWebACLs",
         "ListXssMatchSets",
         "PutLoggingConfiguration",
         "PutPermissionPolicy",
+        "TagResource",
+        "UntagResource",
         "UpdateByteMatchSet",
         "UpdateGeoMatchSet",
         "UpdateIPSet",
@@ -3414,7 +3497,12 @@
         "UpdateXssMatchSet"
       ],
       "HasResource": true,
-      "StringPrefix": "waf"
+      "StringPrefix": "waf",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS WAF Regional": {
       "ARNFormat": "arn:aws:waf-regional:\u003cregion\u003e:\u003caccount_ID\u003e:\u003cresource\u003e/\u003cresource_id\u003e",
@@ -3481,10 +3569,13 @@
         "ListSizeConstraintSets",
         "ListSqlInjectionMatchSets",
         "ListSubscribedRuleGroups",
+        "ListTagsForResource",
         "ListWebACLs",
         "ListXssMatchSets",
         "PutLoggingConfiguration",
         "PutPermissionPolicy",
+        "TagResource",
+        "UntagResource",
         "UpdateByteMatchSet",
         "UpdateGeoMatchSet",
         "UpdateIPSet",
@@ -3499,7 +3590,12 @@
         "UpdateXssMatchSet"
       ],
       "HasResource": true,
-      "StringPrefix": "waf-regional"
+      "StringPrefix": "waf-regional",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Well-Architected Tool": {
       "ARNFormat": "arn:aws:wellarchitected:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
@@ -4030,43 +4126,6 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
-      ]
-    },
-    "Amazon CloudWatch Events": {
-      "ARNFormat": "arn:aws:\u003cserviceName\u003e:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e",
-      "ARNRegex": "^arn:aws:events:.+",
-      "Actions": [
-        "DeleteRule",
-        "DescribeEventBus",
-        "DescribeRule",
-        "DisableRule",
-        "EnableRule",
-        "ListRuleNamesByTarget",
-        "ListRules",
-        "ListTagsForResource",
-        "ListTargetsByRule",
-        "PutEvents",
-        "PutPermission",
-        "PutRule",
-        "PutTargets",
-        "RemovePermission",
-        "RemoveTargets",
-        "TagResource",
-        "TestEventPattern",
-        "UntagResource"
-      ],
-      "HasResource": true,
-      "StringPrefix": "events",
-      "conditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys",
-        "events:TargetArn",
-        "events:detail-type",
-        "events:detail.eventTypeCode",
-        "events:detail.service",
-        "events:detail.userIdentity.principalId",
-        "events:source"
       ]
     },
     "Amazon CloudWatch Logs": {
@@ -4940,6 +4999,16 @@
         "aws:TagKeys"
       ]
     },
+    "Amazon EC2 Instance Connect Service": {
+      "Actions": [
+        "SendSSHPublicKey"
+      ],
+      "HasResource": false,
+      "StringPrefix": "ec2-instance-connect",
+      "conditionKeys": [
+        "ec2:osuser"
+      ]
+    },
     "Amazon ElastiCache": {
       "Actions": [
         "AddTagsToResource",
@@ -5244,6 +5313,56 @@
       ],
       "HasResource": true,
       "StringPrefix": "es"
+    },
+    "Amazon EventBridge": {
+      "ARNFormat": "arn:aws:\u003cserviceName\u003e:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e",
+      "ARNRegex": "^arn:aws:events:.+",
+      "Actions": [
+        "ActivateEventSource",
+        "CreateEventBus",
+        "CreatePartnerEventSource",
+        "DeactivateEventSource",
+        "DeleteEventBus",
+        "DeletePartnerEventSource",
+        "DeleteRule",
+        "DescribeEventBus",
+        "DescribeEventSource",
+        "DescribePartnerEventSource",
+        "DescribeRule",
+        "DisableRule",
+        "EnableRule",
+        "ListEventBuses",
+        "ListEventSources",
+        "ListPartnerEventSourceAccounts",
+        "ListPartnerEventSources",
+        "ListRuleNamesByTarget",
+        "ListRules",
+        "ListTagsForResource",
+        "ListTargetsByRule",
+        "PutEvents",
+        "PutPartnerEvents",
+        "PutPermission",
+        "PutRule",
+        "PutTargets",
+        "RemovePermission",
+        "RemoveTargets",
+        "TagResource",
+        "TestEventPattern",
+        "UntagResource"
+      ],
+      "HasResource": true,
+      "StringPrefix": "events",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "events:TargetArn",
+        "events:detail-type",
+        "events:detail.eventTypeCode",
+        "events:detail.service",
+        "events:detail.userIdentity.principalId",
+        "events:source"
+      ]
     },
     "Amazon FSx": {
       "ARNFormat": "arn:${Partition}:fsx:${Region}:${Account}:${ResourceType}/${ResourcePath}",
@@ -5611,6 +5730,7 @@
         "CreateStream",
         "DeleteStream",
         "DescribeStream",
+        "GetDASHStreamingSessionURL",
         "GetDataEndpoint",
         "GetHLSStreamingSessionURL",
         "GetMedia",
@@ -6417,6 +6537,17 @@
         "rds:subgrp-tag"
       ]
     },
+    "Amazon RDS Data API": {
+      "Actions": [
+        "BatchExecuteStatement",
+        "BeginTransaction",
+        "CommitTransaction",
+        "ExecuteStatement",
+        "RollbackTransaction"
+      ],
+      "HasResource": false,
+      "StringPrefix": "rds-data"
+    },
     "Amazon Redshift": {
       "ARNFormat": "arn:aws:redshift:\u003cregion\u003e:\u003caccountID\u003e:\u003crelative-id\u003e",
       "ARNRegex": "^arn:aws:redshift:.+:.+:.+",
@@ -6940,6 +7071,7 @@
         "ListPlatformApplications",
         "ListSubscriptions",
         "ListSubscriptionsByTopic",
+        "ListTagsForResource",
         "ListTopics",
         "OptInPhoneNumber",
         "Publish",
@@ -6950,11 +7082,15 @@
         "SetSubscriptionAttributes",
         "SetTopicAttributes",
         "Subscribe",
-        "Unsubscribe"
+        "TagResource",
+        "Unsubscribe",
+        "UntagResource"
       ],
       "HasResource": true,
       "StringPrefix": "sns",
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys",
         "sns:Endpoint",
         "sns:Protocol"
       ]
@@ -7534,6 +7670,31 @@
       "HasResource": false,
       "StringPrefix": "discovery"
     },
+    "CloudWatch Application Insights": {
+      "Actions": [
+        "CreateApplication",
+        "CreateComponent",
+        "DeleteApplication",
+        "DeleteComponent",
+        "DescribeApplication",
+        "DescribeComponent",
+        "DescribeComponentConfiguration",
+        "DescribeComponentConfigurationRecommendation",
+        "DescribeObservation",
+        "DescribeProblem",
+        "DescribeProblemDashboard",
+        "DescribeProblemObservations",
+        "ListApplications",
+        "ListComponents",
+        "ListProblems",
+        "UpdateApplication",
+        "UpdateComponent",
+        "UpdateComponentConfiguration",
+        "UpdateProblem"
+      ],
+      "HasResource": false,
+      "StringPrefix": "applicationinsights"
+    },
     "Comprehend Medical": {
       "ARNFormat": "arn:${Partition}:comprehendmedical:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
       "ARNRegex": "^arn:${Partition}:comprehendmedical:.+:.+:.+",
@@ -7759,6 +7920,7 @@
         "DetachUserPolicy",
         "EnableMFADevice",
         "GenerateCredentialReport",
+        "GenerateOrganizationsAccessReport",
         "GenerateServiceLastAccessedDetails",
         "GetAccessKeyLastUsed",
         "GetAccountAuthorizationDetails",
@@ -7772,6 +7934,7 @@
         "GetInstanceProfile",
         "GetLoginProfile",
         "GetOpenIDConnectProvider",
+        "GetOrganizationsAccessReport",
         "GetPolicy",
         "GetPolicyVersion",
         "GetRole",
@@ -7853,6 +8016,7 @@
       "StringPrefix": "iam",
       "conditionKeys": [
         "iam:AWSServiceName",
+        "iam:OrganizationsPolicyId",
         "iam:PassedToService",
         "iam:PermissionsBoundary",
         "iam:PolicyARN",
@@ -7878,16 +8042,32 @@
         "aws:TagKeys"
       ]
     },
-    "The Data API allows access to RDS databases using web services-based APIs": {
+    "Service Quotas": {
+      "ARNFormat": "arn:aws:servicequotas:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e",
+      "ARNRegex": "^arn:aws:servicequotas:.+",
       "Actions": [
-        "BatchExecuteStatement",
-        "BeginTransaction",
-        "CommitTransaction",
-        "ExecuteStatement",
-        "RollbackTransaction"
+        "AssociateServiceQuotaTemplate",
+        "DeleteServiceQuotaIncreaseRequestFromTemplate",
+        "DisassociateServiceQuotaTemplate",
+        "GetAWSDefaultServiceQuota",
+        "GetAssociationForServiceQuotaTemplate",
+        "GetRequestedServiceQuotaChange",
+        "GetServiceQuota",
+        "GetServiceQuotaIncreaseRequestFromTemplate",
+        "ListAWSDefaultServiceQuotas",
+        "ListRequestedServiceQuotaChangeHistory",
+        "ListRequestedServiceQuotaChangeHistoryByQuota",
+        "ListServiceQuotaIncreaseRequestsInTemplate",
+        "ListServiceQuotas",
+        "ListServices",
+        "PutServiceQuotaIncreaseRequestIntoTemplate",
+        "RequestServiceQuotaIncrease"
       ],
-      "HasResource": false,
-      "StringPrefix": "rds-data"
+      "HasResource": true,
+      "StringPrefix": "servicequotas",
+      "conditionKeys": [
+        "servicequotas:service"
+      ]
     }
   }
 }
