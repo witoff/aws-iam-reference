@@ -7910,7 +7910,6 @@
       "conditionKeys": [
         "aws:RequestTag/tag-key",
         "aws:TagKeys",
-        "elasticloadbalancing:ResourceTag/",
         "elasticloadbalancing:ResourceTag/tag-key"
       ]
     },
