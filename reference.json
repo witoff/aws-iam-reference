@@ -3650,6 +3650,7 @@
       "ARNRegex": "^arn:${Partition}:wellarchitected:.+",
       "Actions": [
         "CreateWorkload",
+        "DeleteWorkload",
         "GetWorkload",
         "ListWorkloads"
       ],
