@@ -5299,6 +5299,9 @@
       "HasResource": true,
       "StringPrefix": "elasticmapreduce",
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "elasticmapreduce:RequestTag/${TagKey}",
         "elasticmapreduce:ResourceTag/${TagKey}"
       ]
