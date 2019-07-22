@@ -3293,6 +3293,7 @@
         "CreateAssociationBatch",
         "CreateDocument",
         "CreateMaintenanceWindow",
+        "CreateOpsItem",
         "CreatePatchBaseline",
         "CreateResourceDataSync",
         "DeleteActivation",
@@ -3335,6 +3336,7 @@
         "DescribeMaintenanceWindowTasks",
         "DescribeMaintenanceWindows",
         "DescribeMaintenanceWindowsForTarget",
+        "DescribeOpsItems",
         "DescribeParameters",
         "DescribePatchBaselines",
         "DescribePatchGroupState",
@@ -3354,6 +3356,8 @@
         "GetMaintenanceWindowExecutionTaskInvocation",
         "GetMaintenanceWindowTask",
         "GetManifest",
+        "GetOpsItem",
+        "GetOpsSummary",
         "GetParameter",
         "GetParameterHistory",
         "GetParameters",
@@ -3402,6 +3406,7 @@
         "UpdateMaintenanceWindowTarget",
         "UpdateMaintenanceWindowTask",
         "UpdateManagedInstanceRole",
+        "UpdateOpsItem",
         "UpdatePatchBaseline"
       ],
       "HasResource": true,
@@ -3410,6 +3415,7 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ssm:SessionDocumentAccessCheck",
         "ssm:resourceTag/tag-key"
       ]
     },
