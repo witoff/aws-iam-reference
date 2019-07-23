@@ -963,6 +963,7 @@
         "GetReservationCoverage",
         "GetReservationPurchaseRecommendation",
         "GetReservationUtilization",
+        "GetRightsizingRecommendation",
         "GetTags",
         "GetUsageForecast"
       ],
