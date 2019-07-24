@@ -455,6 +455,26 @@
         "aws:TagKeys"
       ]
     },
+    "AWS Chatbot": {
+      "ARNFormat": "arn:${Partition}:chatbot::\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e",
+      "ARNRegex": "^arn:${Partition}:chatbot:.+",
+      "Actions": [
+        "CreateChimeWebhookConfiguration",
+        "CreateSlackChannelConfiguration",
+        "DeleteChimeWebhookConfiguration",
+        "DeleteSlackChannelConfiguration",
+        "DescribeChimeWebhookConfigurations",
+        "DescribeSlackChannelConfigurations",
+        "DescribeSlackChannels",
+        "DescribeSlackWorkspaces",
+        "GetSlackOauthParameters",
+        "RedeemSlackOauthCode",
+        "UpdateChimeWebhookConfiguration",
+        "UpdateSlackChannelConfiguration"
+      ],
+      "HasResource": true,
+      "StringPrefix": "chatbot"
+    },
     "AWS Cloud Map": {
       "ARNFormat": "arn:aws:servicediscovery:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
       "ARNRegex": "^arn:aws:servicediscovery:.+",
