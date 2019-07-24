@@ -3020,16 +3020,22 @@
         "AssumeRoleWithSAML",
         "AssumeRoleWithWebIdentity",
         "DecodeAuthorizationMessage",
+        "GetAccessKeyInfo",
         "GetCallerIdentity",
         "GetFederationToken"
       ],
       "HasResource": true,
       "StringPrefix": "sts",
       "conditionKeys": [
-        "\u003cweb-identity-provider\u003e:aud",
-        "\u003cweb-identity-provider\u003e:oaud",
-        "\u003cweb-identity-provider\u003e:sub",
+        "accounts.google.com:aud",
+        "accounts.google.com:oaud",
+        "accounts.google.com:sub",
         "aws:FederatedProvider",
+        "cognito-identity.amazonaws.com:amr",
+        "cognito-identity.amazonaws.com:aud",
+        "cognito-identity.amazonaws.com:sub",
+        "graph.facebook.com:app_id",
+        "graph.facebook.com:id",
         "saml:aud",
         "saml:cn",
         "saml:commonName",
@@ -3062,7 +3068,9 @@
         "saml:surname",
         "saml:uid",
         "saml:x500UniqueIdentifier",
-        "sts:ExternalId"
+        "sts:ExternalId",
+        "www.amazon.com:app_id",
+        "www.amazon.com:user_id"
       ]
     },
     "AWS Server Migration Service": {
