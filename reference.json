@@ -592,6 +592,9 @@
       "HasResource": true,
       "StringPrefix": "cloudformation",
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "cloudformation:ChangeSetName",
         "cloudformation:ResourceTypes",
         "cloudformation:RoleArn",
