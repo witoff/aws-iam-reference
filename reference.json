@@ -6448,6 +6448,38 @@
       "HasResource": true,
       "StringPrefix": "polly"
     },
+    "Amazon QLDB": {
+      "ARNFormat": "arn:${Partition}:qldb:${region}:${account}:${resourceType}/${resourcePath}",
+      "ARNRegex": "^arn:${Partition}:qldb:.+",
+      "Actions": [
+        "CreateLedger",
+        "DeleteLedger",
+        "DescribeJournalS3Export",
+        "DescribeLedger",
+        "ExecuteStatement",
+        "ExportJournalToS3",
+        "GetBlock",
+        "GetDigest",
+        "GetRevision",
+        "InsertSampleData",
+        "ListJournalS3Exports",
+        "ListJournalS3ExportsForLedger",
+        "ListLedgers",
+        "ListTagsForResource",
+        "SendCommand",
+        "ShowCatalog",
+        "TagResource",
+        "UntagResource",
+        "UpdateLedger"
+      ],
+      "HasResource": true,
+      "StringPrefix": "qldb",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
     "Amazon QuickSight": {
       "ARNFormat": "arn:aws:quicksight::\u003cregion\u003e:\u003caccountId\u003e:\u003cresourceType\u003e/\u003cresourceId\u003e",
       "ARNRegex": "^arn:aws:quicksight::.+",
