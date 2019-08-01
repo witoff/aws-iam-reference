@@ -1353,7 +1353,7 @@
         "elasticbeanstalk:InApplication"
       ]
     },
-    "AWS Elemental Appliances \u0026 Software": {
+    "AWS Elemental Appliances and Software": {
       "ARNFormat": "arn:aws:aesop:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
       "ARNRegex": "^arn:aws:aesop:.+:.+:.+",
       "Actions": [
@@ -7654,22 +7654,34 @@
       "ARNFormat": "arn:${Partition}:worklink::${account}:${resourceType}/${resourcePath}",
       "ARNRegex": "^arn:${Partition}:worklink:.+",
       "Actions": [
+        "AssociateDomain",
+        "AssociateWebsiteAuthorizationProvider",
         "AssociateWebsiteCertificateAuthority",
         "CreateFleet",
         "DeleteFleet",
+        "DescribeAuditStreamConfiguration",
         "DescribeCompanyNetworkConfiguration",
         "DescribeDevice",
         "DescribeDevicePolicyConfiguration",
+        "DescribeDomain",
         "DescribeFleetMetadata",
         "DescribeIdentityProviderConfiguration",
         "DescribeWebsiteCertificateAuthority",
+        "DisassociateDomain",
+        "DisassociateWebsiteAuthorizationProvider",
         "DisassociateWebsiteCertificateAuthority",
         "ListDevices",
+        "ListDomains",
         "ListFleets",
+        "ListWebsiteAuthorizationProviders",
         "ListWebsiteCertificateAuthorities",
+        "RestoreDomainAccess",
+        "RevokeDomainAccess",
         "SignOutUser",
+        "UpdateAuditStreamConfiguration",
         "UpdateCompanyNetworkConfiguration",
         "UpdateDevicePolicyConfiguration",
+        "UpdateDomainMetadata",
         "UpdateFleetMetadata",
         "UpdateIdentityProviderConfiguration"
       ],
