@@ -999,6 +999,7 @@
       "Actions": [
         "DeleteReportDefinition",
         "DescribeReportDefinitions",
+        "ModifyReportDefinition",
         "PutReportDefinition"
       ],
       "HasResource": true,
