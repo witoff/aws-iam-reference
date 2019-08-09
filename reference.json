@@ -159,27 +159,41 @@
       "Actions": [
         "CreateApp",
         "CreateBranch",
+        "CreateDeployment",
         "CreateDomainAssociation",
+        "CreateWebHook",
         "DeleteApp",
         "DeleteBranch",
         "DeleteDomainAssociation",
         "DeleteJob",
+        "DeleteWebHook",
         "GetApp",
         "GetBranch",
         "GetDomainAssociation",
         "GetJob",
+        "GetWebHook",
         "ListApps",
         "ListBranches",
         "ListDomainAssociations",
         "ListJobs",
+        "ListWebHooks",
+        "StartDeployment",
         "StartJob",
         "StopJob",
+        "TagResource",
+        "UntagResource",
         "UpdateApp",
         "UpdateBranch",
-        "UpdateDomainAssociation"
+        "UpdateDomainAssociation",
+        "UpdateWebHook"
       ],
       "HasResource": true,
-      "StringPrefix": "amplify"
+      "StringPrefix": "amplify",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS App Mesh": {
       "ARNFormat": "arn:aws:appmesh:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
