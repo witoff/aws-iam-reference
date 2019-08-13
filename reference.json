@@ -908,16 +908,24 @@
         "GetExtendedAccess",
         "ListProjects",
         "ListResources",
+        "ListTagsForProject",
         "ListTeamMembers",
         "ListUserProfiles",
         "PutExtendedAccess",
+        "TagProject",
+        "UntagProject",
         "UpdateProject",
         "UpdateTeamMember",
-        "UpdateUserProfile",
-        "VerifyServiceRole"
+        "UpdateUserProfile"
       ],
       "HasResource": true,
-      "StringPrefix": "codestar"
+      "StringPrefix": "codestar",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "iam:ResourceTag/${TagKey}"
+      ]
     },
     "AWS Config": {
       "ARNFormat": "arn:\u003cpartition\u003e:config:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceId\u003e",
