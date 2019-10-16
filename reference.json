@@ -8280,21 +8280,6 @@
       "HasResource": false,
       "StringPrefix": "discovery"
     },
-    "Application Wizard": {
-      "ARNRegex": "^arn:aws:applicationwizard:.+:.+:.+",
-      "Actions": [
-        "DeleteApp",
-        "DescribeProvisionedApp",
-        "DescribeProvisioningEvents",
-        "GetInfrastructureSuggestion",
-        "GetIpAddress",
-        "GetResourceCostEstimate",
-        "ListProvisionedApps",
-        "StartProvisioning"
-      ],
-      "HasResource": false,
-      "StringPrefix": "applicationwizard"
-    },
     "CloudWatch Application Insights": {
       "Actions": [
         "CreateApplication",
