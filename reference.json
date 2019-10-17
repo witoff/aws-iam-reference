@@ -1776,6 +1776,7 @@
         "GetDevEndpoint",
         "GetDevEndpoints",
         "GetJob",
+        "GetJobBookmark",
         "GetJobRun",
         "GetJobRuns",
         "GetJobs",
@@ -1813,6 +1814,7 @@
         "PutResourcePolicy",
         "PutWorkflowRunProperties",
         "ResetJobBookmark",
+        "SearchTables",
         "StartCrawler",
         "StartCrawlerSchedule",
         "StartExportLabelsTaskRun",
@@ -1830,6 +1832,7 @@
         "UpdateClassifier",
         "UpdateConnection",
         "UpdateCrawler",
+        "UpdateCrawlerSchedule",
         "UpdateDatabase",
         "UpdateDevEndpoint",
         "UpdateJob",
@@ -1842,7 +1845,12 @@
         "UseMLTransforms"
       ],
       "HasResource": true,
-      "StringPrefix": "glue"
+      "StringPrefix": "glue",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Ground Station": {
       "ARNFormat": "arn:aws:groundstation:\u003cregion\u003e:\u003caccountID\u003e:\u003cresourceType\u003e/\u003cresourceId\u003e",
