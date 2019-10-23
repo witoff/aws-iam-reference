@@ -4786,7 +4786,11 @@
         "GetFederationToken",
         "GetFederationTokens",
         "GetMetricData",
+        "ListContactFlows",
+        "ListHoursOfOperations",
         "ListInstances",
+        "ListPhoneNumbers",
+        "ListQueues",
         "ModifyInstance",
         "StartOutboundVoiceContact",
         "StopContact"
