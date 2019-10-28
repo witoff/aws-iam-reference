@@ -5471,7 +5471,7 @@
     },
     "Amazon Elastic Container Registry": {
       "ARNFormat": "arn:aws:ecr:\u003cregion\u003e:\u003caccount_ID\u003e:repository/\u003crepository_name\u003e",
-      "ARNRegex": "arn:aws:ecr+:[^:]+:[0-9]{12}:repository/.*",
+      "ARNRegex": "^arn:aws:ecr:.+",
       "Actions": [
         "BatchCheckLayerAvailability",
         "BatchDeleteImage",
@@ -5481,6 +5481,7 @@
         "DeleteLifecyclePolicy",
         "DeleteRepository",
         "DeleteRepositoryPolicy",
+        "DescribeImageScanFindings",
         "DescribeImages",
         "DescribeRepositories",
         "GetAuthorizationToken",
@@ -5492,9 +5493,11 @@
         "ListImages",
         "ListTagsForResource",
         "PutImage",
+        "PutImageScanningConfiguration",
         "PutImageTagMutability",
         "PutLifecyclePolicy",
         "SetRepositoryPolicy",
+        "StartImageScan",
         "StartLifecyclePolicyPreview",
         "TagResource",
         "UntagResource",
