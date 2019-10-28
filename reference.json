@@ -2935,14 +2935,18 @@
         "AssociateProductsWithPrivateMarketplace",
         "CreatePrivateMarketplace",
         "CreatePrivateMarketplaceProfile",
+        "CreatePrivateMarketplaceRequests",
         "DescribePrivateMarketplaceProducts",
         "DescribePrivateMarketplaceProfile",
+        "DescribePrivateMarketplaceRequests",
         "DescribePrivateMarketplaceStatus",
         "DisassociateProductsFromPrivateMarketplace",
         "ListPrivateMarketplaceProducts",
+        "ListPrivateMarketplaceRequests",
         "StartPrivateMarketplace",
         "StopPrivateMarketplace",
-        "UpdatePrivateMarketplaceProfile"
+        "UpdatePrivateMarketplaceProfile",
+        "UpdatePrivateMarketplaceSettings"
       ],
       "HasResource": false,
       "StringPrefix": "aws-marketplace"
@@ -7096,6 +7100,15 @@
       ],
       "HasResource": false,
       "StringPrefix": "rds-data"
+    },
+    "Amazon RDS IAM Authentication": {
+      "ARNFormat": "arn:aws:rds-db:\u003cregion\u003e:\u003caccount-id\u003e:dbuser:\u003cdbi-resource-id\u003e/\u003cdb-user-name\u003e",
+      "ARNRegex": "^arn:aws:rds-db:.+",
+      "Actions": [
+        "connect"
+      ],
+      "HasResource": true,
+      "StringPrefix": "rds-db"
     },
     "Amazon Redshift": {
       "ARNFormat": "arn:aws:redshift:\u003cregion\u003e:\u003caccountID\u003e:\u003crelative-id\u003e",
