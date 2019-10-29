@@ -1327,6 +1327,7 @@
         "AddTagsToResource",
         "AuthorizeApplication",
         "CancelSchemaExtension",
+        "CheckAlias",
         "ConnectDirectory",
         "CreateAlias",
         "CreateComputer",
