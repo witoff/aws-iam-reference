@@ -7183,6 +7183,7 @@
         "DescribeReservedNodeOfferings",
         "DescribeReservedNodes",
         "DescribeResize",
+        "DescribeSavedQueries",
         "DescribeSnapshotCopyGrants",
         "DescribeSnapshotSchedules",
         "DescribeStorage",
