@@ -951,6 +951,7 @@
         "DeleteNotificationRule",
         "DeleteTarget",
         "DescribeNotificationRule",
+        "ListEventTypes",
         "ListNotificationRules",
         "ListTagsForResource",
         "ListTargets",
