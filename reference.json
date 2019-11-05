@@ -3300,7 +3300,8 @@
         "DecodeAuthorizationMessage",
         "GetAccessKeyInfo",
         "GetCallerIdentity",
-        "GetFederationToken"
+        "GetFederationToken",
+        "GetSessionToken"
       ],
       "HasResource": true,
       "StringPrefix": "sts",
