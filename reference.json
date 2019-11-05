@@ -943,6 +943,32 @@
         "iam:ResourceTag/${TagKey}"
       ]
     },
+    "AWS CodeStar Notifications": {
+      "ARNFormat": "arn:aws:codestar-notifications:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_id\u003e",
+      "ARNRegex": "^arn:aws:codestar-notifications:.+:.+:.+",
+      "Actions": [
+        "CreateNotificationRule",
+        "DeleteNotificationRule",
+        "DeleteTarget",
+        "DescribeNotificationRule",
+        "ListNotificationRules",
+        "ListTagsForResource",
+        "ListTargets",
+        "Subscribe",
+        "TagResource",
+        "Unsubscribe",
+        "UntagResource",
+        "UpdateNotificationRule"
+      ],
+      "HasResource": true,
+      "StringPrefix": "codestar-notifications",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "codestar-notifications:NotificationsForResource"
+      ]
+    },
     "AWS Config": {
       "ARNFormat": "arn:\u003cpartition\u003e:config:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceId\u003e",
       "ARNRegex": "arn:\u003cpartition\u003e:config:.+",
