@@ -3198,6 +3198,27 @@
       "HasResource": false,
       "StringPrefix": "sso-directory"
     },
+    "AWS Savings Plans": {
+      "ARNFormat": "arn:aws:savingsplans::${Account}:${ResourceType}/${ResourcePath}",
+      "ARNRegex": "^arn:aws:savingsplans:.+",
+      "Actions": [
+        "CreateSavingsPlan",
+        "DescribeSavingsPlanRates",
+        "DescribeSavingsPlans",
+        "DescribeSavingsPlansOfferingRates",
+        "DescribeSavingsPlansOfferings",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource"
+      ],
+      "HasResource": true,
+      "StringPrefix": "savingsplans",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
     "AWS Secrets Manager": {
       "ARNFormat": "arn:${Partition}:secretsmanager:${Region}:${Account}:secret:${SecretId}",
       "ARNRegex": "^arn:${Partition}:secretsmanager:.+",
