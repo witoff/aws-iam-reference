@@ -7864,7 +7864,9 @@
         "sagemaker:RootAccess",
         "sagemaker:VolumeKmsKey",
         "sagemaker:VpcSecurityGroupIds",
-        "sagemaker:VpcSubnets"
+        "sagemaker:VpcSubnets",
+        "sagemaker:WorkteamArn",
+        "sagemaker:WorkteamType"
       ]
     },
     "Amazon Session Manager Message Gateway Service": {
