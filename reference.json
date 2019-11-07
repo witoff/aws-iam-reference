@@ -1052,6 +1052,10 @@
         "GetReservationPurchaseRecommendation",
         "GetReservationUtilization",
         "GetRightsizingRecommendation",
+        "GetSavingsPlansCoverage",
+        "GetSavingsPlansPurchaseRecommendation",
+        "GetSavingsPlansUtilization",
+        "GetSavingsPlansUtilizationDetails",
         "GetTags",
         "GetUsageForecast"
       ],
