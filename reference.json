@@ -1484,26 +1484,6 @@
         "elasticbeanstalk:InApplication"
       ]
     },
-    "AWS Elemental Appliances and Software": {
-      "ARNFormat": "arn:aws:aesop:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
-      "ARNRegex": "^arn:aws:aesop:.+:.+:.+",
-      "Actions": [
-        "CreateQuote",
-        "GetQuote",
-        "ListQuotes",
-        "ListTagsForResource",
-        "TagResource",
-        "UntagResource",
-        "UpdateQuote"
-      ],
-      "HasResource": true,
-      "StringPrefix": "aesop",
-      "conditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
-      ]
-    },
     "AWS Elemental MediaConnect": {
       "ARNFormat": "arn:${Partition}:mediaconnect:${Region}:${Account}:\u003cnamespace\u003e:\u003crelative-id\u003e:\u003crelative-name\u003e",
       "ARNRegex": "^arn:${Partition}:mediaconnect:.+",
