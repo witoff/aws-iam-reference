@@ -4880,10 +4880,18 @@
         "DeleteLifecyclePolicy",
         "GetLifecyclePolicies",
         "GetLifecyclePolicy",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
         "UpdateLifecyclePolicy"
       ],
       "HasResource": true,
-      "StringPrefix": "dlm"
+      "StringPrefix": "dlm",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon DynamoDB": {
       "ARNFormat": "arn:aws:dynamodb:\u003cregion\u003e:\u003caccountID\u003e:\u003cresourceType\u003e/\u003cresourcePath\u003e",
