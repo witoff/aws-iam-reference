@@ -693,11 +693,19 @@
         "ListSigningJobs",
         "ListSigningPlatforms",
         "ListSigningProfiles",
+        "ListTagsForResource",
         "PutSigningProfile",
-        "StartSigningJob"
+        "StartSigningJob",
+        "TagResource",
+        "UntagResource"
       ],
       "HasResource": true,
-      "StringPrefix": "signer"
+      "StringPrefix": "signer",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS CodeBuild": {
       "ARNFormat": "arn:${Partition}:codebuild:\u003cregion\u003e:\u003caccount_ID\u003e:\u003cresource_type\u003e/\u003cresource_id\u003e",
