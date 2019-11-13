@@ -5694,16 +5694,22 @@
       "ARNRegex": "^arn:aws:eks:.+",
       "Actions": [
         "CreateCluster",
+        "CreateNodegroup",
         "DeleteCluster",
+        "DeleteNodegroup",
         "DescribeCluster",
+        "DescribeNodegroup",
         "DescribeUpdate",
         "ListClusters",
+        "ListNodegroups",
         "ListTagsForResource",
         "ListUpdates",
         "TagResource",
         "UntagResource",
         "UpdateClusterConfig",
-        "UpdateClusterVersion"
+        "UpdateClusterVersion",
+        "UpdateNodegroupConfig",
+        "UpdateNodegroupVersion"
       ],
       "HasResource": true,
       "StringPrefix": "eks",
