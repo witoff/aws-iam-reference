@@ -1082,6 +1082,42 @@
       "HasResource": true,
       "StringPrefix": "cur"
     },
+    "AWS Data Exchange": {
+      "ARNFormat": "arn:aws:dataexchange:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_id\u003e",
+      "ARNRegex": "^arn:aws:dataexchange:.+:.*:.+",
+      "Actions": [
+        "CancelJob",
+        "CreateDataSet",
+        "CreateJob",
+        "CreateRevision",
+        "DeleteAsset",
+        "DeleteDataSet",
+        "DeleteRevision",
+        "GetAsset",
+        "GetDataSet",
+        "GetJob",
+        "GetRevision",
+        "ListDataSetRevisions",
+        "ListDataSets",
+        "ListJobs",
+        "ListRevisionsAssets",
+        "ListTagsForResource",
+        "StartJob",
+        "TagResource",
+        "UntagResource",
+        "UpdateAsset",
+        "UpdateDataSet",
+        "UpdateRevision"
+      ],
+      "HasResource": true,
+      "StringPrefix": "dataexchange",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "dataexchange:JobType"
+      ]
+    },
     "AWS Database Migration Service": {
       "ARNFormat": "arn:aws:dms:\u003cregion\u003e:\u003caccount\u003e:\u003cresource\u003e",
       "ARNRegex": "arn:aws:dms:.+",
@@ -2652,8 +2688,15 @@
     },
     "AWS Marketplace": {
       "Actions": [
+        "AcceptAgreementApprovalRequest",
+        "CancelAgreementRequest",
+        "GetAgreementRequest",
+        "ListAgreementApprovalRequests",
+        "ListAgreementRequests",
+        "RejectAgreementApprovalRequest",
         "Subscribe",
         "Unsubscribe",
+        "UpdateAgreementApprovalRequest",
         "ViewSubscriptions"
       ],
       "HasResource": false,
@@ -8771,6 +8814,21 @@
         "iam:PolicyARN",
         "iam:ResourceTag/${TagKey}"
       ]
+    },
+    "Launch Wizard": {
+      "ARNRegex": "^arn:aws:launchwizard:.+:.+:.+",
+      "Actions": [
+        "DeleteApp",
+        "DescribeProvisionedApp",
+        "DescribeProvisioningEvents",
+        "GetInfrastructureSuggestion",
+        "GetIpAddress",
+        "GetResourceCostEstimate",
+        "ListProvisionedApps",
+        "StartProvisioning"
+      ],
+      "HasResource": false,
+      "StringPrefix": "launchwizard"
     },
     "Manage Amazon API Gateway": {
       "ARNFormat": "arn:aws:apigateway:\u003cregion\u003e::\u003capi_gateway_resource_path\u003e",
