@@ -2995,6 +2995,7 @@
         "aws:TagKeys",
         "ram:AllowsExternalPrincipals",
         "ram:Principal",
+        "ram:RequestedAllowsExternalPrincipals",
         "ram:RequestedResourceType",
         "ram:ResourceArn",
         "ram:ResourceShareName",
