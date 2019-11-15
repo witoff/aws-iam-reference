@@ -4901,12 +4901,18 @@
       ]
     },
     "Amazon Connect": {
-      "ARNFormat": "arn:${Partition}:connect",
-      "ARNRegex": "^arn:${Partition}:connect:.+",
+      "ARNFormat": "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}",
+      "ARNRegex": "^arn:${Partition}:connect:.+:.+:instance/.+",
       "Actions": [
         "CreateInstance",
+        "CreateUser",
+        "DeleteUser",
         "DescribeInstance",
+        "DescribeUser",
+        "DescribeUserHierarchyGroup",
+        "DescribeUserHierarchyStructure",
         "DestroyInstance",
+        "GetContactAttributes",
         "GetCurrentMetricData",
         "GetFederationToken",
         "GetFederationTokens",
@@ -4916,12 +4922,30 @@
         "ListInstances",
         "ListPhoneNumbers",
         "ListQueues",
+        "ListRoutingProfiles",
+        "ListSecurityProfiles",
+        "ListTagsForResource",
+        "ListUserHierarchyGroups",
+        "ListUsers",
         "ModifyInstance",
         "StartOutboundVoiceContact",
-        "StopContact"
+        "StopContact",
+        "TagResource",
+        "UntagResource",
+        "UpdateContactAttributes",
+        "UpdateUserHierarchy",
+        "UpdateUserIdentityInfo",
+        "UpdateUserPhoneConfig",
+        "UpdateUserRoutingProfile",
+        "UpdateUserSecurityProfiles"
       ],
       "HasResource": true,
-      "StringPrefix": "connect"
+      "StringPrefix": "connect",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Data Lifecycle Manager": {
       "ARNFormat": "arn:${Partition}:dlm:\u003cregion\u003e:\u003caccount-id\u003e:policy/\u003cresource_name\u003e",
