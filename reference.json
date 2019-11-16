@@ -1054,6 +1054,7 @@
       "ARNRegex": "^arn:aws:ce::.+:.+",
       "Actions": [
         "GetCostAndUsage",
+        "GetCostAndUsageWithResources",
         "GetCostForecast",
         "GetDimensionValues",
         "GetReservationCoverage",
