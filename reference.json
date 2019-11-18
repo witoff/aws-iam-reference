@@ -237,6 +237,40 @@
         "aws:TagKeys"
       ]
     },
+    "AWS App Mesh Preview": {
+      "ARNFormat": "arn:aws:appmesh-preview:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+      "ARNRegex": "^arn:aws:appmesh-preview:.+:.+:.+",
+      "Actions": [
+        "CreateMesh",
+        "CreateRoute",
+        "CreateVirtualNode",
+        "CreateVirtualRouter",
+        "CreateVirtualService",
+        "DeleteMesh",
+        "DeleteRoute",
+        "DeleteVirtualNode",
+        "DeleteVirtualRouter",
+        "DeleteVirtualService",
+        "DescribeMesh",
+        "DescribeRoute",
+        "DescribeVirtualNode",
+        "DescribeVirtualRouter",
+        "DescribeVirtualService",
+        "ListMeshes",
+        "ListRoutes",
+        "ListVirtualNodes",
+        "ListVirtualRouters",
+        "ListVirtualServices",
+        "StreamAggregatedResources",
+        "UpdateMesh",
+        "UpdateRoute",
+        "UpdateVirtualNode",
+        "UpdateVirtualRouter",
+        "UpdateVirtualService"
+      ],
+      "HasResource": true,
+      "StringPrefix": "appmesh-preview"
+    },
     "AWS AppSync": {
       "ARNFormat": "arn:aws:appsync:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourcePath\u003e",
       "ARNRegex": "^arn:aws:appsync:.+",
@@ -8907,40 +8941,6 @@
       "conditionKeys": [
         "servicequotas:service"
       ]
-    },
-    "The prview channel for upcoming AWS App Mesh features": {
-      "ARNFormat": "arn:aws:appmesh-preview:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
-      "ARNRegex": "^arn:aws:appmesh-preview:.+:.+:.+",
-      "Actions": [
-        "CreateMesh",
-        "CreateRoute",
-        "CreateVirtualNode",
-        "CreateVirtualRouter",
-        "CreateVirtualService",
-        "DeleteMesh",
-        "DeleteRoute",
-        "DeleteVirtualNode",
-        "DeleteVirtualRouter",
-        "DeleteVirtualService",
-        "DescribeMesh",
-        "DescribeRoute",
-        "DescribeVirtualNode",
-        "DescribeVirtualRouter",
-        "DescribeVirtualService",
-        "ListMeshes",
-        "ListRoutes",
-        "ListVirtualNodes",
-        "ListVirtualRouters",
-        "ListVirtualServices",
-        "StreamAggregatedResources",
-        "UpdateMesh",
-        "UpdateRoute",
-        "UpdateVirtualNode",
-        "UpdateVirtualRouter",
-        "UpdateVirtualService"
-      ],
-      "HasResource": true,
-      "StringPrefix": "appmesh-preview"
     }
   }
 }
