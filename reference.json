@@ -3851,6 +3851,8 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ssm:Overwrite",
+        "ssm:Recursive",
         "ssm:SessionDocumentAccessCheck",
         "ssm:SyncType",
         "ssm:resourceTag/tag-key"
