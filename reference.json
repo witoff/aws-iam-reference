@@ -6362,6 +6362,7 @@
         "DeleteApplicationReferenceDataSource",
         "DescribeApplication",
         "DiscoverInputSchema",
+        "GetApplicationState",
         "ListApplications",
         "ListTagsForResource",
         "StartApplication",
