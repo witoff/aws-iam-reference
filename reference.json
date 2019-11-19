@@ -3685,7 +3685,30 @@
       ]
     },
     "AWS Support": {
-      "Actions": [],
+      "Actions": [
+        "AddAttachmentsToSet",
+        "AddCommunicationToCase",
+        "CreateCase",
+        "DescribeAttachment",
+        "DescribeCaseAttributes",
+        "DescribeCases",
+        "DescribeCommunications",
+        "DescribeIssueTypes",
+        "DescribeServices",
+        "DescribeSeverityLevels",
+        "DescribeSupportLevel",
+        "DescribeTrustedAdvisorCheckRefreshStatuses",
+        "DescribeTrustedAdvisorCheckResult",
+        "DescribeTrustedAdvisorCheckSummaries",
+        "DescribeTrustedAdvisorChecks",
+        "InitiateCallForCase",
+        "InitiateChatForCase",
+        "PutCaseAttributes",
+        "RateCaseCommunication",
+        "RefreshTrustedAdvisorCheck",
+        "ResolveCase",
+        "SearchForCases"
+      ],
       "HasResource": false,
       "StringPrefix": "support"
     },
