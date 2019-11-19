@@ -7571,7 +7571,12 @@
         "UpdateResolverRule"
       ],
       "HasResource": true,
-      "StringPrefix": "route53resolver"
+      "StringPrefix": "route53resolver",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Route53 Domains": {
       "Actions": [
