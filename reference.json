@@ -476,7 +476,12 @@
         "UpdateCertificateOptions"
       ],
       "HasResource": true,
-      "StringPrefix": "acm"
+      "StringPrefix": "acm",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Certificate Manager Private Certificate Authority": {
       "ARNFormat": "arn:aws:acm-pca:\u003cregion\u003e:\u003caccount_ID\u003e:\u003carn_type\u003e/\u003cresource_id\u003e",
