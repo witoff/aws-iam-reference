@@ -2828,9 +2828,11 @@
       "Actions": [
         "AssociateCreatedArtifact",
         "AssociateDiscoveredResource",
+        "CreateHomeRegionControl",
         "CreateProgressUpdateStream",
         "DeleteProgressUpdateStream",
         "DescribeApplicationState",
+        "DescribeHomeRegionControls",
         "DescribeMigrationTask",
         "DisassociateCreatedArtifact",
         "DisassociateDiscoveredResource",
