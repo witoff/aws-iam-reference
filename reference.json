@@ -3424,7 +3424,8 @@
         "GetAccessKeyInfo",
         "GetCallerIdentity",
         "GetFederationToken",
-        "GetSessionToken"
+        "GetSessionToken",
+        "TagSession"
       ],
       "HasResource": true,
       "StringPrefix": "sts",
@@ -3433,6 +3434,10 @@
         "accounts.google.com:oaud",
         "accounts.google.com:sub",
         "aws:FederatedProvider",
+        "aws:PrincipalTag/${TagKey}",
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "cognito-identity.amazonaws.com:amr",
         "cognito-identity.amazonaws.com:aud",
         "cognito-identity.amazonaws.com:sub",
@@ -3471,6 +3476,7 @@
         "saml:uid",
         "saml:x500UniqueIdentifier",
         "sts:ExternalId",
+        "sts:TransitiveTagKeys",
         "www.amazon.com:app_id",
         "www.amazon.com:user_id"
       ]
