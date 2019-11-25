@@ -1163,7 +1163,7 @@
         "ListDataSetRevisions",
         "ListDataSets",
         "ListJobs",
-        "ListRevisionsAssets",
+        "ListRevisionAssets",
         "ListTagsForResource",
         "StartJob",
         "TagResource",
