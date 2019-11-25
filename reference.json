@@ -1148,6 +1148,9 @@
       "ARNFormat": "arn:aws:ce::\u003caccount_ID\u003e:ce",
       "ARNRegex": "^arn:aws:ce::.+:.+",
       "Actions": [
+        "CreateCostCategoryDefinition",
+        "DeleteCostCategoryDefinition",
+        "DescribeCostCategoryDefinition",
         "GetCostAndUsage",
         "GetCostAndUsageWithResources",
         "GetCostForecast",
@@ -1161,7 +1164,9 @@
         "GetSavingsPlansUtilization",
         "GetSavingsPlansUtilizationDetails",
         "GetTags",
-        "GetUsageForecast"
+        "GetUsageForecast",
+        "ListCostCategoryDefinitions",
+        "UpdateCostCategoryDefinition"
       ],
       "HasResource": false,
       "StringPrefix": "ce"
