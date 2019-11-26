@@ -3068,6 +3068,7 @@
         "DeletePolicy",
         "DescribeAccount",
         "DescribeCreateAccountStatus",
+        "DescribeEffectivePolicy",
         "DescribeHandshake",
         "DescribeOrganization",
         "DescribeOrganizationalUnit",
@@ -7664,9 +7665,12 @@
     },
     "Amazon Resource Group Tagging API": {
       "Actions": [
+        "DescribeReportCreation",
+        "GetComplianceSummary",
         "GetResources",
         "GetTagKeys",
         "GetTagValues",
+        "StartReportCreation",
         "TagResources",
         "UntagResources"
       ],
