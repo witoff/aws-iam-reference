@@ -6229,6 +6229,46 @@
         "events:source"
       ]
     },
+    "Amazon EventBridge Schemas": {
+      "ARNFormat": "arn:aws:schemas:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e",
+      "ARNRegex": "^arn:${Partition}:schemas:.+:.+:.+",
+      "Actions": [
+        "CreateDiscoverer",
+        "CreateRegistry",
+        "CreateSchema",
+        "DeleteDiscoverer",
+        "DeleteRegistry",
+        "DeleteSchema",
+        "DeleteSchemaVersion",
+        "DescribeCodeBinding",
+        "DescribeDiscoverer",
+        "DescribeRegistry",
+        "DescribeSchema",
+        "GetCodeBindingSource",
+        "GetDiscoveredSchema",
+        "ListDiscoverers",
+        "ListRegistries",
+        "ListSchemaVersions",
+        "ListSchemas",
+        "ListTagsForResource",
+        "PutCodeBinding",
+        "SearchSchemas",
+        "StartDiscoverer",
+        "StopDiscoverer",
+        "TagResource",
+        "UntagResource",
+        "UpdateDiscoverer",
+        "UpdateRegistry",
+        "UpdateSchema"
+      ],
+      "HasResource": true,
+      "StringPrefix": "schemas",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
     "Amazon FSx": {
       "ARNFormat": "arn:${Partition}:fsx:${Region}:${Account}:${ResourceType}/${ResourcePath}",
       "ARNRegex": "^arn:${Partition}:fsx:.+",
