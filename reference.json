@@ -9088,6 +9088,37 @@
         "elasticloadbalancing:ResourceTag/tag-key"
       ]
     },
+    "IAM Access Analyzer": {
+      "ARNFormat": "arn:${Partition}:access-analyzer::analyzer/${analyzerName}",
+      "ARNRegex": "^arn:${Partition}:access-analyzer::.+",
+      "Actions": [
+        "CreateAnalyzer",
+        "CreateArchiveRule",
+        "DeleteAnalyzer",
+        "DeleteArchiveRule",
+        "GetAnalyzedResource",
+        "GetAnalyzer",
+        "GetArchiveRule",
+        "GetFinding",
+        "ListAnalyzedResources",
+        "ListAnalyzers",
+        "ListArchiveRules",
+        "ListFindings",
+        "ListTagsForResource",
+        "StartResourceScan",
+        "TagResource",
+        "UntagResource",
+        "UpdateArchiveRule",
+        "UpdateFindings"
+      ],
+      "HasResource": true,
+      "StringPrefix": "access-analyzer",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
     "Identity And Access Management": {
       "ARNFormat": "arn:aws:iam::\u003cnamespace\u003e:\u003crelative-id\u003e",
       "ARNRegex": "^arn:aws:iam::.+",
