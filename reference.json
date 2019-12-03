@@ -8909,6 +8909,18 @@
       "HasResource": false,
       "StringPrefix": "comprehendmedical"
     },
+    "Compute Optimizer": {
+      "Actions": [
+        "GetAutoScalingGroupRecommendations",
+        "GetEC2InstanceRecommendations",
+        "GetEC2RecommendationProjectedMetrics",
+        "GetEnrollmentStatus",
+        "GetRecommendationSummaries",
+        "UpdateEnrollmentStatus"
+      ],
+      "HasResource": false,
+      "StringPrefix": "compute-optimizer"
+    },
     "Data Pipeline": {
       "Actions": [
         "ActivatePipeline",
