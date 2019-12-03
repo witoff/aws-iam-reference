@@ -2854,6 +2854,19 @@
         "license-manager:ResourceTag/${TagKey}"
       ]
     },
+    "AWS Managed Apache Cassandra Service": {
+      "ARNFormat": "arn:${Partition}:cassandra:${region}:${account}:${resourceType}/${resourcePath}",
+      "ARNRegex": "^arn:${Partition}:cassandra:.+",
+      "Actions": [
+        "Alter",
+        "Create",
+        "Drop",
+        "Modify",
+        "Select"
+      ],
+      "HasResource": true,
+      "StringPrefix": "cassandra"
+    },
     "AWS Marketplace": {
       "Actions": [
         "AcceptAgreementApprovalRequest",
