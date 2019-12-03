@@ -9430,6 +9430,49 @@
         "aws:TagKeys"
       ]
     },
+    "Network Manager": {
+      "ARNFormat": "arn:aws:networkmanager::\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+      "ARNRegex": "^arn:aws:networkmanager::.+:.+",
+      "Actions": [
+        "AssociateCustomerGateway",
+        "AssociateLink",
+        "CreateDevice",
+        "CreateGlobalNetwork",
+        "CreateLink",
+        "CreateSite",
+        "DeleteDevice",
+        "DeleteGlobalNetwork",
+        "DeleteLink",
+        "DeleteSite",
+        "DeregisterTransitGateway",
+        "DescribeGlobalNetworks",
+        "DisassociateCustomerGateway",
+        "DisassociateLink",
+        "GetCustomerGatewayAssociations",
+        "GetDevices",
+        "GetLinkAssociations",
+        "GetLinks",
+        "GetSites",
+        "GetTransitGatewayRegistrations",
+        "ListTagsForResource",
+        "RegisterTransitGateway",
+        "TagResource",
+        "UntagResource",
+        "UpdateDevice",
+        "UpdateGlobalNetwork",
+        "UpdateLink",
+        "UpdateSite"
+      ],
+      "HasResource": true,
+      "StringPrefix": "networkmanager",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "networkmanager:cgwArn",
+        "networkmanager:tgwArn"
+      ]
+    },
     "Service Quotas": {
       "ARNFormat": "arn:aws:servicequotas:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e",
       "ARNRegex": "^arn:aws:servicequotas:.+",
