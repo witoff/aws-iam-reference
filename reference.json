@@ -3189,6 +3189,7 @@
         "DescribePrivateMarketplaceProducts",
         "DescribePrivateMarketplaceProfile",
         "DescribePrivateMarketplaceRequests",
+        "DescribePrivateMarketplaceSettings",
         "DescribePrivateMarketplaceStatus",
         "DisassociateProductsFromPrivateMarketplace",
         "ListPrivateMarketplaceProducts",
