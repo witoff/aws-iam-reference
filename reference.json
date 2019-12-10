@@ -4583,6 +4583,7 @@
         "GetVoiceConnectorTerminationHealth",
         "InviteDelegate",
         "InviteUsers",
+        "InviteUsersFromProvider",
         "ListAccountUsageReportData",
         "ListAccounts",
         "ListApiKeys",
