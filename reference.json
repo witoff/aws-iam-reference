@@ -9078,6 +9078,13 @@
       "HasResource": false,
       "StringPrefix": "discovery"
     },
+    "Application Discovery Service endpoint for data collectors": {
+      "Actions": [
+        "RegisterOnPremisesAgent"
+      ],
+      "HasResource": false,
+      "StringPrefix": "arsenal"
+    },
     "CloudWatch Application Insights": {
       "Actions": [
         "CreateApplication",
