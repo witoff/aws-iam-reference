@@ -349,7 +349,7 @@
       "StringPrefix": "autoscaling-plans"
     },
     "AWS Backup": {
-      "ARNFormat": "arn:aws:backup:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e:\u003cresource_name\u003e",
+      "ARNFormat": "arn:\u003cpartition\u003e:backup:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e:\u003cresource_name\u003e",
       "ARNRegex": "^arn:aws:backup:.+:.+:.+",
       "Actions": [
         "CreateBackupPlan",
@@ -397,7 +397,11 @@
         "UpdateRecoveryPointLifecycle"
       ],
       "HasResource": true,
-      "StringPrefix": "backup"
+      "StringPrefix": "backup",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Backup storage": {
       "ARNFormat": "arn:aws:backup-storage:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e:\u003cresource_name\u003e",
@@ -6483,8 +6487,8 @@
       "StringPrefix": "frauddetector"
     },
     "Amazon FreeRTOS": {
-      "ARNFormat": "arn:aws:freertos:\u003cregion\u003e:\u003caccount_ID\u003e:\u003ctype\u003e/\u003cname\u003e",
-      "ARNRegex": "^arn:aws:freertos:.+:[0-9]+:.+",
+      "ARNFormat": "arn:${Partition}:freertos:\u003cregion\u003e:\u003caccount_ID\u003e:\u003ctype\u003e/\u003cname\u003e",
+      "ARNRegex": "^arn:${Partition}:freertos:.+:[0-9]+:.+",
       "Actions": [
         "CreateSoftwareConfiguration",
         "DeleteSoftwareConfiguration",
