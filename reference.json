@@ -585,9 +585,11 @@
         "DescribeEnvironmentMemberships",
         "DescribeEnvironmentStatus",
         "DescribeEnvironments",
+        "GetUserSettings",
         "ListEnvironments",
         "UpdateEnvironment",
-        "UpdateEnvironmentMembership"
+        "UpdateEnvironmentMembership",
+        "UpdateUserSettings"
       ],
       "HasResource": true,
       "StringPrefix": "cloud9",
