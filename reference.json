@@ -9106,7 +9106,7 @@
       "HasResource": false,
       "StringPrefix": "discovery"
     },
-    "Application Discovery Service endpoint for data collectors": {
+    "Application Discovery Arsenal": {
       "Actions": [
         "RegisterOnPremisesAgent"
       ],
