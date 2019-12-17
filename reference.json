@@ -3790,6 +3790,9 @@
       "HasResource": true,
       "StringPrefix": "servicecatalog",
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "servicecatalog:accountLevel",
         "servicecatalog:roleLevel",
         "servicecatalog:userLevel"
