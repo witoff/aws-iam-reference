@@ -2917,6 +2917,8 @@
       "StringPrefix": "aws-marketplace"
     },
     "AWS Marketplace Catalog": {
+      "ARNFormat": "arn:aws:aws-marketplace:\u003cregion\u003e:\u003caccount\u003e:\u003ccatalog\u003e/\u003cresource_type\u003e/\u003cresource_id\u003e",
+      "ARNRegex": "^arn:aws:aws-marketplace:::.+",
       "Actions": [
         "CancelChangeSet",
         "DescribeChangeSet",
@@ -2925,8 +2927,11 @@
         "ListEntities",
         "StartChangeSet"
       ],
-      "HasResource": false,
-      "StringPrefix": "aws-marketplace"
+      "HasResource": true,
+      "StringPrefix": "aws-marketplace",
+      "conditionKeys": [
+        "catalog:ChangeType"
+      ]
     },
     "AWS Marketplace Entitlement Service": {
       "Actions": [
