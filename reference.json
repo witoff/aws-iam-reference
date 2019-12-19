@@ -2820,6 +2820,7 @@
         "DeleteFunction",
         "DeleteFunctionConcurrency",
         "DeleteLayerVersion",
+        "DisableReplication",
         "EnableReplication",
         "GetAccountSettings",
         "GetAlias",
