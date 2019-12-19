@@ -6557,6 +6557,8 @@
       ]
     },
     "Amazon GameLift": {
+      "ARNFormat": "arn:aws:gamelift:\u003cregion\u003e:\u003caccountId\u003e:\u003cresourceType\u003e/\u003cresourceId\u003e",
+      "ARNRegex": "^arn:aws:gamelift:.+",
       "Actions": [
         "AcceptMatch",
         "CreateAlias",
@@ -6609,6 +6611,7 @@
         "ListBuilds",
         "ListFleets",
         "ListScripts",
+        "ListTagsForResource",
         "PutScalingPolicy",
         "RequestUploadCredentials",
         "ResolveAlias",
@@ -6620,6 +6623,8 @@
         "StopFleetActions",
         "StopGameSessionPlacement",
         "StopMatchmaking",
+        "TagResource",
+        "UntagResource",
         "UpdateAlias",
         "UpdateBuild",
         "UpdateFleetAttributes",
@@ -6632,8 +6637,13 @@
         "UpdateScript",
         "ValidateMatchmakingRuleSet"
       ],
-      "HasResource": false,
-      "StringPrefix": "gamelift"
+      "HasResource": true,
+      "StringPrefix": "gamelift",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon Glacier": {
       "ARNFormat": "arn:aws:glacier:\u003cregion\u003e:\u003caccountID\u003e:\u003crelative-id\u003e",
