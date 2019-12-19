@@ -6043,6 +6043,20 @@
       "HasResource": false,
       "StringPrefix": "elasticache"
     },
+    "Amazon Elastic Block Store": {
+      "ARNFormat": "arn:aws:ebs:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourcePath\u003e",
+      "ARNRegex": "^arn:aws:ebs:.+",
+      "Actions": [
+        "GetSnapshotBlock",
+        "ListChangedBlocks",
+        "ListSnapshotBlocks"
+      ],
+      "HasResource": true,
+      "StringPrefix": "ebs",
+      "conditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
     "Amazon Elastic Container Registry": {
       "ARNFormat": "arn:aws:ecr:\u003cregion\u003e:\u003caccount_ID\u003e:repository/\u003crepository_name\u003e",
       "ARNRegex": "^arn:aws:ecr:.+",
