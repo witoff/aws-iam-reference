@@ -8855,15 +8855,20 @@
       "ARNRegex": "^arn:${Partition}:transcribe:.+:.+:.+",
       "Actions": [
         "CreateVocabulary",
+        "CreateVocabularyFilter",
         "DeleteTranscriptionJob",
         "DeleteVocabulary",
+        "DeleteVocabularyFilter",
         "GetTranscriptionJob",
         "GetVocabulary",
+        "GetVocabularyFilter",
         "ListTranscriptionJobs",
         "ListVocabularies",
+        "ListVocabularyFilters",
         "StartStreamTranscription",
         "StartTranscriptionJob",
-        "UpdateVocabulary"
+        "UpdateVocabulary",
+        "UpdateVocabularyFilter"
       ],
       "HasResource": false,
       "StringPrefix": "transcribe"
