@@ -2099,12 +2099,19 @@
       "ARNFormat": "arn:aws:health::\u003cnamespace\u003e:\u003crelative-id\u003e",
       "ARNRegex": "^arn:aws:health:[^:]*:[^:]*:.+",
       "Actions": [
+        "DescribeAffectedAccountsForOrganization",
         "DescribeAffectedEntities",
+        "DescribeAffectedEntitiesForOrganization",
         "DescribeEntityAggregates",
         "DescribeEventAggregates",
         "DescribeEventDetails",
+        "DescribeEventDetailsForOrganization",
         "DescribeEventTypes",
-        "DescribeEvents"
+        "DescribeEvents",
+        "DescribeEventsForOrganization",
+        "DescribeHealthServiceStatusForOrganization",
+        "DisableHealthServiceAccessForOrganization",
+        "EnableHealthServiceAccessForOrganization"
       ],
       "HasResource": true,
       "StringPrefix": "health",
