@@ -411,7 +411,7 @@
       "ARNFormat": "arn:aws:backup-storage:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e:\u003cresource_name\u003e",
       "ARNRegex": "^^arn:aws:backup-storage:.+:.+:.+",
       "Actions": [
-        "Mount"
+        "MountCapsule"
       ],
       "HasResource": false,
       "StringPrefix": "backup-storage"
