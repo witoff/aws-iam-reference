@@ -1882,11 +1882,19 @@
         "ListComplianceStatus",
         "ListMemberAccounts",
         "ListPolicies",
+        "ListTagsForResource",
         "PutNotificationChannel",
-        "PutPolicy"
+        "PutPolicy",
+        "TagResource",
+        "UntagResource"
       ],
       "HasResource": true,
-      "StringPrefix": "fms"
+      "StringPrefix": "fms",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Global Accelerator": {
       "ARNFormat": "arn:aws:globalaccelerator::\u003caccount\u003e:accelerator/\u003cAcceleratorId\u003e",
