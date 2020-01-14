@@ -5066,6 +5066,24 @@
       "HasResource": true,
       "StringPrefix": "synthetics"
     },
+    "Amazon CodeGuru Reviewer": {
+      "ARNFormat": "arn:aws:codeguru-reviewer:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e:\u003cresource_name\u003e",
+      "ARNRegex": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+      "Actions": [
+        "AssociateRepository",
+        "CreateConnectionToken",
+        "DescribeRepositoryAssociation",
+        "DisassociateRepository",
+        "GetMetricsData",
+        "ListRepositoryAssociations",
+        "ListThirdPartyRepositories"
+      ],
+      "HasResource": true,
+      "StringPrefix": "codeguru-reviewer",
+      "conditionKeys": [
+        "aws:ResourceTag/${TagKey}"
+      ]
+    },
     "Amazon Cognito Identity": {
       "ARNFormat": "arn:aws:cognito-identity:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourcePath\u003e",
       "ARNRegex": "^arn:aws:cognito-identity:.+",
