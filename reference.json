@@ -3586,6 +3586,7 @@
         "DescribeActionTargets",
         "DescribeHub",
         "DescribeProducts",
+        "DescribeStandardsControls",
         "DisableImportFindingsForProduct",
         "DisableSecurityHub",
         "DisassociateFromMasterAccount",
@@ -3608,7 +3609,8 @@
         "UntagResource",
         "UpdateActionTarget",
         "UpdateFindings",
-        "UpdateInsight"
+        "UpdateInsight",
+        "UpdateStandardsControl"
       ],
       "HasResource": true,
       "StringPrefix": "securityhub",
