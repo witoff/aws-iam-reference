@@ -5068,6 +5068,26 @@
       "HasResource": true,
       "StringPrefix": "synthetics"
     },
+    "Amazon CodeGuru Profiler": {
+      "ARNFormat": "arn:aws:codeguru-profiler:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+      "ARNRegex": "^arn:aws:codeguru-profiler:.+:.+:.+",
+      "Actions": [
+        "ConfigureAgent",
+        "CreateProfilingGroup",
+        "DeleteProfilingGroup",
+        "DescribeProfilingGroup",
+        "GetFindingsReport",
+        "GetFindingsReportAccountSummary",
+        "GetProfile",
+        "ListFindingsReports",
+        "ListProfileTimes",
+        "ListProfilingGroups",
+        "PostAgentProfile",
+        "UpdateProfilingGroup"
+      ],
+      "HasResource": true,
+      "StringPrefix": "codeguru-profiler"
+    },
     "Amazon CodeGuru Reviewer": {
       "ARNFormat": "arn:aws:codeguru-reviewer:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e:\u003cresource_name\u003e",
       "ARNRegex": "^arn:aws:codeguru-reviewer:.+:.+:.+",
