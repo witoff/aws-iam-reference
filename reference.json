@@ -7828,6 +7828,7 @@
         "ApplyPendingMaintenanceAction",
         "AuthorizeDBSecurityGroupIngress",
         "BacktrackDBCluster",
+        "CancelExportTask",
         "CopyDBClusterParameterGroup",
         "CopyDBClusterSnapshot",
         "CopyDBParameterGroup",
@@ -7889,6 +7890,7 @@
         "DescribeEventCategories",
         "DescribeEventSubscriptions",
         "DescribeEvents",
+        "DescribeExportTasks",
         "DescribeGlobalClusters",
         "DescribeOptionGroupOptions",
         "DescribeOptionGroups",
@@ -7939,6 +7941,7 @@
         "StartActivityStream",
         "StartDBCluster",
         "StartDBInstance",
+        "StartExportTask",
         "StopActivityStream",
         "StopDBCluster",
         "StopDBInstance"
