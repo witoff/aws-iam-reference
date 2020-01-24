@@ -681,12 +681,16 @@
       ]
     },
     "AWS CloudHSM": {
+      "ARNFormat": "arn:\u003cpartition\u003e:cloudhsm:\u003cregion\u003e:\u003caccountID\u003e:\u003crelative-id\u003e",
+      "ARNRegex": "^arn:\u003cpartition\u003e:cloudhsm:.+",
       "Actions": [
         "AddTagsToResource",
+        "CopyBackupToRegion",
         "CreateCluster",
         "CreateHapg",
         "CreateHsm",
         "CreateLunaClient",
+        "DeleteBackup",
         "DeleteCluster",
         "DeleteHapg",
         "DeleteHsm",
@@ -708,11 +712,17 @@
         "ModifyHsm",
         "ModifyLunaClient",
         "RemoveTagsFromResource",
+        "RestoreBackup",
         "TagResource",
         "UntagResource"
       ],
-      "HasResource": false,
-      "StringPrefix": "cloudhsm"
+      "HasResource": true,
+      "StringPrefix": "cloudhsm",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS CloudTrail": {
       "ARNFormat": "arn:aws:cloudtrail:\u003cregion\u003e:\u003caccount\u003e:\u003cresource\u003e",
