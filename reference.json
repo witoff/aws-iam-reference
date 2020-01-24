@@ -3868,7 +3868,8 @@
         "GetSubscriptionState",
         "ListAttacks",
         "ListProtections",
-        "UpdateEmergencyContactSettings"
+        "UpdateEmergencyContactSettings",
+        "UpdateSubscription"
       ],
       "HasResource": true,
       "StringPrefix": "shield"
