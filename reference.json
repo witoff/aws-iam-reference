@@ -6347,6 +6347,7 @@
         "DeleteFileSystemPolicy",
         "DeleteMountTarget",
         "DeleteTags",
+        "DescribeAccessPoints",
         "DescribeFileSystemPolicy",
         "DescribeFileSystems",
         "DescribeLifecycleConfiguration",
