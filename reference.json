@@ -5397,6 +5397,7 @@
         "ListUserHierarchyGroups",
         "ListUsers",
         "ModifyInstance",
+        "StartChatContact",
         "StartOutboundVoiceContact",
         "StopContact",
         "TagResource",
