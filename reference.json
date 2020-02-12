@@ -3353,17 +3353,6 @@
         "ram:ShareOwnerAccountId"
       ]
     },
-    "AWS Resource Explorer": {
-      "ARNFormat": "arn:aws:resource-explorer:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
-      "ARNRegex": "^arn:aws:resource-explorer:.+",
-      "Actions": [
-        "ListResourceTypes",
-        "ListResources",
-        "ListTags"
-      ],
-      "HasResource": false,
-      "StringPrefix": "resource-explorer"
-    },
     "AWS Resource Groups": {
       "ARNFormat": "arn:aws:\u003cserviceName\u003e:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourceName\u003e",
       "ARNRegex": "^arn:aws:resource-groups:.+",
