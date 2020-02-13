@@ -9849,15 +9849,6 @@
         "iam:ResourceTag/${TagKey}"
       ]
     },
-    "IoT Device Tester": {
-      "ARNFormat": "arn:aws:iot-device-tester:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
-      "ARNRegex": "^arn:aws:iot-device-tester:.+:.+:.+",
-      "Actions": [
-        "sendMetrics"
-      ],
-      "HasResource": false,
-      "StringPrefix": "iot-device-tester"
-    },
     "Launch Wizard": {
       "ARNRegex": "^arn:aws:launchwizard:.+:.+:.+",
       "Actions": [
