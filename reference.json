@@ -3624,6 +3624,7 @@
         "DescribeActionTargets",
         "DescribeHub",
         "DescribeProducts",
+        "DescribeStandards",
         "DescribeStandardsControls",
         "DisableImportFindingsForProduct",
         "DisableSecurityHub",
