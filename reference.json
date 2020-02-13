@@ -9232,6 +9232,7 @@
         "CreateResource",
         "CreateSmtpGateway",
         "CreateUser",
+        "DeleteAccessControlRule",
         "DeleteAlias",
         "DeleteGroup",
         "DeleteInboundMailFlowRule",
@@ -9264,6 +9265,7 @@
         "EnableMailDomain",
         "EnableMailGroups",
         "EnableMailUsers",
+        "GetAccessControlEffect",
         "GetJournalingRules",
         "GetMailDomainDetails",
         "GetMailGroupDetails",
@@ -9272,6 +9274,7 @@
         "GetMobileDeviceDetails",
         "GetMobileDevicesForUser",
         "GetMobilePolicyDetails",
+        "ListAccessControlRules",
         "ListAliases",
         "ListGroupMembers",
         "ListGroups",
@@ -9283,7 +9286,9 @@
         "ListResourceDelegates",
         "ListResources",
         "ListSmtpGateways",
+        "ListTagsForResource",
         "ListUsers",
+        "PutAccessControlRule",
         "PutMailboxPermissions",
         "RegisterToWorkMail",
         "RemoveMembersFromGroup",
@@ -9296,8 +9301,10 @@
         "SetMailGroupDetails",
         "SetMailUserDetails",
         "SetMobilePolicyDetails",
+        "TagResource",
         "TestInboundMailFlowRules",
         "TestOutboundMailFlowRules",
+        "UntagResource",
         "UpdateInboundMailFlowRule",
         "UpdateMailboxQuota",
         "UpdateOutboundMailFlowRule",
@@ -9306,8 +9313,13 @@
         "UpdateSmtpGateway",
         "WipeMobileDevice"
       ],
-      "HasResource": false,
-      "StringPrefix": "workmail"
+      "HasResource": true,
+      "StringPrefix": "workmail",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "Amazon WorkMail Message Flow": {
       "ARNFormat": "arn:${Partition}:workmailmessageflow:${Region}:${Account}:message/${OrganizationId}/${Context}/${MessageId}",
