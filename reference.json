@@ -8238,6 +8238,7 @@
         "GetFaceSearch",
         "GetLabelDetection",
         "GetPersonTracking",
+        "GetTextDetection",
         "IndexFaces",
         "ListCollections",
         "ListFaces",
@@ -8253,6 +8254,7 @@
         "StartPersonTracking",
         "StartProjectVersion",
         "StartStreamProcessor",
+        "StartTextDetection",
         "StopProjectVersion",
         "StopStreamProcessor"
       ],
