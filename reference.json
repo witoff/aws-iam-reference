@@ -3615,8 +3615,8 @@
       ]
     },
     "AWS Security Hub": {
-      "ARNFormat": "arn:aws:securityhub:\u003cregion\u003e:\u003caccount_ID\u003e:.+",
-      "ARNRegex": "^arn:aws:securityhub:.+",
+      "ARNFormat": "arn:${Partition}:securityhub:\u003cregion\u003e:\u003caccount_ID\u003e:.+",
+      "ARNRegex": "^arn:${Partition}:securityhub:.+",
       "Actions": [
         "AcceptInvitation",
         "BatchDisableStandards",
