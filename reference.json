@@ -1906,12 +1906,15 @@
         "GetObject",
         "ListContainers",
         "ListItems",
+        "ListTagsForResource",
         "PutContainerPolicy",
         "PutCorsPolicy",
         "PutLifecyclePolicy",
         "PutObject",
         "StartAccessLogging",
-        "StopAccessLogging"
+        "StopAccessLogging",
+        "TagResource",
+        "UntagResource"
       ],
       "HasResource": true,
       "StringPrefix": "mediastore"
