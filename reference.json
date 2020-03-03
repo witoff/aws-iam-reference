@@ -1984,26 +1984,39 @@
       "ARNFormat": "arn:aws:globalaccelerator::\u003caccount\u003e:accelerator/\u003cAcceleratorId\u003e",
       "ARNRegex": "^arn:aws:globalaccelerator::.+:.+",
       "Actions": [
+        "AdvertiseByoipCidr",
         "CreateAccelerator",
         "CreateEndpointGroup",
         "CreateListener",
         "DeleteAccelerator",
         "DeleteEndpointGroup",
         "DeleteListener",
+        "DeprovisionByoipCidr",
         "DescribeAccelerator",
         "DescribeAcceleratorAttributes",
         "DescribeEndpointGroup",
         "DescribeListener",
         "ListAccelerators",
+        "ListByoipCidrs",
         "ListEndpointGroups",
         "ListListeners",
+        "ListTagsForResource",
+        "ProvisionByoipCidr",
+        "TagResource",
+        "UntagResource",
         "UpdateAccelerator",
         "UpdateAcceleratorAttributes",
         "UpdateEndpointGroup",
-        "UpdateListener"
+        "UpdateListener",
+        "WithdrawByoipCidr"
       ],
       "HasResource": true,
-      "StringPrefix": "globalaccelerator"
+      "StringPrefix": "globalaccelerator",
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     "AWS Glue": {
       "ARNFormat": "arn:aws:glue:\u003cregion\u003e:\u003caccountID\u003e:\u003cresourceType\u003e/\u003cresourcePath\u003e",
