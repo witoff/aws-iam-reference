@@ -1073,6 +1073,7 @@
         "RegisterWebhookWithThirdParty",
         "RetryStageExecution",
         "StartPipelineExecution",
+        "StopPipelineExecution",
         "TagResource",
         "UntagResource",
         "UpdatePipeline"
@@ -3015,7 +3016,7 @@
       ]
     },
     "AWS Managed Apache Cassandra Service": {
-      "ARNFormat": "arn:${Partition}:cassandra:${region}:${account}:/${resourceType}/${resourcePath}",
+      "ARNFormat": "arn:${Partition}:cassandra:${region}:${account}:${resourceType}/${resourcePath}",
       "ARNRegex": "^arn:${Partition}:cassandra:.+",
       "Actions": [
         "Alter",
