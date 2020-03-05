@@ -3074,11 +3074,15 @@
       "ARNRegex": "^arn:aws:aws-marketplace:::.+",
       "Actions": [
         "CancelChangeSet",
+        "CompleteTask",
         "DescribeChangeSet",
         "DescribeEntity",
+        "DescribeTask",
         "ListChangeSets",
         "ListEntities",
-        "StartChangeSet"
+        "ListTasks",
+        "StartChangeSet",
+        "UpdateTask"
       ],
       "HasResource": true,
       "StringPrefix": "aws-marketplace",
