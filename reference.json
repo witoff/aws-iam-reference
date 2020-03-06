@@ -6622,6 +6622,7 @@
       "Actions": [
         "AddTags",
         "CreateElasticsearchDomain",
+        "CreateElasticsearchServiceRole",
         "DeleteElasticsearchDomain",
         "DeleteElasticsearchServiceRole",
         "DescribeElasticsearchDomain",
@@ -6640,6 +6641,7 @@
         "GetUpgradeHistory",
         "GetUpgradeStatus",
         "ListDomainNames",
+        "ListElasticsearchInstanceTypeDetails",
         "ListElasticsearchInstanceTypes",
         "ListElasticsearchVersions",
         "ListTags",
