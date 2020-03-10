@@ -3876,10 +3876,14 @@
         "ListApplications",
         "PutApplicationPolicy",
         "SearchApplications",
+        "UnshareApplication",
         "UpdateApplication"
       ],
       "HasResource": true,
-      "StringPrefix": "serverlessrepo"
+      "StringPrefix": "serverlessrepo",
+      "conditionKeys": [
+        "serverlessrepo:applicationType"
+      ]
     },
     "AWS Service Catalog": {
       "ARNFormat": "arn:aws:(catalog|servicecatalog):\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cid\u003e",
