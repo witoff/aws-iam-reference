@@ -9252,6 +9252,7 @@
         "ListTranscriptionJobs",
         "ListVocabularies",
         "ListVocabularyFilters",
+        "StartMedicalStreamTranscription",
         "StartStreamTranscription",
         "StartTranscriptionJob",
         "UpdateVocabulary",
