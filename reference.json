@@ -2563,7 +2563,11 @@
       "ARNFormat": "arn:aws:iot-device-tester:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
       "ARNRegex": "^arn:aws:iot-device-tester:.+:.+:.+",
       "Actions": [
-        "SendMetrics"
+        "CheckVersion",
+        "DownloadTestSuite",
+        "LatestIdt",
+        "SendMetrics",
+        "SupportedVersion"
       ],
       "HasResource": false,
       "StringPrefix": "iot-device-tester"
@@ -6564,6 +6568,7 @@
         "DeleteSecurityConfiguration",
         "DescribeCluster",
         "DescribeEditor",
+        "DescribeJobFlows",
         "DescribeSecurityConfiguration",
         "DescribeStep",
         "GetBlockPublicAccessConfiguration",
@@ -6575,6 +6580,7 @@
         "ListInstances",
         "ListSecurityConfigurations",
         "ListSteps",
+        "ModifyCluster",
         "ModifyInstanceFleet",
         "ModifyInstanceGroups",
         "OpenEditorInConsole",
