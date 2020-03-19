@@ -10000,6 +10000,7 @@
       "StringPrefix": "iam",
       "conditionKeys": [
         "iam:AWSServiceName",
+        "iam:AssociatedResourceArn",
         "iam:OrganizationsPolicyId",
         "iam:PassedToService",
         "iam:PermissionsBoundary",
