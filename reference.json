@@ -6222,6 +6222,7 @@
         "autoscaling:InstanceType",
         "autoscaling:InstanceTypes",
         "autoscaling:LaunchConfigurationName",
+        "autoscaling:LaunchTemplateVersionSpecified",
         "autoscaling:LoadBalancerNames",
         "autoscaling:MaxSize",
         "autoscaling:MinSize",
