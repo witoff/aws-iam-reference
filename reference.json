@@ -8379,6 +8379,8 @@
         "CreateStreamProcessor",
         "DeleteCollection",
         "DeleteFaces",
+        "DeleteProject",
+        "DeleteProjectVersion",
         "DeleteStreamProcessor",
         "DescribeCollection",
         "DescribeProjectVersions",
