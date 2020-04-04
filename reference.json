@@ -1392,6 +1392,29 @@
         "dms:task-tag/${TagKey}"
       ]
     },
+    "AWS DeepComposer": {
+      "ARNFormat": "arn:aws:deepcomposer:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+      "ARNRegex": "^arn:aws:deepcomposer:.+:.+:.+",
+      "Actions": [
+        "AssociateCoupon",
+        "CreateAudio",
+        "CreateComposition",
+        "CreateModel",
+        "DeleteComposition",
+        "DeleteModel",
+        "GetComposition",
+        "GetModel",
+        "GetSampleModel",
+        "ListCompositions",
+        "ListModels",
+        "ListSampleModels",
+        "ListTrainingTopics",
+        "UpdateComposition",
+        "UpdateModel"
+      ],
+      "HasResource": true,
+      "StringPrefix": "deepcomposer"
+    },
     "AWS DeepLens": {
       "ARNFormat": "arn:aws:deeplens:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
       "ARNRegex": "^arn:aws:deeplens:.+:.+:.+",
